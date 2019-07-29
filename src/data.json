@@ -1,0 +1,995 @@
+{
+    "companies": [
+        {
+            "day": "DAY 2 - Wednesday, January 30, 2019",
+            "positions_offered": "Professional Full Time Position, Internship Position, Co-op Position",
+            "overview": "Mission: Advance Air Force superiority by providing world-class, innovative and dynamic software products and services. Vision: To be the industry leader in providing Department of Defense (DoD) software products and services. Goals: 1) Institutionalize standard processes for executing 402 SMXG activities 2) Strengthen relationship with mission partners and Software Enterprise 3) Create and maintain an organization that delivers products and services based on its operating process with the agility to adapt to dynamic workload factors 4) Promote a professional work environment",
+            "name": "402d Software Maintenance Group, Robins AFB",
+            "image": "https://s3.amazonaws.com/symp.csm.usprod/gatech/files/6be/6be02eb5057fc0925bc57bf08b178035_512_512.jpg",
+            "degree_levels": "Bachelors, Masters, Doctorate",
+            "sponsorships": "US Citizen"
+        },
+        {
+            "day": "DAY 3 - Thursday, January 31, 2019",
+            "positions_offered": "Professional Full Time Position, Internship Position",
+            "overview": "Accenture is a leading global professional services company, providing a broad range of services and solutions in strategy, consulting, digital, technology and operations. Combining unmatched experience and specialized skills across more than 40 industries and all business functions-underpinned by the world's largest delivery network-Accenture works at the intersection of business and technology to help clients improve their performance and create sustainable value for their stakeholders. With 449,000 people serving clients in more than 120 countries, Accenture drives innovation to improve the way the world works and lives. Visit us at www.accenture.com.",
+            "name": "Accenture",
+            "image": "https://s3.amazonaws.com/symp.csm.usprod/gatech/files/e0e/e0ec0bd4f630cb8f3f696ac5958fbafb_512_512.jpg",
+            "degree_levels": "Bachelors, Masters",
+            "sponsorships": "US Citizen, Permanent Resident (U.S.)"
+        },
+        {
+            "day": "Day 4 (Reschedule Day 1) Friday, February 1st",
+            "positions_offered": "Professional Full Time Position, Internship Position, Masters, PhD, & MBA Internship/Co-op Position",
+            "overview": "We are a comprehensive global provider of cloud-based human capital management (HCM) solutions that unite HR, payroll, talent, time, tax and benefits administration, and a leader in business outsourcing services, analytics and compliance expertise. Our unmatched experience, deep insights and cutting-edge technology have transformed human resources from a back-office administrative function to a strategic business advantage.",
+            "name": "ADP",
+            "image": "https://s3.amazonaws.com/symp.csm.usprod/gatech/files/281/28182adeaedac98c52c478f37b002087_512_512.jpg",
+            "degree_levels": "Bachelors, Masters",
+            "sponsorships": "US Citizen, EAD - Employment Authorization, Employment (H-1) Visa"
+        },
+        {
+            "day": "Day 4 (Reschedule Day 1) Friday, February 1st",
+            "positions_offered": "Professional Full Time Position, Internship Position",
+            "overview": "Agilysys is a leading technology company that provides innovative point-of-sale, property management, inventory and procurement, workforce management, analytics, document management and mobile and wireless solutions and services to the hospitality industry.",
+            "name": "Agilysys, Inc.",
+            "image": "https://s3.amazonaws.com/symp.csm.usprod/gatech/files/8d5/8d5297eea6e5ec874c29b4aae6bf6451_512_512.jpg",
+            "degree_levels": "Bachelors, Masters",
+            "sponsorships": "US Citizen, Permanent Resident (U.S.), EAD - Employment Authorization, Student (F-1) Visa"
+        },
+        {
+            "day": "DAY 2 - Wednesday, January 30, 2019",
+            "positions_offered": "Professional Part Time Position Only, Non-Professional Part-Time/Seasonal Only",
+            "overview": "The Air Force Reserve offers a variety of part-time jobs with full-time benefits, including low-cost health insurance, a non-contributory retirement plan, 100% Tuition Assistance and other educational programs. Signing bonuses up to $20,000 are available for specific jobs. Go to AFReserve.com to Start Your Adventure with the Air Force Reserve.",
+            "name": "Air Force Reserve",
+            "image": "https://s3.amazonaws.com/symp.csm.usprod/gatech/files/073/073c8d2cac647ea0fdb3b51388c51fdf_512_512.jpg",
+            "degree_levels": "Bachelors, Masters, Doctorate, Post-Doc, Special, Non-Degree",
+            "sponsorships": "US Citizen, Permanent Resident (U.S.)"
+        },
+        {
+            "day": "DAY 3 - Thursday, January 31, 2019",
+            "positions_offered": "Professional Full Time Position",
+            "overview": "American Express Co",
+            "name": "American Express",
+            "image": "https://s3.amazonaws.com/symp.csm.usprod/gatech/files/9c5/9c5166028d62252db12cb31b097f845f_512_512.jpg",
+            "degree_levels": "Bachelors, Masters",
+            "sponsorships": "US Citizen, Permanent Resident (U.S.)"
+        },
+        {
+            "day": "DAY 2 - Wednesday, January 30, 2019",
+            "positions_offered": "Professional Full Time Position, Internship Position, Co-op Position, Masters, PhD, & MBA Internship/Co-op Position",
+            "overview": "Annapolis Micro Systems is a small business, incorporated in 1982. Considered the leader in reconfigurable computing systems, Annapolis designs and manufactures embedded Commercial Off-The-Shelf (COTS) systems and products for digital signal processing and high performance embedded computing for the military and commercial markets. Annapolis has also developed revolutionary graphical programming tools called CoreFire Next™ and Open Project Builder™, enabling customers to leverage the power of FPGAs to solve their most challenging applications. Annapolis has a 40,000 square foot facility including engineering labs, and a surface mount assembly line, located in beautiful Annapolis, Maryland",
+            "name": "Annapolis Micro Systems, Inc.",
+            "image": "https://s3.amazonaws.com/symp.csm.usprod/gatech/files/04f/04f9106ad437dfb8ea333e5c1431e6a1_512_512.jpg",
+            "degree_levels": "Bachelors, Masters, Doctorate",
+            "sponsorships": "US Citizen"
+        },
+        {
+            "day": "DAY 3 - Thursday, January 31, 2019",
+            "positions_offered": "Professional Full Time Position",
+            "overview": "Founded by successful technology entrepreneurs in 2013, our launch product is a natural language query solution for medium to large companies. Using machine learning algorithms, our software enables business leaders to make better, faster decisions. We are now in our 5th year as a startup and looking to significantly expand our team in the coming year!",
+            "name": "AnswerRocket",
+            "image": "https://s3.amazonaws.com/symp.csm.usprod/gatech/files/fb0/fb014cdde134adcd76404fc153d397ac_512_512.jpg",
+            "degree_levels": "Bachelors, Masters",
+            "sponsorships": "US Citizen"
+        },
+        {
+            "day": "DAY 2 - Wednesday, January 30, 2019",
+            "positions_offered": "Internship Position",
+            "overview": "We're Apogee. Nice to meet you. At our core, we're a student services organization that happens to focus on IT. We touch the lives of binge-watching, music-loving, game-playing, finals-taking, seminar-attending, class-selecting students by providing IT infrastructure that meets the needs of today's technology-savvy generation. At Apogee, we offer dynamic, hands-on internship and co-op programs for undergraduate students from across the US. Before our interns come on-site, we're planning a learning experience from the time you start the interview process, through selection, and the program itself. This ten-week paid internship is open to full-time engineering students currently enrolled in a four-year undergraduate program.",
+            "name": "Apogee",
+            "image": "https://s3.amazonaws.com/symp.csm.usprod/gatech/files/d51/d5176f628d6467548028f4e016db09a2_512_512.jpg",
+            "degree_levels": "Bachelors",
+            "sponsorships": "US Citizen"
+        },
+        {
+            "day": "DAY 2 - Wednesday, January 30, 2019",
+            "positions_offered": "Professional Full Time Position, Internship Position",
+            "overview": "Aporeto is the leader in Identity-Powered Security for cloud applications, containers, and microservices, enabling distributed Zero Trust security for apps, networks and users. The Aporeto platform protects cloud applications and networks from attack and prevents lateral movement by authenticating, authorizing and encrypting all communications with a cryptographically signed identity assigned to every workload. A uniform, distributed security policy is enforced per workload independent of network or infrastructure configuration, enabling automated security orchestration across hybrid and multi-cloud environments.",
+            "name": "Aporeto",
+            "image": "https://s3.amazonaws.com/symp.csm.usprod/gatech/files/e64/e64635f1f97405e577c8894f31b83b4a_512_512.jpg",
+            "degree_levels": "Bachelors, Masters",
+            "sponsorships": "US Citizen, Permanent Resident (U.S.), Student (F-1) Visa, Employment (H-1) Visa"
+        },
+        {
+            "day": "DAY 2 - Wednesday, January 30, 2019",
+            "positions_offered": "Professional Full Time Position, Internship Position, Co-op Position, Masters, PhD, & MBA Internship/Co-op Position",
+            "overview": "ARRIS is a global innovator in IP, video and broadband technology. We have continually worked with our customers to transform the experience of entertainment and communications for millions of people around the world. The people of ARRIS are dedicated to the success of our customers, bringing a passion for invention that has fueled our history: We created digital TV, delivered the first wireless broadband gateway and are pioneering the standards and pathways for tomorrow's personalized, Ultra HD, multiscreen, and cloud services. We are dedicated to meeting today's challenges and preparing for the tasks the future holds. Collaborating with our customers, ARRIS will continue to solve the most pressing challenges of 21st century communications. Together, we are inventing the future.",
+            "name": "ARRIS",
+            "image": "https://s3.amazonaws.com/symp.csm.usprod/gatech/files/249/24941f2bd5d193c1c0a085d81186d6e6_512_512.jpg",
+            "degree_levels": "Bachelors, Masters, Doctorate, Post-Doc, Non-Degree",
+            "sponsorships": "US Citizen, Permanent Resident (U.S.), EAD - Employment Authorization, Student (F-1) Visa, Employment (H-1) Visa, J-1 Visa, A"
+        },
+        {
+            "day": "DAY 3 - Thursday, January 31, 2019",
+            "positions_offered": "Professional Full Time Position, Internship Position",
+            "overview": "While there's a lot of buzz around big data in today's buildings, data is only powerful when it can be organized, understood and used to make smart decisions. That's where Automated Logic comes in. We're known throughout the industry for providing the native integral set of analytical solutions that deliver the understanding, prompt action and historical record you need.",
+            "name": "Automated Logic",
+            "image": "https://s3.amazonaws.com/symp.csm.usprod/gatech/files/fe8/fe83038a49ff1af56fe15e2af147ac77_512_512.jpg",
+            "degree_levels": "Bachelors, Masters",
+            "sponsorships": "US Citizen, Permanent Resident (U.S.)"
+        },
+        {
+            "day": "Day 4 (Reschedule Day 1) Friday, February 1st",
+            "positions_offered": "Professional Full Time Position, Internship Position, Masters, PhD, & MBA Internship/Co-op Position, Global Internship Position",
+            "overview": "\"At Bank of America, we are guided by a common purpose to help make financial lives better by connecting clients and communities to the resource they need to be successful. We deliver this through a focus on responsible growth and environmental, social and governance (ESG) leadership.\"",
+            "name": "Bank of America",
+            "image": "https://s3.amazonaws.com/symp.csm.usprod/gatech/files/b28/b289adcc69910493fbc3010d8130e7de_512_512.jpg",
+            "degree_levels": "Bachelors, Masters, Doctorate",
+            "sponsorships": "US Citizen, Permanent Resident (U.S.), EAD - Employment Authorization, Student (F-1) Visa, Employment (H-1) Visa, J-1 Visa, A"
+        },
+        {
+            "day": "Day 4 (Reschedule Day 1) Friday, February 1st",
+            "positions_offered": "Professional Full Time Position, Co-op Position, Professional Part Time Position Only",
+            "overview": "Hello there! We are Big Southern Software, from McDonough, Georgia. We build custom web apps, websites, graphics, and more for small businesses in our community and across the state of Georgia. We do what we love. We believe in helping coffee shops, town-square restaurants, local magazines, small-town engineers and surveyors, non-profits, churches, artists and other mom-and-pop shops who need websites, project management software, custom integrations, digital mapping tools, and web apps. We want to equip small businesses with the tools the big corporations have. We love small town life, agile businesses, local products, strong businesses, & forming a high quality of life for our community. If you believe in the little man, small towns, and high-tech web-solutions, you're one of us.",
+            "name": "Big Southern Software",
+            "image": "https://s3.amazonaws.com/symp.csm.usprod/gatech/files/574/574b1fe060df241362e36006dbefbc08_512_512.jpg",
+            "degree_levels": "Bachelors, Masters, Special, Non-Degree",
+            "sponsorships": "US Citizen, Permanent Resident (U.S.), EAD - Employment Authorization, Student (F-1) Visa, Employment (H-1) Visa"
+        },
+        {
+            "day": "DAY 3 - Thursday, January 31, 2019",
+            "positions_offered": "Professional Full Time Position",
+            "overview": "Who are we? We are global. With more than 200,000 people, Capgemini is present in over 40 countries. We are results oriented. A global leader in consulting, technology and professional services, The Group reported 2017 global revenues of EUR 12.8 billion. We are committed to delivery. Together with its clients, Capgemini creates and delivers business and technology solutions that fit their needs and drive the results they want. Capgemini has developed its own way of working, the Collaborative Business Experience™, and draws on Rightshore®, its worldwide delivery model. We invest in our people. Capgemini helps each new consultant hit the ground running with a robust training program. Throughout your career, we offer structured programs and on-the-job training to provide you with th",
+            "name": "Capgemini",
+            "image": "https://s3.amazonaws.com/symp.csm.usprod/gatech/files/97a/97a167986c781590a741d691faa16020_512_512.jpg",
+            "degree_levels": "Bachelors",
+            "sponsorships": "US Citizen, Permanent Resident (U.S.)"
+        },
+        {
+            "day": "DAY 2 - Wednesday, January 30, 2019",
+            "positions_offered": "Professional Full Time Position, Internship Position",
+            "overview": "More Info to come",
+            "name": "Capital One",
+            "image": "https://gatech-csm.symplicity.com/utils/view.php?inline=true&id=b5b0713c4857ac52b516ca63fa596ba4&key=eOzGfcNnZXzv4vmbx03z856UJIGRP1Y6qnCxtsoyezWV32wwrkK43gajHGM3zPT-INdPINHZDz7BON1lNKdlRQ",
+            "degree_levels": "Bachelors",
+            "sponsorships": "US Citizen"
+        },
+        {
+            "day": "DAY 2 - Wednesday, January 30, 2019",
+            "positions_offered": "Professional Full Time Position, Internship Position",
+            "overview": "Cisco is the worldwide leader in networking that transforms how people connect, communicate, and collaborate. As an innovator in the communications and information technology industry, Cisco and our valued partners sell Cisco hardware, software, and services to businesses of all sizes, governments, service providers, and consumers. Learn more at www.cisco.com.",
+            "name": "Cisco Systems",
+            "image": "https://s3.amazonaws.com/symp.csm.usprod/gatech/files/cae/cae602831aa83b50fd3a377c6ee9ea5a_512_512.jpg",
+            "degree_levels": "Bachelors, Masters",
+            "sponsorships": "US Citizen, Permanent Resident (U.S.)"
+        },
+        {
+            "day": "Day 4 (Reschedule Day 1) Friday, February 1st",
+            "positions_offered": "Professional Full Time Position, Internship Position",
+            "overview": "Citadel is a leading investor in the world's financial markets. For over a quarter of a century, we have sought to deliver market-leading investment returns to capital partners including pension funds, endowments, foundations, hospitals, governments, sovereign wealth funds, and private individuals. Our global team works to help our capital partners achieve their financial goals.",
+            "name": "Citadel",
+            "image": "https://s3.amazonaws.com/symp.csm.usprod/gatech/files/13e/13e812b5211830d0d313db1d01cb0f90_512_512.jpg",
+            "degree_levels": "Bachelors, Masters, Doctorate, Post-Doc",
+            "sponsorships": "US Citizen, Permanent Resident (U.S.), EAD - Employment Authorization, Student (F-1) Visa, Employment (H-1) Visa, J-1 Visa, A"
+        },
+        {
+            "day": "DAY 3 - Thursday, January 31, 2019",
+            "positions_offered": "Professional Full Time Position, Internship Position",
+            "overview": "We know. You probably think we're boring, suit-wearing bankers who don't know an API from an apricot and who communicate with each other solely via fax. But we see ourselves as a tech company with a banking license. Our technology team is made up of thousands of engineers across the globe, solving challenges on a huge scale and driving innovation that impacts customers via one of the most personal products in the world. No matter what your goal is - software engineering, architecture, product management, data science, information security or many others - you can find it at Citi. We're hiring for internships and full-time, primarily in Dallas.",
+            "name": "Citi Technology",
+            "image": "https://s3.amazonaws.com/symp.csm.usprod/gatech/files/96b/96b1b0ea7c6bb70c62cb2245c01f9b81_512_512.jpg",
+            "degree_levels": "Bachelors, Masters, Doctorate, Post-Doc, Non-Degree",
+            "sponsorships": "US Citizen, Permanent Resident (U.S.), EAD - Employment Authorization"
+        },
+        {
+            "day": "DAY 2 - Wednesday, January 30, 2019",
+            "positions_offered": "Professional Full Time Position, Co-op Position",
+            "overview": "CodeMettle's mission is to transform traditional silo technology management into fully business- aligned network service orchestration. At CodeMettle, you will be part of an exciting, rapidly growing team that is disrupting the network & systems management landscape and transforming network managers into fully automated, highly efficient business service orchestrators. Our clients include the largest and most complex hybrid networks in the world. In fact, most clients come to us after searching the world over and being unable to find the right solution for the most challenging requirements. You will work alongside fun and talented people with an amazing culture, focused on success of our clients, company and each and every member of our team.",
+            "name": "CodeMettle",
+            "image": "https://s3.amazonaws.com/symp.csm.usprod/gatech/files/cbc/cbce62c22de78c79935e1008d18ba659_512_512.jpg",
+            "degree_levels": "Bachelors, Non-Degree",
+            "sponsorships": "US Citizen, Permanent Resident (U.S.)"
+        },
+        {
+            "day": "DAY 3 - Thursday, January 31, 2019",
+            "positions_offered": "Professional Full Time Position, Internship Position",
+            "overview": "Comentec is a Business Integration Design Company. Comentec believes that integration starts with business processes and combines it with technology to connect enterprise systems at the speed and quality needed to make business data meaningful and actionable. Comentec is headquartered in Atlanta, Georgia and serves global customers from offices in the US and Europe.",
+            "name": "Comentec LLC",
+            "image": "https://s3.amazonaws.com/symp.csm.usprod/gatech/files/9ba/9ba19b84ecb73348ded9a27c7f946c5d_512_512.jpg",
+            "degree_levels": "Bachelors, Masters",
+            "sponsorships": "US Citizen, Permanent Resident (U.S.)"
+        },
+        {
+            "day": "DAY 3 - Thursday, January 31, 2019",
+            "positions_offered": "Internship Position",
+            "overview": "At COUNTRY Financial®, our customers' needs are the #1 priority. Whether a client needs insurance or a plan to save for retirement, we're there to help.",
+            "name": "COUNTRY Financial",
+            "image": "https://gatech-csm.symplicity.com/utils/view.php?inline=true&id=b2b7634591ef903778fbd062976b8ed8&key=eOzGfcNnZXzv4vmbx03z856UJIGRP1Y6GNxo0dJonOKV32wwrkK43gajHGM3zPT-INdPINHZDz7BON1lNKdlRQ",
+            "degree_levels": "Bachelors",
+            "sponsorships": "US Citizen"
+        },
+        {
+            "day": "DAY 3 - Thursday, January 31, 2019",
+            "positions_offered": "Professional Full Time Position, Internship Position",
+            "overview": "Cvent is a leading meetings, events, and hospitality management technology provider. The Cvent Event Cloud offers software solutions to event planners and marketers for online event registration, venue selection, event management and marketing, onsite solutions, and attendee engagement. Cvent's suite of products automate and simplify the planning process to maximize the impact of events. The Cvent Hospitality Cloud partners with hotels and venues to help them drive group and corporate travel business. Hotels use the Cvent Hospitality Cloud's digital marketing tools and software solutions to win business through Cvent's sourcing platforms and to service their customers directly, efficiently and profitably. Cvent solutions optimize the entire event management value chain.",
+            "name": "Cvent",
+            "image": "https://s3.amazonaws.com/symp.csm.usprod/gatech/files/70a/70a8bfe239067bec52ed6e7abdb87666_512_512.jpg",
+            "degree_levels": "Bachelors, Masters",
+            "sponsorships": "US Citizen"
+        },
+        {
+            "day": "Day 4 (Reschedule Day 1) Friday, February 1st",
+            "positions_offered": "Professional Full Time Position, Internship Position",
+            "overview": "DataScan is a wholly owned subsidiary of JM Family Enterprises. Just like our parent company, we believe that our Associates are the heart and soul of our company and the driving force behind our success. This is why we have been ranked by FORTUNE magazine as one of the \"100 Best Companies to Work For\" every year since 1999. DataScan's expertise spans 60 clients, more than $80 billion of loan collateral in our systems, and over 250,000 audits conducted per year. We are the leader in wholesale asset finance and risk management industry and we value that responsibility. This sense of pride is fueled through collaboration, and innovation. We love what we do at DataScan and are passionate about propelling our clients' business forward.",
+            "name": "DataScan",
+            "image": "https://s3.amazonaws.com/symp.csm.usprod/gatech/files/770/7709cdbe9eb23e7e0059de0efcd6728f_512_512.jpg",
+            "degree_levels": "Bachelors, Masters, Non-Degree",
+            "sponsorships": "US Citizen"
+        },
+        {
+            "day": "DAY 2 - Wednesday, January 30, 2019",
+            "positions_offered": "Professional Full Time Position, Internship Position, Co-op Position",
+            "overview": "At Datto, our mission is to empower the world's small and medium sized businesses with the best in enterprise-level technology. We do it by equipping our unique community of Managed Service Provider partners with the right products, tools and knowledge to allow each and every customer to succeed. It's an approach that's made us the world's leading provider of MSP delivered IT solutions. Datto is headquartered in Norwalk, CT, with offices worldwide.",
+            "name": "Datto Inc",
+            "image": "https://s3.amazonaws.com/symp.csm.usprod/gatech/files/788/7884176301f806aad865264ee0258421_512_512.jpg",
+            "degree_levels": "Bachelors",
+            "sponsorships": "US Citizen"
+        },
+        {
+            "day": "DAY 2 - Wednesday, January 30, 2019",
+            "positions_offered": "Professional Full Time Position",
+            "overview": "Daugherty Business Solutions is a management consulting firm that brings a fresh approach to professional services consulting. We roll up our sleeves and work with our clients collaborating to solve some of their most pressing business challenges. We’re practical, not pompous. We deliver results, not reports. Find out why some of the most well-known companies in the world trust us with their mission critical projects, and learn why working here satisfies the smart, the talented, and the curious.",
+            "name": "Daugherty Business Solutions",
+            "image": "https://gatech-csm.symplicity.com/utils/view.php?inline=true&id=4117dee853bc603370cef1fbc6f19ffd&key=eOzGfcNnZXzv4vmbx03z856UJIGRP1Y6GNxo0dJonOKV32wwrkK43gajHGM3zPT-INdPINHZDz7BON1lNKdlRQ",
+            "degree_levels": "Bachelors, Masters",
+            "sponsorships": "US Citizen, Permanent Resident (U.S.)"
+        },
+        {
+            "day": "DAY 3 - Thursday, January 31, 2019",
+            "positions_offered": "Professional Full Time Position, Internship Position",
+            "overview": "Dispersive's programmable networking changes how our partners deliver mission-critical solutions to their enterprise customers. Our 100% software-based network securely connects branches, IoT, devices, clouds, and applications. It allows our service provider and system integration partners to tailor and deliver vertical solutions that require secure, reliable and high performance communications to their enterprise customers. We're a team of highly intelligent, passionate and committed individuals working together to solve some of networking's biggest challenges. We work hard. We hold each other to the highest standards. We embrace big thinkers, good listeners, and strong collaborators. We hail from diverse backgrounds and all walks of life. Rather than consider this diversity a chal",
+            "name": "Dispersive Networks",
+            "image": "https://s3.amazonaws.com/symp.csm.usprod/gatech/files/864/864782cb529c817ac05429da148b2910_512_512.jpg",
+            "degree_levels": "Bachelors, Masters",
+            "sponsorships": "US Citizen"
+        },
+        {
+            "day": "DAY 2 - Wednesday, January 30, 2019",
+            "positions_offered": "Professional Full Time Position, Internship Position",
+            "overview": "We've always been obsessed with making work better for people. Back in 2007, that meant designing a simpler way to keep files in sync. Today, it means designing a more enlightened way of working-on files, projects, and more.",
+            "name": "Dropbox",
+            "image": "https://s3.amazonaws.com/symp.csm.usprod/gatech/files/874/87495babe029dfd399bf1eb0fdf2ee6a_512_512.jpg",
+            "degree_levels": "Bachelors, Masters, Doctorate",
+            "sponsorships": "US Citizen, Permanent Resident (U.S.), Student (F-1) Visa, Employment (H-1) Visa"
+        },
+        {
+            "day": "Day 4 (Reschedule Day 1) Friday, February 1st",
+            "positions_offered": "Professional Full Time Position, Internship Position",
+            "overview": "A leader in the payments industry, Elavon provides end-to-end payment processing solutions and services to more than one million merchants around the world. Elavon is an equal opportunity employer committed to creating a diverse workforce. We consider all qualified applicants without regard to race, religion, color, sex, national origin, age, sexual orientation, gender identity, disability or veteran status, among other factors. ABOUT US - https://www.elavon.com/about/company",
+            "name": "Elavon",
+            "image": "https://s3.amazonaws.com/symp.csm.usprod/gatech/files/84e/84e231243b393708d56269162ccccf3d_512_512.jpg",
+            "degree_levels": "Bachelors, Masters",
+            "sponsorships": "US Citizen, Permanent Resident (U.S.)"
+        },
+        {
+            "day": "DAY 2 - Wednesday, January 30, 2019",
+            "positions_offered": "Professional Full Time Position, Internship Position",
+            "overview": "At Esri, we bring meaning to maps. We pioneer problem solving using geographic information system (GIS) technology, and we believe The Science of Where™ can transform the world by unlocking data's full potential in every organization. Our users are creating the maps that change the world and shape our future. Headquartered in Redlands, a community ideally located in Southern California, Esri spans the globe with 11 R&D Centers and 10 US regional offices, supported by a network of partners, international distributors, and customers in 150 countries. Esri employs 4,000 people who share a passion for helping our customers succeed.",
+            "name": "Environmental Systems Research Institute, Inc. (Esri)",
+            "image": "https://s3.amazonaws.com/symp.csm.usprod/gatech/files/a60/a60292f4fa31c3dc818b6e4d33c3b56d_512_512.jpg",
+            "degree_levels": "Bachelors, Masters, Doctorate",
+            "sponsorships": "US Citizen, Permanent Resident (U.S.), EAD - Employment Authorization, Student (F-1) Visa, Employment (H-1) Visa, J-1 Visa"
+        },
+        {
+            "day": "DAY 3 - Thursday, January 31, 2019",
+            "positions_offered": "Professional Full Time Position, Internship Position, Professional Part Time Position Only",
+            "overview": "EPI-USE specialises in services and software products that address areas that are based on Enterprise Resource Planning ('ERP') systems and that are non-core, yet business-critical to large commercial enterprises and public sector agencies.",
+            "name": "EPI-USE America Inc",
+            "image": "https://s3.amazonaws.com/symp.csm.usprod/gatech/files/f24/f24dace0878117879b7f396c8124ef26_512_512.jpg",
+            "degree_levels": "Bachelors, Masters",
+            "sponsorships": "US Citizen, Permanent Resident (U.S.), EAD - Employment Authorization, Student (F-1) Visa"
+        },
+        {
+            "day": "DAY 3 - Thursday, January 31, 2019",
+            "positions_offered": "Professional Full Time Position",
+            "overview": "As a global leader in the development of software for healthcare organizations, Epic is driving change for an entire industry - one that affects the quality of life for everyone. Our team collaborates with some of the world's most respected healthcare organizations to improve both individual patient care and the health of entire communities. The challenges we tackle on a day-to-day basis impact the lives of more than 230 million patients worldwide. We're searching for smart, passionate people who want to achieve great things. If you want to be part of something truly important, consider a career at Epic.",
+            "name": "Epic",
+            "image": "https://s3.amazonaws.com/symp.csm.usprod/gatech/files/332/332a54f521c2fa9bd4e7988d145a124d_512_512.jpg",
+            "degree_levels": "Bachelors, Masters",
+            "sponsorships": "US Citizen"
+        },
+        {
+            "day": "DAY 2 - Wednesday, January 30, 2019",
+            "positions_offered": "Professional Full Time Position, Internship Position, Co-op Position, Masters, PhD, & MBA Internship/Co-op Position, Global Internship Position",
+            "overview": "Equifax is a global information solutions company that uses unique data, innovative analytics, technology and industry expertise to power organizations and individuals around the world by transforming knowledge into insights that help make more informed business and personal decisions. Headquartered in Atlanta, Ga., Equifax operates or has investments in 24 countries in North America, Central and South America, Europe and the Asia Pacific region. It is a member of Standard & Poor's (S&P) 500® Index, and its common stock is traded on the New York Stock Exchange (NYSE) under the symbol EFX. Equifax employs 10,400 employees worldwide.",
+            "name": "Equifax",
+            "image": "https://s3.amazonaws.com/symp.csm.usprod/gatech/files/df1/df15cedbd6e306f9b104cb9690f5d4af_512_512.jpg",
+            "degree_levels": "Bachelors, Masters, Doctorate",
+            "sponsorships": "US Citizen, Permanent Resident (U.S.)"
+        },
+        {
+            "day": "DAY 3 - Thursday, January 31, 2019",
+            "positions_offered": "Professional Full Time Position, Co-op Position",
+            "overview": "Eventbrite is a global platform for live experiences that allows anyone to create, share, find and attend events that fuel their passions and enrich their lives. From music festivals, marathons, conferences, community rallies, and fundraisers, to gaming competitions and air guitar contests. Our mission is to bring the world together through live experiences.",
+            "name": "Eventbrite",
+            "image": "https://s3.amazonaws.com/symp.csm.usprod/gatech/files/5a1/5a17e786e92069ef59c50e24c44ce41c_512_512.jpg",
+            "degree_levels": "Bachelors",
+            "sponsorships": "US Citizen, Permanent Resident (U.S.)"
+        },
+        {
+            "day": "DAY 2 - Wednesday, January 30, 2019",
+            "positions_offered": "Professional Full Time Position, Internship Position",
+            "overview": "eVestment, part of Nasdaq (Nasdaq: NDAQ), is the leading institutional investment database and analytics provider. BlackRock, UBS, Willis Towers Watson, Putnam and Aon are just a few of the clients who trust our cloud-based technology platforms. Our environment is fun, smart, and collaborative. Casual dress, catered weekly lunches, unlimited PTO (because we trust our people), and regular team-building activities are part of what makes our workplace successful. We provide exceptional opportunities for development with a dedicated training budget, tuition reimbursement, and time off for training and certification preparation. We've also ranked consistently on the Inc. 5000 fastest growing firms list every year since 2007, and we have almost 400 amazing team members around the globe.",
+            "name": "eVestment",
+            "image": "https://s3.amazonaws.com/symp.csm.usprod/gatech/files/8a9/8a9b564416dad1ee2bfd3708006d7e46_512_512.jpg",
+            "degree_levels": "Bachelors, Masters",
+            "sponsorships": "US Citizen, Permanent Resident (U.S.)"
+        },
+        {
+            "day": "DAY 2 - Wednesday, January 30, 2019",
+            "positions_offered": "Professional Full Time Position, Co-op Position",
+            "overview": "Expensify prides itself in solving a real world problem with a team of top notch engineers. Expense reports have long been a burden on the business world and working at Expensify means helping us automate every step of the process from the moment people incur their business expenses to the moment they get reimbursed with money in the bank (and everything in between!). Joining our team means you will be working in our fast paced environment and you are fearless of our next big challenge. Even though we work hard at Expensify, we make sure our employees are happy. Our most discussed perk is our offshore where we spend a month abroad working from a remote location as a team. This year we went to Uruguay, do you want to join?",
+            "name": "Expensify",
+            "image": "https://s3.amazonaws.com/symp.csm.usprod/gatech/files/981/9810d37bae80709de25ae4f7aeeb0d48_512_512.jpg",
+            "degree_levels": "Bachelors, Masters, Non-Degree",
+            "sponsorships": "US Citizen, Permanent Resident (U.S.), EAD - Employment Authorization, Student (F-1) Visa, Employment (H-1) Visa, J-1 Visa"
+        },
+        {
+            "day": "DAY 3 - Thursday, January 31, 2019",
+            "positions_offered": "Professional Full Time Position, Internship Position, Masters, PhD, & MBA Internship/Co-op Position",
+            "overview": "Are you interested in transforming technology that improves data-driven digital insights, enhances and extends the customer experience, and leads global commerce payment transactions? Are you interested in cloud automation and operations, software-defined infrastructure, big data, and cyber security? Come join the talented people at First Data leading the financial technology revolution. We deliver technology solutions at global scale: processing 79 Billion transactions a year at 2,500 transactions per second across 118 countries, including engagement with 47 of the top 50 Fortune 500 companies. From data centers around the world, every second of every day, we make financial interactions secure, fast, and easy for financial institutions, merchants and their customers. We have 24,000",
+            "name": "First Data Corporation",
+            "image": "https://gatech-csm.symplicity.com/utils/view.php?inline=true&id=c065a5fda839d93285889a71628e168f&key=eOzGfcNnZXzv4vmbx03z856UJIGRP1Y6GNxo0dJonOKV32wwrkK43gajHGM3zPT-INdPINHZDz7BON1lNKdlRQ",
+            "degree_levels": "Bachelors, Masters, Doctorate, Post-Doc, Special, Non-Degree",
+            "sponsorships": "US Citizen, Permanent Resident (U.S.), EAD - Employment Authorization, Student (F-1) Visa, Employment (H-1) Visa, J-1 Visa, A"
+        },
+        {
+            "day": "DAY 3 - Thursday, January 31, 2019",
+            "positions_offered": "Professional Full Time Position, Internship Position, Co-op Position, Masters, PhD, & MBA Internship/Co-op Position, Global Internship Position, Undergraduate Research Position, Professional Part Time Position Only",
+            "overview": "Fraudmarc is a Techstars & ATDC startup company, and we strongly believe in the Techstars #givefirst philosophy so we open sourced Fraudmarc CE and it is currently in use by the US Department of Homeland Security and US General Service Administration. It is important to share our expertise in email authentication and make many of our tools are available for free. We've open sourced our DMARC reports, and we provide free DMARC reports to all users.",
+            "name": "Fraudmarc",
+            "image": "https://s3.amazonaws.com/symp.csm.usprod/gatech/files/579/57926c5e5c7960cb75b060d4965f19c4_512_512.jpg",
+            "degree_levels": "Bachelors, Masters, Doctorate, Post-Doc, Special, Non-Degree",
+            "sponsorships": "US Citizen, Permanent Resident (U.S.), EAD - Employment Authorization, Student (F-1) Visa, Employment (H-1) Visa, J-1 Visa, A"
+        },
+        {
+            "day": "DAY 3 - Thursday, January 31, 2019",
+            "positions_offered": "Professional Full Time Position, Internship Position",
+            "overview": "General Dynamics Land Systems, headquartered in Sterling Heights, Michigan is a wholly-owned business unit of General Dynamics Corporation's Combat Systems group and is a global leader in the design, development, production, support and enhancement of tracked and wheeled military vehicles. GDLS provides a full spectrum of high quality, technically superior, high value products and services to the United States and its Allies and demonstrates the leadership, financial resources, technology and strength dedicated to making the Company the World's preferred supplier of land vehicles and weapons systems. Land Systems' military-vehicle platforms is the Abrams main battle tank and the family of Stryker and LAV wheeled combat vehicles.",
+            "name": "General Dynamics Land Systems",
+            "image": "https://s3.amazonaws.com/symp.csm.usprod/gatech/files/d58/d5860aa5635c1084126bad8605c6a738_512_512.jpg",
+            "degree_levels": "Bachelors, Masters, Doctorate, Post-Doc",
+            "sponsorships": "US Citizen, Permanent Resident (U.S.)"
+        },
+        {
+            "day": "DAY 3 - Thursday, January 31, 2019",
+            "positions_offered": "Professional Full Time Position, Internship Position, Co-op Position, Masters, PhD, & MBA Internship/Co-op Position",
+            "overview": "GE imagines things others don't, builds things others can't and delivers outcomes that make the world work better. GE brings together the physical and digital worlds in ways no other company can. In its labs and factories and on the ground with customers, GE is inventing the next industrial era to move, power, build and cure the world.",
+            "name": "GENERAL ELECTRIC - GE",
+            "image": "https://gatech-csm.symplicity.com/utils/view.php?inline=true&id=f484f6df2ff44c8862dcfd7553195c35&key=eOzGfcNnZXzv4vmbx03z856UJIGRP1Y6GNxo0dJonOKV32wwrkK43gajHGM3zPT-INdPINHZDz7BON1lNKdlRQ",
+            "degree_levels": "Bachelors, Masters, Doctorate",
+            "sponsorships": "US Citizen"
+        },
+        {
+            "day": "Day 4 (Reschedule Day 1) Friday, February 1st",
+            "positions_offered": "Professional Full Time Position, Internship Position, Co-op Position, Masters, PhD, & MBA Internship/Co-op Position, Undergraduate Research Position",
+            "overview": "The Georgia Tech Research Institute (GTRI) is the nonprofit, applied research division of the Georgia Institute of Technology (Georgia Tech). Founded in 1934 as the Engineering Experiment Station, GTRI has grown to more than 2,000 employees supporting eight laboratories in over 20 locations around the country, and performs more than $350 million of problem-solving research annually for government and industry. GTRI's renowned researchers combine science, engineering, economics, policy and technical expertise to solve complex problems for the U.S. federal government, state and industry. We develop highly effective, practical solutions that we put into action.",
+            "name": "Georgia Tech Research Institute (GTRI)",
+            "image": "https://s3.amazonaws.com/symp.csm.usprod/gatech/files/9cf/9cf7455842f519e836a0e80cfd616595_512_512.jpg",
+            "degree_levels": "Bachelors, Masters, Doctorate",
+            "sponsorships": "US Citizen"
+        },
+        {
+            "day": "DAY 2 - Wednesday, January 30, 2019",
+            "positions_offered": "Non-Professional Part-Time/Seasonal Only",
+            "overview": "At Goldman Sachs, our Engineers don't just make things - we make things possible. Change the world by connecting people and capital with ideas. Solve the most challenging and pressing engineering problems for our clients. Join our engineering teams that build massively scalable software and systems, architect low latency infrastructure solutions, proactively guard against cyber threats, and leverage machine learning alongside financial engineering to continuously turn data into action. Create new businesses, transform finance, and explore a world of opportunity at the speed of markets.",
+            "name": "Goldman Sachs",
+            "image": "https://s3.amazonaws.com/symp.csm.usprod/gatech/files/2d9/2d9b0e6783daa4a972350cfaa4c02856_512_512.jpg",
+            "degree_levels": "Bachelors",
+            "sponsorships": "US Citizen, Permanent Resident (U.S.), Student (F-1) Visa, Employment (H-1) Visa"
+        },
+        {
+            "day": "DAY 3 - Thursday, January 31, 2019",
+            "positions_offered": "Professional Full Time Position, Internship Position, Co-op Position",
+            "overview": "GRAIL is a healthcare company whose mission is to detect cancer early, when it can be cured. GRAIL is using the power of high-intensity sequencing, population-scale clinical studies, and state-of-the-art computer science and data science to enhance the scientific understanding of cancer biology, and to develop and commercialize pioneering products for the early detection of cancer. The company is located in Menlo Park, California and Hong Kong. It is supported by leading global investors and pharmaceutical, technology, and healthcare companies. For more information, please visit www.grail.com.",
+            "name": "GRAIL",
+            "image": "https://s3.amazonaws.com/symp.csm.usprod/gatech/files/d2d/d2d91f56cf00c1068d8b80faf385abd8_512_512.jpg",
+            "degree_levels": "Bachelors, Masters, Doctorate",
+            "sponsorships": "US Citizen, Permanent Resident (U.S.), EAD - Employment Authorization, Student (F-1) Visa, Employment (H-1) Visa, J-1 Visa, A"
+        },
+        {
+            "day": "DAY 2 - Wednesday, January 30, 2019",
+            "positions_offered": "Professional Full Time Position, Internship Position, Masters, PhD, & MBA Internship/Co-op Position, Professional Part Time Position Only",
+            "overview": "Want to experience working at a startup? The Advanced Technology Development Center (ATDC), a program of the Georgia Institute of Technology, is the State of Georgia's technology startup incubator. ATDC's mission is to work with entrepreneurs in Georgia to help them learn, launch, scale, and succeed in the creation of viable, disruptive technology companies. Founded in 1980, ATDC is the one of the longest running and most successful university-affiliated incubators in the United States. ATDC has fostered innovation and economic development in Georgia by graduating more than 170 companies from its rigorous ATDC Signature program. Collectively, those ATDC graduates have raised more than $2 billion in investment financing and generated more than $12 billion in revenue in the State of Georgia.",
+            "name": "GT's Advanced Technology Development Center",
+            "image": "https://s3.amazonaws.com/symp.csm.usprod/gatech/files/a5b/a5b6a75199b0bc0305b5b7416c5afc6d_512_512.jpg",
+            "degree_levels": "Bachelors, Masters, Doctorate",
+            "sponsorships": "US Citizen, Permanent Resident (U.S.), Student (F-1) Visa, Employment (H-1) Visa, J-1 Visa"
+        },
+        {
+            "day": "Day 4 (Reschedule Day 1) Friday, February 1st",
+            "positions_offered": "Professional Full Time Position, Internship Position",
+            "overview": "Hi-Rez Studios was established in 2005 to create exceptional online interactive entertainment and is now one of the largest video game studios in the Southeast United States. Our games include the squad-based shooter Global Agenda, the critically acclaimed Tribes: Ascend, and SMITE, the Battleground of the Gods. Our studio is a spacious development facility just outside of Atlanta, Ga., in the northern suburb of Alpharetta. Our talented development team consists of industry-proven concept, character, environment, and technical artists, animators, designers, and programmers.",
+            "name": "Hi-Rez Studios",
+            "image": "https://s3.amazonaws.com/symp.csm.usprod/gatech/files/18a/18af0c4b49e959dec9725fda36cf6207_512_512.jpg",
+            "degree_levels": "Bachelors, Masters",
+            "sponsorships": "US Citizen, Permanent Resident (U.S.), EAD - Employment Authorization, Student (F-1) Visa"
+        },
+        {
+            "day": "DAY 2 - Wednesday, January 30, 2019",
+            "positions_offered": "Professional Full Time Position",
+            "overview": "Honeywell is a Fortune 100 software-industrial company that delivers industry specific solutions that include aerospace and automotive products and services; control technologies for buildings, homes, and industry; and performance materials globally. Our technologies help everything from aircraft, cars, homes and buildings, manufacturing plants, supply chains, and workers become more connected to make our world smarter, safer, and more sustainable.",
+            "name": "Honeywell",
+            "image": "https://s3.amazonaws.com/symp.csm.usprod/gatech/files/21f/21f9c130b5576470a3eabad251d24c37_512_512.jpg",
+            "degree_levels": "Bachelors, Masters",
+            "sponsorships": "US Citizen"
+        },
+        {
+            "day": "DAY 2 - Wednesday, January 30, 2019",
+            "positions_offered": "Professional Full Time Position, Internship Position",
+            "overview": "Hughes Network Systems, LLC (Hughes) is the global leader in satellite broadband solutions and services, and a leading provider of managed network services and applications. HughesNet® is the #1 high-speed satellite Internet service in the marketplace with over 900,000 subscribers in North America and offerings to suit every budget. Hughes has shipped more than 4 million systems to customers in over 100 countries, representing approximately 50 percent market share. Headquartered outside Washington, D.C., in Germantown, Maryland, USA, Hughes operates sales and support offices worldwide, and is a wholly owned subsidiary of EchoStar Corporation (NASDAQ: SATS), a premier global provider of satellite operations and digital TV solutions. For additional information about Hughes, www.hughes.com",
+            "name": "Hughes Network Systems",
+            "image": "https://s3.amazonaws.com/symp.csm.usprod/gatech/files/0ad/0ad36bacfe0798ac837db120d80328cd_512_512.jpg",
+            "degree_levels": "Bachelors, Masters",
+            "sponsorships": "US Citizen, Permanent Resident (U.S.), EAD - Employment Authorization, Student (F-1) Visa"
+        },
+        {
+            "day": "DAY 2 - Wednesday, January 30, 2019",
+            "positions_offered": "Professional Full Time Position, Internship Position",
+            "overview": "At IBM, work is more than a job-it's a calling. To build. To design. To code. To consult. To think along with clients and sell. To make markets. To invent. To collaborate. Not just to do something better, but to attempt things you've never thought possible. To lead in this new era of technology and solve some of the world's most challenging problems. Let's put smart to work.",
+            "name": "IBM",
+            "image": "https://gatech-csm.symplicity.com/utils/view.php?inline=true&id=72fea4659ccb44b0928d91f0a933713c&key=eOzGfcNnZXzv4vmbx03z856UJIGRP1Y6YLKr3yC_oVKV32wwrkK43gajHGM3zPT-INdPINHZDz7BON1lNKdlRQ",
+            "degree_levels": "Bachelors, Masters, Doctorate",
+            "sponsorships": "US Citizen"
+        },
+        {
+            "day": "Day 4 (Reschedule Day 1) Friday, February 1st",
+            "positions_offered": "Professional Full Time Position, Co-op Position",
+            "overview": "Itential simplifies and automates the journey toward the Modern Network. Our Intelligent Network Automation solution bridges the gap between IT and networking teams, enabling users to easily build, execute and visualize Network Intelligent Workflows. Our low-code environment provides a vendor agnostic, turnkey solution to our customers. Itential's solutions leverage the latest thinking, open standards, open architectures, partners and best practices to drive network operations and maximize the impact of automation. Companies worldwide from Fortune 500 telecommunications and financial services companies to enterprises of all sizes, trust Itential to mitigate risk, automate operations, accelerate change and fuel their journey toward the Modern Network. Learn more at www.itential.com",
+            "name": "Itential",
+            "image": "https://s3.amazonaws.com/symp.csm.usprod/gatech/files/39d/39d879c2e13ec4de78151bd3b1001277_512_512.jpg",
+            "degree_levels": "Bachelors, Masters, Doctorate",
+            "sponsorships": "US Citizen, Permanent Resident (U.S.), EAD - Employment Authorization, Student (F-1) Visa, Employment (H-1) Visa, J-1 Visa"
+        },
+        {
+            "day": "DAY 2 - Wednesday, January 30, 2019",
+            "positions_offered": "Internship Position",
+            "overview": "Jabil is a product solutions company headquartered in St. Petersburg, FL which provides comprehensive design, manufacturing, supply chain and product management services. Operating from over 100 facilities in 29 countries, Jabil delivers innovative, integrated and tailored solutions to customers across a broad range of industries and end-markets, such as automotive, consumer lifestyle and wearable tech, defense and aerospace, connected home and building, industrial and energy, enterprise and infrastructure, healthcare, mobility, packaging and printing. Jabil reported $22.1 billion in revenue in fiscal year 2018 and is the world's third largest electronic manufacturing services provider. For more information, visit: http://www.jabil.com",
+            "name": "Jabil",
+            "image": "https://gatech-csm.symplicity.com/utils/view.php?inline=true&id=1f64a09eed53a423c8d9e13ee85fd377&key=eOzGfcNnZXzv4vmbx03z856UJIGRP1Y6YLKr3yC_oVKV32wwrkK43gajHGM3zPT-INdPINHZDz7BON1lNKdlRQ",
+            "degree_levels": "Bachelors",
+            "sponsorships": "US Citizen, Permanent Resident (U.S.)"
+        },
+        {
+            "day": "DAY 3 - Thursday, January 31, 2019",
+            "positions_offered": "Professional Full Time Position, Co-op Position",
+            "overview": "Of all the companies out there, why choose JDA? Great question. JDA is a great place to work because we are a proven, passionate bunch of game-changers, and our culture is based on collaboration, respect, and work-life balance. Our people are super smart, creative, supply chain and retail rock stars with 400 patents and 10,000 people years of expertise. We understand that innovation doesn't happen overnight. In fact, we've invested more than 30 years in it. That's why more than 4,000 of the largest retailers, manufacturers, and logistics companies around the globe run JDA!",
+            "name": "JDA Software",
+            "image": "https://s3.amazonaws.com/symp.csm.usprod/gatech/files/9fd/9fda80b22122bd309f84252a5a06724d_512_512.jpg",
+            "degree_levels": "Bachelors",
+            "sponsorships": "US Citizen, Permanent Resident (U.S.), EAD - Employment Authorization, Student (F-1) Visa, Employment (H-1) Visa"
+        },
+        {
+            "day": "DAY 3 - Thursday, January 31, 2019",
+            "positions_offered": "Internship Position, Co-op Position",
+            "overview": "Caring for the world, one person at a time has inspired and united the people of Johnson & Johnson for over 130 years. We embrace research and science -- bringing innovative ideas, products and services to advance the health and well-being of people. With $76.5 billion in 2017 sales, Johnson & Johnson is the world's most comprehensive and broadly based manufacturer of health care products, as well as a provider of related services, for the consumer, pharmaceutical, and medical devices markets. There are more than 250 Johnson & Johnson operating companies employing over 125,000 people and with products touching the lives of over a billion people every day, worldwide. If you have the talent and desire to touch the world, Johnson & Johnson has the career opportunities to help make it happen",
+            "name": "Johnson & Johnson",
+            "image": "https://s3.amazonaws.com/symp.csm.usprod/gatech/files/8cf/8cf0b1ec3874a1dc36c7d35d983da75b_512_512.jpg",
+            "degree_levels": "Bachelors",
+            "sponsorships": "US Citizen, Permanent Resident (U.S.)"
+        },
+        {
+            "day": "DAY 2 - Wednesday, January 30, 2019",
+            "positions_offered": "Professional Full Time Position, Internship Position, Co-op Position",
+            "overview": "Keysight Technologies has the broadest range of products in the industry to accelerate deployment of your new technologies. Keysight reflects our rich heritage - a direct line from both Hewlett-Packard's standards of integrity and innovation and Agilent's premier measurement business. The name Keysight conveys the ability to see what others cannot, offering the critical or key insight to understand and unlock the changing technology landscape.",
+            "name": "Keysigh Technologies",
+            "image": "https://s3.amazonaws.com/symp.csm.usprod/gatech/files/7ca/7ca0655806316d80d385941f80e86988_512_512.jpg",
+            "degree_levels": "Bachelors, Masters, Doctorate",
+            "sponsorships": "US Citizen, Permanent Resident (U.S.), EAD - Employment Authorization, Student (F-1) Visa, Employment (H-1) Visa"
+        },
+        {
+            "day": "DAY 3 - Thursday, January 31, 2019",
+            "positions_offered": "Professional Full Time Position, Internship Position",
+            "overview": "KPMG is a global network of professional firms providing Audit, Tax, and Advisory services. Our purpose is to turn knowledge into value for the benefit of our clients, our people, and the capital markets. Our member firms aim to provide clients with a globally consistent set of multidisciplinary financial and accounting services based on deep industry knowledge. With a strong growth record over the past decade, KPMG member firms offer their clients the scale, global reach, industry insight, and multidisciplinary range of services they require. In the United States, KPMG partners and professionals provide a wide range of Audit, Tax, and Advisory services, working from offices covering clients in all 50 states.",
+            "name": "KPMG LLP",
+            "image": "https://s3.amazonaws.com/symp.csm.usprod/gatech/files/a0e/a0e0236336ec25e92e6f44c2a2cc3682_512_512.jpg",
+            "degree_levels": "Bachelors, Masters",
+            "sponsorships": "US Citizen, Permanent Resident (U.S.)"
+        },
+        {
+            "day": "DAY 2 - Wednesday, January 30, 2019",
+            "positions_offered": "Professional Full Time Position",
+            "overview": "KS2 Technologies, Inc. provides consulting, development, and implementation services and is a leading IBM Solution Provider of information technology products. At KS2, we combine our skills and experience with products from industry leaders to provide solutions that add value to your business. While products, systems, and technologies change, we continue to deliver solutions that solve business problems and deliver exceptional results. KS2's software offerings include consulting and solutions on the hybrid cloud, middleware, and mobile platforms, complete with specialized platform support. With our key services, all projects will have a properly defined budget, communicate expectations clearly, require sign-offs at all critical stages in the project, and meet your timeline.",
+            "name": "KS2 Technologies, Inc.",
+            "image": "https://s3.amazonaws.com/symp.csm.usprod/gatech/files/d0e/d0edff06dd59ee5d2ec4bdbf0ce31c4b_512_512.jpg",
+            "degree_levels": "Bachelors",
+            "sponsorships": "US Citizen, Permanent Resident (U.S.), EAD - Employment Authorization"
+        },
+        {
+            "day": "Day 4 (Reschedule Day 1) Friday, February 1st",
+            "positions_offered": "Professional Full Time Position, Internship Position",
+            "overview": "We Are an Industry Leader LexisNexis Risk Solutions is the trusted data analytics provider for organizations seeking actionable insights to manage risks and improve results. We deliver targeted solutions that empower well-informed decisions while upholding the highest standards for security and privacy. We Value Our People People are our most valuable asset, and drive the innovation that fuels our success. Headquartered in metro Atlanta, Georgia, LexisNexis Risk Solutions has 4,764 full-time employees in offices around the world.* LexisNexis Risk Solutions is part of RELX Group, a global provider of information and analytics solutions. Since 2000, LexisNexis Risk Solutions has scaled through innovation and growth in core businesses, and expansion into attractive",
+            "name": "LexisNexis RIsk Solutions",
+            "image": "https://s3.amazonaws.com/symp.csm.usprod/gatech/files/8b7/8b79fb303434306e775d9a21cfb88dbe_512_512.jpg",
+            "degree_levels": "Bachelors, Masters",
+            "sponsorships": "US Citizen, Permanent Resident (U.S.), EAD - Employment Authorization, Student (F-1) Visa, Employment (H-1) Visa, J-1 Visa, A"
+        },
+        {
+            "day": "DAY 2 - Wednesday, January 30, 2019",
+            "positions_offered": "Professional Full Time Position, Internship Position",
+            "overview": "Headquartered in Bethesda, Maryland, Lockheed Martin is a global security and aerospace company that employs approximately 100,000 people worldwide and is principally engaged in the research, design, development, manufacture, integration and sustainment of advanced technology systems, products and services. This year we received three Edison Awards for ground-breaking innovations in autonomy, satellite technology and directed energy.",
+            "name": "Lockheed Martin",
+            "image": "https://s3.amazonaws.com/symp.csm.usprod/gatech/files/c8d/c8db4518261b9b277c38ff57168c667d_512_512.jpg",
+            "degree_levels": "Bachelors, Masters",
+            "sponsorships": "US Citizen"
+        },
+        {
+            "day": "DAY 2 - Wednesday, January 30, 2019",
+            "positions_offered": "Professional Full Time Position, Internship Position, Co-op Position, Masters, PhD, & MBA Internship/Co-op Position",
+            "overview": "Lutron Electronics designs and manufactures energy-saving light controls and automated window treatments for residential and commercial applications. Its innovative, intuitive products and software can be used to control everything from a single light, to every light, shade and even stand-by power in a home or commercial building. Lutron estimates that the installed base of its products saves the nation nearly 10 billion kWh of electricity, or approximately $1 billion in utility costs per year.",
+            "name": "Lutron Electronics",
+            "image": "https://s3.amazonaws.com/symp.csm.usprod/gatech/files/9e3/9e37bda8c1ce8c7865c3d06fc9435d3d_512_512.jpg",
+            "degree_levels": "Bachelors, Masters",
+            "sponsorships": "US Citizen, Permanent Resident (U.S.)"
+        },
+        {
+            "day": "DAY 2 - Wednesday, January 30, 2019",
+            "positions_offered": "Professional Full Time Position, Internship Position",
+            "overview": "Macy's Inc. is one of the nation's premier retailers. With fiscal 2017 sales of $24.8 billion and approximately 140,000 employees, the company operates more than 700 department stores under the nameplates Macy's and Bloomingdale's, and approximately 125 specialty stores that include Bloomingdale's The Outlet, Bluemercury and Macy's Backstage. Macy's, Inc. operates stores in 45 states, the District of Columbia, Guam and Puerto Rico, as well as macys.com, bloomingdales.com and bluemercury.com. Bloomingdale's stores in Dubai and Kuwait are operated by Al Tayer. Macy's Technology is the technology hub of Macy's. Combining the entrepreneurial thinking of a start-up with the stability of an iconic national brand, Macy's Technology supports innovation and encourages hands-on learning.",
+            "name": "Macy's Inc",
+            "image": "https://gatech-csm.symplicity.com/utils/view.php?inline=true&id=b358c8163a397c5d71099a22f957b523&key=eOzGfcNnZXzv4vmbx03z856UJIGRP1Y6YLKr3yC_oVKV32wwrkK43gajHGM3zPT-INdPINHZDz7BON1lNKdlRQ",
+            "degree_levels": "Bachelors",
+            "sponsorships": "US Citizen, Permanent Resident (U.S.), EAD - Employment Authorization, Student (F-1) Visa, Employment (H-1) Visa"
+        },
+        {
+            "day": "Day 4 (Reschedule Day 1) Friday, February 1st",
+            "positions_offered": "Professional Full Time Position, Internship Position, Co-op Position",
+            "overview": "Manhattan designs, builds and delivers market-leading Supply Chain Commerce solutions for its customers around the world. We help drive the commerce revolution with unmatched insight and unrivaled technology, connecting front-end revenue and relationships with back-end execution and efficiency-optimized on a common technology platform. This platform-based approach is enabling leading companies across the globe to get closer to their customers and achieve real-world results.",
+            "name": "Manhattan Associates",
+            "image": "https://s3.amazonaws.com/symp.csm.usprod/gatech/files/f69/f6913675eec560eb143be223e96e0c8a_512_512.jpg",
+            "degree_levels": "Bachelors",
+            "sponsorships": "US Citizen, Permanent Resident (U.S.)"
+        },
+        {
+            "day": "DAY 3 - Thursday, January 31, 2019",
+            "positions_offered": "Co-op Position",
+            "overview": "For 25 years, we've made it our business to use technology to create some of the most popular ways for people flirt, date, and find love. Now, we're looking for someone just as passionate to join us in those endeavors.",
+            "name": "Match Group",
+            "image": "https://s3.amazonaws.com/symp.csm.usprod/gatech/files/01e/01efd072a57d7982fe84b833d994ade1_512_512.jpg",
+            "degree_levels": "Bachelors, Masters",
+            "sponsorships": "US Citizen, Permanent Resident (U.S.), EAD - Employment Authorization, Student (F-1) Visa, Employment (H-1) Visa, J-1 Visa"
+        },
+        {
+            "day": "DAY 3 - Thursday, January 31, 2019",
+            "positions_offered": "Internship Position, Masters, PhD, & MBA Internship/Co-op Position",
+            "overview": "McKesson is the oldest and largest healthcare company in the nation, serving more than 50% of U.S. hospitals and 20% of physicians. We deliver one-third of all medications used daily in North America with operations in more than 16 countries.",
+            "name": "McKesson Corporation",
+            "image": "https://s3.amazonaws.com/symp.csm.usprod/gatech/files/337/33760b35138c3237c283bb8975ec8068_512_512.jpg",
+            "degree_levels": "Bachelors, Masters",
+            "sponsorships": "US Citizen"
+        },
+        {
+            "day": "DAY 2 - Wednesday, January 30, 2019",
+            "positions_offered": "Professional Full Time Position, Internship Position, Co-op Position, Masters, PhD, & MBA Internship/Co-op Position, Global Internship Position, Undergraduate Research Position, Professional Part Time Position Only, Non-Professional Part-Time/Seasonal Only",
+            "overview": "At Memorial Sloan Kettering (MSK), we're not only changing the way we treat cancer, but also the way the world thinks about it. By working together and pushing forward with innovation and discovery, we're driving excellence and improving outcomes. For the 27th year, MSK has been named a top hospital for cancer by U.S. News & World Report. We are proud to be on Becker's Healthcare list as one of the 150 Great Places to Work in Healthcare in 2016, as well as Glassdoor's annual Employees' Choice Awards 2017. We're treating cancer, one patient at a time. Join us and make a difference every day.",
+            "name": "Memorial Sloan Kettering Cancer Center",
+            "image": "https://s3.amazonaws.com/symp.csm.usprod/gatech/files/3d9/3d93675db5188a8ccced50b66085e023_512_512.jpg",
+            "degree_levels": "Bachelors, Masters, Doctorate, Post-Doc, Special, Non-Degree",
+            "sponsorships": "US Citizen, Permanent Resident (U.S.)"
+        },
+        {
+            "day": "DAY 3 - Thursday, January 31, 2019",
+            "positions_offered": "Professional Full Time Position, Internship Position",
+            "overview": "MessageGears is the first email marketing solution of its kind. By combining the power and security of on-premises software with the efficiency and scalability of cloud delivery, we enable marketers to capitalize on every email. We're not interested in simply being another email service provider - we're disrupting an industry by providing a solution that gives marketers complete control over their multi-channel programs through advanced tech.",
+            "name": "MessageGears",
+            "image": "https://s3.amazonaws.com/symp.csm.usprod/gatech/files/216/2161eae83b479e95eb9d66c397c29345_512_512.jpg",
+            "degree_levels": "Bachelors, Masters",
+            "sponsorships": "US Citizen, Permanent Resident (U.S.)"
+        },
+        {
+            "day": "Day 4 (Reschedule Day 1) Friday, February 1st",
+            "positions_offered": "Professional Full Time Position, Internship Position",
+            "overview": "NCR Corporation (NYSE: NCR) is the global leader in consumer transaction technologies, turning everyday interactions with businesses into exceptional experiences. With its software, hardware, and portfolio of services, NCR enables nearly 700 million transactions daily across retail, financial, travel, hospitality, telecom and technology, and small business. NCR solutions run the everyday transactions that make your life easier.",
+            "name": "NCR",
+            "image": "https://s3.amazonaws.com/symp.csm.usprod/gatech/files/54a/54a721b43df01a2fd703a42d02451bbb_512_512.jpg",
+            "degree_levels": "Bachelors, Masters",
+            "sponsorships": "US Citizen, Permanent Resident (U.S.), EAD - Employment Authorization, Student (F-1) Visa"
+        },
+        {
+            "day": "Day 4 (Reschedule Day 1) Friday, February 1st",
+            "positions_offered": "Professional Full Time Position, Co-op Position",
+            "overview": "Nead Werx is a full service software firm specializing in the development of cloud-based enterprise applications. We focus on database driven web applications that integrate natively with your existing infrastructure and business processes. Founded in 1999, Nead Werx serves more than 50 clients in three countries.",
+            "name": "NEAD WERX",
+            "image": "https://s3.amazonaws.com/symp.csm.usprod/gatech/files/6c6/6c63995327b5330461d5f0a400f4b88c_512_512.jpg",
+            "degree_levels": "Bachelors, Masters",
+            "sponsorships": "US Citizen, Permanent Resident (U.S.)"
+        },
+        {
+            "day": "DAY 3 - Thursday, January 31, 2019",
+            "positions_offered": "Professional Full Time Position",
+            "overview": "Nexidia has applied years of research and development to deliver a comprehensive range of solutions for audio and video search. Nexidia works with some of the world's largest organizations across a number of industries including: communications, healthcare, financial services, media and entertainment companies, government agencies, and legal firms to help them harness the insights discoverable in audio and video content. As a big data technology company, Nexidia makes Interaction Analytics affordable, scaleable, consumable, and economically valuable.",
+            "name": "Nexidia, Inc.",
+            "image": "https://s3.amazonaws.com/symp.csm.usprod/gatech/files/0cc/0cc79826c2995f2816a2807016357d2f_512_512.jpg",
+            "degree_levels": "Bachelors, Masters, Doctorate",
+            "sponsorships": "US Citizen, Permanent Resident (U.S.)"
+        },
+        {
+            "day": "DAY 2 - Wednesday, January 30, 2019",
+            "positions_offered": "Professional Full Time Position, Internship Position, Co-op Position",
+            "overview": "Headquartered in New York City, Next Jump is changing the world by changing the workplace culture. Next Jump funds its mission through its e-commerce platform Perks at Work, which serves over 40 million of Fortune 1000 employees with exclusive offers and products from over 30k merchants. Next Jump has created \"OS for Workplace Culture\" - a free suite of Culture Applications that let companies hire, retain and grow their employees. Next Jump has offices in New York City, Boston, San Francisco and London. For more information visits us at www.nextjump.com.",
+            "name": "Next Jump",
+            "image": "https://gatech-csm.symplicity.com/utils/view.php?inline=true&id=0261f7ad81ecb004a41b6ab4a9e991f2&key=eOzGfcNnZXzv4vmbx03z856UJIGRP1Y6qk2s8-BzYOSV32wwrkK43gajHGM3zPT-INdPINHZDz7BON1lNKdlRQ",
+            "degree_levels": "Bachelors, Masters, Doctorate, Post-Doc, Special, Non-Degree",
+            "sponsorships": "US Citizen, Permanent Resident (U.S.), EAD - Employment Authorization, Student (F-1) Visa, Employment (H-1) Visa, J-1 Visa, A"
+        },
+        {
+            "day": "DAY 2 - Wednesday, January 30, 2019",
+            "positions_offered": "Professional Full Time Position, Internship Position",
+            "overview": "The Company Nextech is the complete healthcare technology solution for specialty providers. Since 1997, Nextech has been focused on delivering intelligent, intuitive, integrated solutions that empower specialty physicians to maximize efficiency, optimize charting accuracy and increase overall practice profitability. Nextech services more than 7,000 physicians and over 50,000 office staff members in the clinical specialties of Ophthalmology, Dermatology and Plastic Surgery.Nextech understands each physician has specific needs that must be fulfilled by their EMR vendor in order to meet and exceed the demands of their patients and the general healthcare industry. That is why Nextech continues to evolve it's product with the thoughtful and strategic input of specialty physicians. Nextech's",
+            "name": "Nextech",
+            "image": "https://s3.amazonaws.com/symp.csm.usprod/gatech/files/a92/a92892ca1c9dcc25b637cbfc3d7cc8e1_512_512.jpg",
+            "degree_levels": "Bachelors, Masters, Doctorate, Post-Doc, Special, Non-Degree",
+            "sponsorships": "US Citizen"
+        },
+        {
+            "day": "Day 4 (Reschedule Day 1) Friday, February 1st",
+            "positions_offered": "Professional Full Time Position, Internship Position, Co-op Position",
+            "overview": "Norfolk Southern Corporation (NYSE: NSC) is one of the nation's premier transportation companies. Its Norfolk Southern Railway Company subsidiary operates approximately 19,500 route miles in 22 states and the District of Columbia, serves every major container port in the eastern United States, and provides efficient connections to other rail carriers. Norfolk Southern operates the most extensive intermodal network in the East and is a major transporter of coal, automotive, and industrial products. We are a team of more than 28,000 employees working together to maintain our reputation as \"The Thoroughbred of Transportation\". As an industry leader, Norfolk Southern offers a competitive salary and an excellent benefits package.",
+            "name": "Norfolk Southern",
+            "image": "https://s3.amazonaws.com/symp.csm.usprod/gatech/files/7f2/7f2786a1defd7b2fd99b3a9fc4e1cc2f_512_512.jpg",
+            "degree_levels": "Bachelors, Masters",
+            "sponsorships": "US Citizen, Permanent Resident (U.S.)"
+        },
+        {
+            "day": "DAY 3 - Thursday, January 31, 2019",
+            "positions_offered": "Professional Full Time Position, Internship Position, Masters, PhD, & MBA Internship/Co-op Position",
+            "overview": "Nutanix makes infrastructure invisible, elevating IT to focus on the applications and services that power their business. The Nutanix enterprise cloud platform leverages web-scale engineering and consumer-grade design to natively converge compute, virtualization and storage into a resilient, software-defined solution with rich machine intelligence. The result is predictable performance, cloud-like infrastructure consumption, robust security, and seamless application mobility for a broad range of enterprise applications.",
+            "name": "Nutanix",
+            "image": "https://s3.amazonaws.com/symp.csm.usprod/gatech/files/6e1/6e1b4798a9ce104517de8ecbf25a79f4_512_512.jpg",
+            "degree_levels": "Bachelors, Masters, Doctorate",
+            "sponsorships": "US Citizen, Permanent Resident (U.S.), EAD - Employment Authorization, Student (F-1) Visa, Employment (H-1) Visa, J-1 Visa, A"
+        },
+        {
+            "day": "DAY 3 - Thursday, January 31, 2019",
+            "positions_offered": "Professional Full Time Position",
+            "overview": "OM Partners is a leading provider of Supply Chain Planning software with customers in many types of industries all over the world. Our supply chain planning software solves questions related to Network Design, Product Portfolio, Sales & Operations Planning (S&OP), Demand Planning and Forecasting, Master Planning, Distribution Planning, Order Booking and Order Promising, Manufacturing or Production Scheduling and Supply Scheduling, Load Planning, Transport Scheduling, Multi-Echelon Inventory Optimization (MEIO) and Demand Driven Material Requirements Planning (DDMRP).",
+            "name": "OM Partners",
+            "image": "https://s3.amazonaws.com/symp.csm.usprod/gatech/files/97d/97d6a0fa29ce2e928f9dd3ca6783076f_512_512.jpg",
+            "degree_levels": "Bachelors, Masters",
+            "sponsorships": "US Citizen, Permanent Resident (U.S.), EAD - Employment Authorization"
+        },
+        {
+            "day": "Day 4 (Reschedule Day 1) Friday, February 1st",
+            "positions_offered": "Professional Full Time Position, Internship Position",
+            "overview": "OneTrust is the largest and most widely used dedicated privacy management technology platform used by more than 1,700 customers to comply with data privacy regulations across sectors and jurisdictions, including the EU GDPR, ePrivacy (Cookie Law), California Consumer Privacy Act (CCPA) and more. OneTrust is co-headquartered in Atlanta, GA and in London, UK, and has additional offices in Bangalore, Melbourne, Munich and Hong Kong. Our fast-growing team of privacy and technology experts surpasses 500 employees worldwide. Backed and co-chaired by the founders of Manhattan Associates (NASDAQ: MANH) and AirWatch ($1.54B acq. by VMware), the OneTrust leadership team has experience building scalable, enterprise software platforms.",
+            "name": "OneTrust",
+            "image": "https://s3.amazonaws.com/symp.csm.usprod/gatech/files/4e8/4e82ddc1206eeb4dfe856abebfbd1cda_512_512.jpg",
+            "degree_levels": "Bachelors, Masters",
+            "sponsorships": "US Citizen, Permanent Resident (U.S.), EAD - Employment Authorization, Student (F-1) Visa, Employment (H-1) Visa"
+        },
+        {
+            "day": "DAY 2 - Wednesday, January 30, 2019",
+            "positions_offered": "Professional Full Time Position, Internship Position, Masters, PhD, & MBA Internship/Co-op Position",
+            "overview": "OnScale is an early-stage enterprise engineering software company with offices in Atlanta, Silicon Valley, and Scotland. We market a proprietary multiphysics computer-aided engineering (CAE) platform that runs on Amazon Web Services (AWS) to provide engineers in a broad range of fields access to supercomputing resources for their most difficult engineering problems.",
+            "name": "OnScale",
+            "image": "https://s3.amazonaws.com/symp.csm.usprod/gatech/files/6be/6be5b43a09018f46e0f85982bbffb3d6_512_512.jpg",
+            "degree_levels": "Bachelors, Masters, Doctorate, Post-Doc, Special, Non-Degree",
+            "sponsorships": "US Citizen, Permanent Resident (U.S.), EAD - Employment Authorization, Student (F-1) Visa, Employment (H-1) Visa, J-1 Visa, A"
+        },
+        {
+            "day": "Day 4 (Reschedule Day 1) Friday, February 1st",
+            "positions_offered": "Professional Full Time Position, Internship Position",
+            "overview": "Our mission is to empower everyone with the freedom to move, and we've served nearly 20,000 customers who have come to Opendoor to make that move easier. Whether it's getting married, starting a family, or taking a new job, we help people get to their next step in one simple, seamless transaction.",
+            "name": "Opendoor",
+            "image": "https://s3.amazonaws.com/symp.csm.usprod/gatech/files/0c7/0c73a88a040bd02ca99ac2dc1a3c83d1_512_512.jpg",
+            "degree_levels": "Bachelors, Masters, Doctorate",
+            "sponsorships": "US Citizen, Permanent Resident (U.S.), EAD - Employment Authorization, Student (F-1) Visa, Employment (H-1) Visa"
+        },
+        {
+            "day": "DAY 3 - Thursday, January 31, 2019",
+            "positions_offered": "Professional Full Time Position, Internship Position",
+            "overview": "The Oracle Cloud offers complete SaaS application suites for ERP, HCM and CX, plus best-in-class database Platform as a Service (PaaS) and Infrastructure as a Service (IaaS) from data centers throughout the Americas, Europe and Asia. For more information about Oracle (NYSE:ORCL), please visit us at oracle.com.",
+            "name": "Oracle Corporation",
+            "image": "https://s3.amazonaws.com/symp.csm.usprod/gatech/files/869/8696611577fd5aea37e01a0938e14b8f_512_512.jpg",
+            "degree_levels": "Bachelors, Masters, Doctorate",
+            "sponsorships": "US Citizen, Permanent Resident (U.S.), EAD - Employment Authorization, Student (F-1) Visa, Employment (H-1) Visa"
+        },
+        {
+            "day": "DAY 3 - Thursday, January 31, 2019",
+            "positions_offered": "Professional Full Time Position, Internship Position, Co-op Position",
+            "overview": "OSIsoft has established itself as the Global Leader in Operational Intelligence. We provide an open infrastructure to connect sensor-based data, operations and people to enable real-time intelligence. Our flagship product, the PI System, enables businesses to capture and leverage sensor-based data across the enterprise to improve efficiency, sustainability, quality and safety. OSIsoft is not your typical software company; we differentiate ourselves through product, culture, and people.",
+            "name": "OSIsoft",
+            "image": "https://s3.amazonaws.com/symp.csm.usprod/gatech/files/b72/b7233c69f014cbbe9e1dbc379193a03b_512_512.jpg",
+            "degree_levels": "Bachelors, Masters",
+            "sponsorships": "US Citizen, Permanent Resident (U.S.), EAD - Employment Authorization"
+        },
+        {
+            "day": "Day 4 (Reschedule Day 1) Friday, February 1st",
+            "positions_offered": "Professional Full Time Position, Internship Position",
+            "overview": "ParkMobile is the leading provider of parking solutions in the US, helping millions of people easily find and pay for parking on their mobile device. People can use ParkMobile solutions to quickly pay for on-street and garage parking without having to use a meter or kiosk. Additionally, ParkMobile offers parking reservations at stadium venues for concerts and sporting events. Reservations are also available in metro areas, allowing people to drive into the city without having to worry about finding parking.",
+            "name": "ParkMobile, LLC",
+            "image": "https://s3.amazonaws.com/symp.csm.usprod/gatech/files/a8b/a8b730388f1f259844da352abe09c89e_512_512.jpg",
+            "degree_levels": "Bachelors, Masters, Doctorate",
+            "sponsorships": "US Citizen, Permanent Resident (U.S.)"
+        },
+        {
+            "day": "Day 4 (Reschedule Day 1) Friday, February 1st",
+            "positions_offered": "Professional Full Time Position, Co-op Position",
+            "overview": "Founded by two Georgia Tech graduates, Patientco is a payment technology company built specifically for healthcare. We simplify the complex payment experience that exists in healthcare by providing one place for every patient payment. By providing the technology to process every type of patient payment transaction in one place, Patientco empowers any healthcare provider or healthcare IT vendor that needs to process patient payments. We are a pas­sion­ate team of tech­nol­ogy pro­fes­sion­als, joined together the goal of changing the patient finan­cial expe­ri­ence in health­care.",
+            "name": "Patientco",
+            "image": "https://s3.amazonaws.com/symp.csm.usprod/gatech/files/787/787edfb3ad774721f69b9bc788e72892_512_512.jpg",
+            "degree_levels": "Bachelors",
+            "sponsorships": "US Citizen"
+        },
+        {
+            "day": "Day 4 (Reschedule Day 1) Friday, February 1st",
+            "positions_offered": "Professional Full Time Position, Internship Position",
+            "overview": "POSSIBLE Mobile builds native apps for mobile devices in iOS, Android, and connected devices including Apple TV, Chromecast and Android TV. We are trusted by and have long lasting relationships with our clients including renowned brands like JetBlue, PGA Tour, Hasbro and Tuner Sports. More than development, our team partners with our customers providing strategy, consulting, and business analytics from start to ship to ensure each app performs well and meets user needs. Founded in 2008 as one of the first mobile consulting shops, we pride ourselves on continually being cutting-edge and place a high priority on staying in the forefront of technology.",
+            "name": "POSSIBLE Mobile",
+            "image": "https://s3.amazonaws.com/symp.csm.usprod/gatech/files/3e8/3e85668e0485768f4b8f8a5899f4c4f1_512_512.jpg",
+            "degree_levels": "Bachelors, Masters",
+            "sponsorships": "US Citizen, Employment (H-1) Visa"
+        },
+        {
+            "day": "DAY 3 - Thursday, January 31, 2019",
+            "positions_offered": "Professional Full Time Position, Internship Position",
+            "overview": "Protiviti is a global consulting firm that delivers deep expertise, objective insights, a tailored approach and unparalleled collaboration to help leaders confidently face the future. Protiviti and our independently owned Member Firms provide consulting solutions in finance, technology, operations, data, analytics, governance, risk and internal audit to our clients through our network of more than 70 offices in over 20 countries. For the third consecutive year, Protiviti was named to the Fortune 100 Best Companies to Work® for list. We have served more than 60 percent of Fortune 1000® and 35 percent of Fortune Global 500® companies. We also work with smaller, growing companies, including those looking to go public, as well as with government agencies.",
+            "name": "Protiviti",
+            "image": "https://s3.amazonaws.com/symp.csm.usprod/gatech/files/1a3/1a3224fc09542cb79d7cadef6d35bd4a_512_512.jpg",
+            "degree_levels": "Bachelors, Masters",
+            "sponsorships": "US Citizen, Permanent Resident (U.S.)"
+        },
+        {
+            "day": "DAY 3 - Thursday, January 31, 2019",
+            "positions_offered": "Professional Full Time Position",
+            "overview": "About Reflexis Systems, Inc. The Reflexis cloud-based Real-Time Store Operations Platform helps retailers simplify store operations, provide improved line of sight for field managers, and streamline corporate processes. Reflexis store execution, labor operations, mobility, and analytics solutions enable retailers to unleash the power of store associates, giving them more opportunities for customer engagement, providing customers with a more consistent brand experience. Since 2001, Reflexis has helped more than 250 of the world's best retailers improve store-level execution and drive quantifiable business value and significant ROI. Reflexis Systems, Inc. is privately held and headquartered in Dedham, Massachusetts and has offices in Atlanta, London, Düsseldorf, and Pune (India), with ad",
+            "name": "Reflexis Systems, Inc",
+            "image": "https://s3.amazonaws.com/symp.csm.usprod/gatech/files/e67/e67beffff073a5c7bdcae4b245f3e046_512_512.jpg",
+            "degree_levels": "Bachelors, Masters",
+            "sponsorships": "US Citizen, EAD - Employment Authorization, Employment (H-1) Visa"
+        },
+        {
+            "day": "DAY 3 - Thursday, January 31, 2019",
+            "positions_offered": "Professional Full Time Position",
+            "overview": "RELEX is a fast-growing software company developing its own products that help retail companies plan and operate more efficiently. By accurately forecasting consumption of goods, we reduce inventory costs, increase availability and cut waste. To achieve this we use our in-house built terabyte scale in-memory database, which stores tens of billions of rows of data. The RELEX team in Atlanta is now looking for a Technical Consultant whose main responsibilities will include acting as a system integration expert in implementation projects, attending or leading specification workshops, building integrations between RELEX and customer backend systems and providing 2nd tier support for customers.",
+            "name": "RELEX Solutions",
+            "image": "https://s3.amazonaws.com/symp.csm.usprod/gatech/files/b3d/b3d1d35654d52160a19b8487ea5dfdd1_512_512.jpg",
+            "degree_levels": "Bachelors, Masters, Doctorate",
+            "sponsorships": "US Citizen, Permanent Resident (U.S.), EAD - Employment Authorization, Student (F-1) Visa, Employment (H-1) Visa, J-1 Visa"
+        },
+        {
+            "day": "Day 4 (Reschedule Day 1) Friday, February 1st",
+            "positions_offered": "Professional Full Time Position",
+            "overview": "Revenue Analytics is a tech-enabled consulting ﬁrm that helps the world's biggest companies make their biggest revenue decisions, like what to charge, what to stock, and what to promote when. The challenge is that these decisions can have millions of variables and many unknown outcomes. How do you eliminate the unknowns so you can increase revenue without increasing risk? We make it happen with experienced, multi-disciplinary teams; battle-tested technology; and a process that solves for the human equation. That's how we've helped our clients outpace their peers and achieve a combined $11B in organic revenue growth.",
+            "name": "Revenue Analytics",
+            "image": "https://s3.amazonaws.com/symp.csm.usprod/gatech/files/cac/cacaeed90f122a291ac41729903f6789_512_512.jpg",
+            "degree_levels": "Bachelors, Masters, Doctorate, Post-Doc",
+            "sponsorships": "US Citizen, Permanent Resident (U.S.), EAD - Employment Authorization, Employment (H-1) Visa"
+        },
+        {
+            "day": "DAY 3 - Thursday, January 31, 2019",
+            "positions_offered": "Professional Full Time Position",
+            "overview": "Samsara's mission is to bring the benefits of sensor data to the organizations that drive our economy-from transportation and logistics to construction, food production, energy, and manufacturing-and to improve the safety, efficiency, and quality of their operations.",
+            "name": "Samsara",
+            "image": "https://s3.amazonaws.com/symp.csm.usprod/gatech/files/2b1/2b17b22591e1595b6cfb6404804d6d4d_512_512.jpg",
+            "degree_levels": "Bachelors, Masters, Doctorate",
+            "sponsorships": "US Citizen, Permanent Resident (U.S.), EAD - Employment Authorization, Student (F-1) Visa"
+        },
+        {
+            "day": "DAY 2 - Wednesday, January 30, 2019",
+            "positions_offered": "Professional Full Time Position, Internship Position",
+            "overview": "Schlumberger is the world's leading supplier of technology, integrated project management, and information solutions to customers working in the oil and gas industry worldwide. Employing more than 100,000 people representing over 140 nationalities and working in approximately 85 countries, Schlumberger provides the industry's widest range of products and services from exploration through production. Schlumberger recently completed a merger with Cameron combining two complementary technology portfolios into a pore-to-pipeline products and services offering to the global oil and gas industry. Schlumberger Limited has principal offices in Paris, Houston and The Hague, and reported revenues of USD $30.44 billion in 2017. Schlumberger: http://careers.slb.com Cameron, A Schlumberger Company: h",
+            "name": "SCHLUMBERGER TECHNOLOGY CORP",
+            "image": "https://gatech-csm.symplicity.com/utils/view.php?inline=true&id=5bbcbd9d415b49fedf883821b77fa581&key=eOzGfcNnZXzv4vmbx03z856UJIGRP1Y6YNpmTAJA86OV32wwrkK43gajHGM3zPT-INdPINHZDz7BON1lNKdlRQ",
+            "degree_levels": "Bachelors, Masters, Doctorate",
+            "sponsorships": "US Citizen"
+        },
+        {
+            "day": "DAY 3 - Thursday, January 31, 2019",
+            "positions_offered": "Professional Full Time Position",
+            "overview": "SeaTec is a trusted technology and business consulting partner to aerospace, air transport and defense companies. We have been solving complex and unique technical, business and operational problems for our customers since 2000. We are a privately owned U.S. consulting firm with a track record of delivering exceptional results on the most demanding programs.",
+            "name": "SeaTec",
+            "image": "https://s3.amazonaws.com/symp.csm.usprod/gatech/files/63d/63d132c5b7a27774b427ae1ba917ff9c_512_512.jpg",
+            "degree_levels": "Bachelors, Masters",
+            "sponsorships": "US Citizen"
+        },
+        {
+            "day": "DAY 3 - Thursday, January 31, 2019",
+            "positions_offered": "Professional Full Time Position",
+            "overview": "We're a purpose-driven consulting firm that helps companies solve business problems and build for the future.",
+            "name": "Slalom",
+            "image": "https://s3.amazonaws.com/symp.csm.usprod/gatech/files/cf8/cf8886b107f0d2c369de2c134cc78c39_512_512.jpg",
+            "degree_levels": "Bachelors, Masters, Doctorate",
+            "sponsorships": "US Citizen, Permanent Resident (U.S.)"
+        },
+        {
+            "day": "Day 4 (Reschedule Day 1) Friday, February 1st",
+            "positions_offered": "Professional Full Time Position, Internship Position, Co-op Position",
+            "overview": "As an international center of excellence in applied research, SwRI employs highly skilled and trained personnel and offers opportunities for bachelor, master, and doctoral level professionals. Employment opportunities include internships, entry-level, and experienced positions as well as management positions in the fields of: antennas, avionics engineering, automotive engineering, autonomous agents, chemistry, chemical engineering, communications theory and statistics, computer engineering, computer science, electrical engineering, electromagnetics, acoustics, embedded systems, environmental science, geophysics, materials sciences, mechanical engineering, optics, physics, robotics, systems dynamics, and unmanned aerial vehicle design. Please visit www.swri.jobs to find out more.",
+            "name": "Southwest Research Institute",
+            "image": "https://s3.amazonaws.com/symp.csm.usprod/gatech/files/af5/af523af77a0a78abfae5f9d2293870ec_512_512.jpg",
+            "degree_levels": "Bachelors, Masters, Doctorate",
+            "sponsorships": "US Citizen, Permanent Resident (U.S.)"
+        },
+        {
+            "day": "DAY 2 - Wednesday, January 30, 2019",
+            "positions_offered": "Professional Full Time Position, Internship Position, Masters, PhD, & MBA Internship/Co-op Position",
+            "overview": "The Space and Naval Warfare Systems Command (SPAWAR) is a geographically-dispersed and diverse agency that leads the world in information technology (IT) solutions to the Department of Defense. We meet our nation's demands for uninterrupted vigilance, fail-safe cyber security, adaptive response, and engineering excellence by delivering secure, integrated, and innovative solutions to protect American interests around the world. SPAWAR, SSC Atlantic, is part of the Naval Research & Development Establishment that explores and develops future naval warfighting capabilities in our laboratories and engineering facilities, and ranges to test these products. At SSC Atlantic, we design, acquire, engineer and sustain a full range of IT capabilities from communications systems and sensors to data cen",
+            "name": "SPAWAR Systems Center Atlantic",
+            "image": "https://s3.amazonaws.com/symp.csm.usprod/gatech/files/4a4/4a4552a538dfc8e00beeee9b12a94c80_512_512.jpg",
+            "degree_levels": "Bachelors, Masters, Doctorate, Post-Doc",
+            "sponsorships": "US Citizen"
+        },
+        {
+            "day": "Day 4 (Reschedule Day 1) Friday, February 1st",
+            "positions_offered": "Professional Full Time Position, Internship Position, Masters, PhD, & MBA Internship/Co-op Position",
+            "overview": "Stryker is one of the world's leading medical technology companies and, together with our customers, is driven to make healthcare better. We offer innovative products and services in Orthopaedics, Medical and Surgical, and Neurotechnology and Spine that help improve patient and hospital outcomes.",
+            "name": "Stryker",
+            "image": "https://s3.amazonaws.com/symp.csm.usprod/gatech/files/61a/61a7ec0af041f93284e6f66d1f03ea02_512_512.jpg",
+            "degree_levels": "Bachelors, Masters, Doctorate, Post-Doc, Special",
+            "sponsorships": "US Citizen, Permanent Resident (U.S.), Employment (H-1) Visa"
+        },
+        {
+            "day": "DAY 2 - Wednesday, January 30, 2019",
+            "positions_offered": "Professional Full Time Position",
+            "overview": "Synamedia is looking for a Software Engineer who is interested in joining the Cloud development organization. We are developing cutting edge cloud video solutions that are recording and playing billions of hours of video every year. This is an exciting opportunity to join a group of awesome software engineers focused on implementing and deploying the next generation of cloud based video technology. You will have the opportunity to develop, integrate, test, and deploy highly scalable and robust software onto cloud and private data centers that is delivering video to millions around the world.",
+            "name": "Synamedia",
+            "image": "https://s3.amazonaws.com/symp.csm.usprod/gatech/files/f6f/f6f39bcf30623c0a2e150bd7154286ae_512_512.jpg",
+            "degree_levels": "Bachelors, Masters",
+            "sponsorships": "US Citizen"
+        },
+        {
+            "day": "DAY 2 - Wednesday, January 30, 2019",
+            "positions_offered": "Professional Full Time Position, Internship Position, Co-op Position",
+            "overview": "A trusted partner. A national resource. A leader in national security space. We are THE Aerospace Corporation. A team that takes pride in our readiness to solve some of the most complex technical challenges in existence. With challenges spanning government to commercial, you'll have the unique opportunity to work on projects that are literally evolving our nation's space and launch capabilities. We all share a common passion and aspiration - to serve a mission much bigger than ourselves. When you join our team, you'll be part of a rare collection of thought leaders and game-changing innovators. Are you ready to launch your career? Equal Opportunity Commitment (updated 5/3/18)",
+            "name": "The Aerospace Corporation",
+            "image": "https://s3.amazonaws.com/symp.csm.usprod/gatech/files/cc3/cc311c068a5108763f531843a35789dd_512_512.jpg",
+            "degree_levels": "Bachelors, Masters, Doctorate, Post-Doc",
+            "sponsorships": "US Citizen"
+        },
+        {
+            "day": "DAY 2 - Wednesday, January 30, 2019",
+            "positions_offered": "Professional Full Time Position, Internship Position",
+            "overview": "The Home Depot is the world's largest home improvement specialty retailer, with 2,284 retail stores in all 50 states, the District of Columbia, Puerto Rico, U.S. Virgin Islands, Guam, 10 Canadian provinces and Mexico. In fiscal 2017, The Home Depot had sales of $100.9 billion and earnings of $8.6 billion. THD employs more than 400,000 associates. Recently named one of Fast Company's 50 Most Innovative Companies, The Home Depot's technology team uses the latest modern development stacks and agile practices across public and private cloud platforms. THD leverages artificial intelligence, augmented reality, big data, machine learning, and voice and visual recognition capabilities to build award-winning experiences for customers and associates.",
+            "name": "The Home Depot",
+            "image": "https://s3.amazonaws.com/symp.csm.usprod/gatech/files/b0b/b0b5c016f52cff25d4f0ad853f2037f7_512_512.jpg",
+            "degree_levels": "Bachelors, Masters, Doctorate",
+            "sponsorships": "US Citizen, Permanent Resident (U.S.), Student (F-1) Visa"
+        },
+        {
+            "day": "DAY 2 - Wednesday, January 30, 2019",
+            "positions_offered": "Professional Full Time Position",
+            "overview": "TracFone Wireless, America's prepaid wireless leader, is a subsidiary of América Móvil, a company with more wireless customers than AT&T and Verizon combined. We offer the least expensive way to own and use a cell phone in America. No contracts, credit checks, activation charges or cancellation fees. And no surprises! Brand name phones from leading manufacturers like Motorola, Kyocera, LG, Nokia and Samsung. Choose from simple \"Candy Bar\" phones, to Bluetooth®-enabled \"Smart\" phones. TracFone Wireless offers handsets from only the leading manufacturers such as Motorola, Nokia, LG, Kyocera and Samsung. We are able to bring the highest quality phones and features to customers at the best prices. TracFone Wireless offers a wide range of cell phones that include \"Candy Bar\" style, \"Camera,\" \"F",
+            "name": "TracFone Wireless, Inc.",
+            "image": "https://s3.amazonaws.com/symp.csm.usprod/gatech/files/e4d/e4d19d5b51bc6a2bf2edc66ec753c7fb_512_512.jpg",
+            "degree_levels": "Bachelors, Masters",
+            "sponsorships": "US Citizen, Permanent Resident (U.S.), EAD - Employment Authorization, Employment (H-1) Visa"
+        },
+        {
+            "day": "Day 4 (Reschedule Day 1) Friday, February 1st",
+            "positions_offered": "Professional Full Time Position, Internship Position",
+            "overview": "From financial management and property taxes to courts and public safety, we create, deliver, and support software solutions and services making it easier for local governments and schools to manage their complex day-to-day business functions. Our singular focus on the public sector gives us a unique advantage to deliver outstanding products to our thousands of clients.",
+            "name": "Tyler Technologies",
+            "image": "https://s3.amazonaws.com/symp.csm.usprod/gatech/files/1b5/1b5da3e28e283124a81942dc3f44a2a7_512_512.jpg",
+            "degree_levels": "Bachelors, Masters",
+            "sponsorships": "US Citizen"
+        },
+        {
+            "day": "DAY 2 - Wednesday, January 30, 2019",
+            "positions_offered": "Professional Full Time Position, Internship Position, Co-op Position",
+            "overview": "We believe that software should work for people. Not the other way around. This \"People First\" philosophy is a cornerstone of who we are as a company and that extends to how we treat our people - including our TechStar Interns. That means that you will have access to intensive mentorship from senior engineers, multiple opportunities to develop and expand your skills as a technologist, and the ability to work on REAL projects that have a REAL impact on our product and people. Here at Ultimate Software, we truly put our people first. We strongly believe in teamwork, and we encourage and trust our people to reach higher, learn more, and live up to their potential. Ultimate is ranked #1 on Fortune's \"Best Places to Work in Technology\" for 2018 and #3 on the \"100 Best Companies to Work For\" li",
+            "name": "Ultimate Software",
+            "image": "https://s3.amazonaws.com/symp.csm.usprod/gatech/files/625/62549abbda8e66292c4ebc2a9d266507_512_512.jpg",
+            "degree_levels": "Bachelors, Masters",
+            "sponsorships": "US Citizen"
+        },
+        {
+            "day": "DAY 2 - Wednesday, January 30, 2019",
+            "positions_offered": "Internship Position, Co-op Position",
+            "overview": "We are a global leader in developing technology that helps our customers optimize their shipping and logistics business processes to lower costs, improve service and increase efficiency. Our expertise in Logistics and Supply Chain Management enables us to offer a broad range of solutions including the development and deployment of advanced technology, the transportation of packages and freight across the world, and the facilitation of international trade to more efficiently manage the world of business. Rooted in the innovative development and use of technology, UPS'S unmatched global network enables the broadest and most reliable solutions in the industry.",
+            "name": "United Parcel Service",
+            "image": "https://s3.amazonaws.com/symp.csm.usprod/gatech/files/c9a/c9a45a60419d5908a1acb5843ec74050_512_512.jpg",
+            "degree_levels": "Bachelors, Masters, Doctorate, Post-Doc, Special, Non-Degree",
+            "sponsorships": "US Citizen"
+        },
+        {
+            "day": "DAY 3 - Thursday, January 31, 2019",
+            "positions_offered": "Professional Full Time Position, Internship Position, Co-op Position",
+            "overview": "Urjanet connects to a global network of utility providers and delivers utility data directly into the application of your choosing. Whether your needs require utility bill or interval data, historical or ongoing data, delivery on a set schedule or on-demand, our platform was built to work for you. Let Urjanet simplify and streamline utility data aggregation on your behalf so you can focus on your business.",
+            "name": "Urjanet",
+            "image": "https://s3.amazonaws.com/symp.csm.usprod/gatech/files/ef6/ef6185660b4d43cda57aef468449ce15_512_512.jpg",
+            "degree_levels": "Bachelors, Masters",
+            "sponsorships": "US Citizen"
+        },
+        {
+            "day": "DAY 3 - Thursday, January 31, 2019",
+            "positions_offered": "Professional Full Time Position, Internship Position",
+            "overview": "People Powering Victories........ Imagine a world without fear of cancer. We do, every day. We innovate new technologies for treating cancer and for connecting clinical teams to advance patient outcomes. Through ingenuity we inspire new victories and empower people in the fight against cancer. We are Varian. Varian is the world's leading manufacturer of medical devices and software for treating and managing cancer. Through our partnerships with physicians, scientists, researchers, and others around the world, we offer the most advanced and cost-effective treatment technologies available. When you join Varian, you become part of a global network of over 6,800 innovative and inspired minds working together as One Varian to save lives and provide hope. Together, we are greater than cancer.",
+            "name": "Varian",
+            "image": "https://s3.amazonaws.com/symp.csm.usprod/gatech/files/7d0/7d04165504bcbb8fa7404ed0e51c9d3f_512_512.jpg",
+            "degree_levels": "Bachelors, Masters, Doctorate",
+            "sponsorships": "US Citizen, Permanent Resident (U.S.), EAD - Employment Authorization, Student (F-1) Visa, Employment (H-1) Visa, J-1 Visa"
+        },
+        {
+            "day": "Day 4 (Reschedule Day 1) Friday, February 1st",
+            "positions_offered": "Professional Full Time Position, Internship Position",
+            "overview": "Verizon Connect is guiding a connected world on the go by automating, optimizing and revolutionizing the way people, vehicles and things move through the world. Our full suite of industry-defining solutions and services put innovation, automation and connected data to work for customers and help them be safer, more efficient and more productive. As a division of Verizon, we combine the fun and excitement of a start-up environment with the resources, operational excellence, and brand recognition of an established tech giant.",
+            "name": "Verizon Connect",
+            "image": "https://s3.amazonaws.com/symp.csm.usprod/gatech/files/405/40580ace9b6bc6223c47efe9e32e5190_512_512.jpg",
+            "degree_levels": "Bachelors, Masters",
+            "sponsorships": "US Citizen, Permanent Resident (U.S.)"
+        },
+        {
+            "day": "DAY 3 - Thursday, January 31, 2019",
+            "positions_offered": "Professional Full Time Position",
+            "overview": "Viagogo is on a mission to revolutionize the way people get tickets to live events, making it possible for anyone, anywhere in the world to see their favorite artists, teams or shows live. We've helped millions of people from almost every country attend live events, and we're just getting started! We believe creative individuals with innovative ideas are the engine for our rapid growth, so we're looking for the world's smartest problem-solvers to come make meaningful and measurable improvements impacting millions of people.",
+            "name": "Viagogo",
+            "image": "https://s3.amazonaws.com/symp.csm.usprod/gatech/files/320/32082132089d15da509f23c8e86dea3e_512_512.jpg",
+            "degree_levels": "Bachelors, Masters",
+            "sponsorships": "US Citizen, EAD - Employment Authorization, Student (F-1) Visa, Employment (H-1) Visa"
+        },
+        {
+            "day": "DAY 2 - Wednesday, January 30, 2019",
+            "positions_offered": "Professional Full Time Position, Internship Position",
+            "overview": "We're on a mission to deliver connections with the capacity to change the world. We're behind the world's fastest satellite internet service, with technology that's helping to bridge the digital divide and improve life for customers around the globe.",
+            "name": "Viasat, Inc.",
+            "image": "https://s3.amazonaws.com/symp.csm.usprod/gatech/files/21c/21c4a02ed12a14f5cee6e5f7bc8bf7bc_512_512.jpg",
+            "degree_levels": "Bachelors, Masters",
+            "sponsorships": "US Citizen, Permanent Resident (U.S.)"
+        },
+        {
+            "day": "DAY 2 - Wednesday, January 30, 2019",
+            "positions_offered": "Professional Full Time Position, Internship Position",
+            "overview": "Innovative thinking. Leadership through service. And above all, an unwavering commitment to saving people money. It's what makes us the business we are today, and shapes the company we will be tomorrow. As the largest retailer in the world, our 2.3 million associates meet the needs of more than 260 million customers every week. And we do it wherever they shop - in our stores, online, or through their mobile devices. Sound like a lot of work? We're just getting started. Join us and be a part of a winning team!",
+            "name": "Walmart eCommerce",
+            "image": "https://s3.amazonaws.com/symp.csm.usprod/gatech/files/013/01395d76b4e72fe28c7a4bf84f954698_512_512.jpg",
+            "degree_levels": "Bachelors, Masters, Doctorate, Post-Doc, Special, Non-Degree",
+            "sponsorships": "US Citizen, Permanent Resident (U.S.), EAD - Employment Authorization, Student (F-1) Visa, Employment (H-1) Visa, J-1 Visa, A"
+        },
+        {
+            "day": "DAY 3 - Thursday, January 31, 2019",
+            "positions_offered": "Professional Full Time Position, Internship Position",
+            "overview": "Imagine working in an environment where one experiment can catapult an entire industry toward a smarter future. That's what we do at Walmart Labs. We're a team of 4,000+ software engineers, data scientists, designers and product managers within the world's largest retailer delivering innovations that improve how our customers shop and our enterprise operates. We're changing the way the world shops-join our team and make your mark.",
+            "name": "Walmart Labs",
+            "image": "https://s3.amazonaws.com/symp.csm.usprod/gatech/files/a15/a1521b5365885a903c417cf5953abd33_512_512.jpg",
+            "degree_levels": "Bachelors, Masters, Doctorate, Post-Doc",
+            "sponsorships": "US Citizen, Permanent Resident (U.S.), EAD - Employment Authorization, Student (F-1) Visa, Employment (H-1) Visa, J-1 Visa"
+        },
+        {
+            "day": "DAY 3 - Thursday, January 31, 2019",
+            "positions_offered": "Professional Full Time Position, Internship Position, Co-op Position",
+            "overview": "Wayfair believes everyone should live in a home they love. Through technology and innovation, Wayfair makes it possible for shoppers to quickly and easily find exactly what they want from a selection of more than 10 million items across home furnishings, décor, home improvement, housewares and more. Committed to delighting its customers every step of the way, Wayfair is reinventing the way people shop for their homes - from product discovery to final delivery.",
+            "name": "Wayfair",
+            "image": "https://s3.amazonaws.com/symp.csm.usprod/gatech/files/f3b/f3bb98776e164da19f2d50b6756fb720_512_512.jpg",
+            "degree_levels": "Bachelors, Masters",
+            "sponsorships": "US Citizen, Permanent Resident (U.S.), EAD - Employment Authorization, Student (F-1) Visa, Employment (H-1) Visa, J-1 Visa, A"
+        },
+        {
+            "day": "DAY 2 - Wednesday, January 30, 2019",
+            "positions_offered": "Professional Full Time Position, Internship Position, Co-op Position, Masters, PhD, & MBA Internship/Co-op Position",
+            "overview": "We are Building the Adaptable, Intelligent World Xilinx is the inventor of the FPGA, programmable SoCs, and now, the ACAP. Our highly-flexible programmable silicon, enabled by a suite of advanced software and tools, drives rapid innovation across a wide span of industries and technologies - from consumer to cars to the cloud. Xilinx delivers the most dynamic processing technology in the industry, enabling rapid innovation with its adaptable, intelligent computing.",
+            "name": "Xilinx",
+            "image": "https://s3.amazonaws.com/symp.csm.usprod/gatech/files/b79/b79e62519a7488be0c7baf2a139a10ae_512_512.jpg",
+            "degree_levels": "Bachelors, Masters, Doctorate, Post-Doc",
+            "sponsorships": "US Citizen, Permanent Resident (U.S.), EAD - Employment Authorization, Student (F-1) Visa, Employment (H-1) Visa, J-1 Visa"
+        },
+        {
+            "day": "DAY 2 - Wednesday, January 30, 2019",
+            "positions_offered": "Professional Full Time Position, Internship Position",
+            "overview": "XPO Logistics, Inc. (NYSE: XPO) is a top ten global logistics provider of cutting-edge supply chain solutions to the most successful companies in the world. The company operates as a highly integrated network of people, technology and physical assets in 32 countries, with 1,505 locations and more than 97,000 employees. XPO uses its network to help more than 50,000 customers manage their goods more efficiently throughout their supply chains. XPO's corporate headquarters is in Greenwich, Conn., USA, and its European headquarters is in Lyon, France. www.xpo.com",
+            "name": "XPO Logistics",
+            "image": "https://s3.amazonaws.com/symp.csm.usprod/gatech/files/0c0/0c0923c2ed6c5eb47b2d8389cdd6ad76_512_512.jpg",
+            "degree_levels": "Bachelors",
+            "sponsorships": "US Citizen"
+        },
+        {
+            "day": "Day 4 (Reschedule Day 1) Friday, February 1st",
+            "positions_offered": "Professional Full Time Position, Internship Position",
+            "overview": "Will be recruiting for the Yahoo and Tumblr brands",
+            "name": "Yahoo/Tumblr",
+            "image": "https://s3.amazonaws.com/symp.csm.usprod/gatech/files/989/9893a61acc1aaea97e14635dc41bef5e_512_512.jpg",
+            "degree_levels": "Bachelors, Masters, Doctorate",
+            "sponsorships": "US Citizen, Permanent Resident (U.S.), EAD - Employment Authorization, Student (F-1) Visa, Employment (H-1) Visa, J-1 Visa"
+        },
+        {
+            "day": "DAY 3 - Thursday, January 31, 2019",
+            "positions_offered": "Professional Full Time Position, Internship Position, Co-op Position, Masters, PhD, & MBA Internship/Co-op Position, Global Internship Position, Undergraduate Research Position, Professional Part Time Position Only, Non-Professional Part-Time/Seasonal Only",
+            "overview": "We are in the midst of a once-in-a-century shift in business models. Consumers are choosing outcomes over ownership. The world is shifting to subscriptions. Zuora is The Subscription Economy® Leader, at the heart of this shift, enabling business and subscriber freedom across the globe. Zuora's leading subscription management platform helps businesses in any industry to launch or shift products to subscription, implement new pay-as-you-go pricing and packaging models, gain new insights into subscriber behavior, open new revenue streams, and disrupt market segments to gain competitive advantage. In short, Zuora is Powering the Subscription Economy® with our unified order-to-cash system. Zuora supports over 1000 customers worldwide including Dell, Vivint, Schneider Electric, Box, The Financia",
+            "name": "Zuora",
+            "image": "https://s3.amazonaws.com/symp.csm.usprod/gatech/files/862/862674f1773320bc741ab5ffe0242f3e_512_512.jpg",
+            "degree_levels": "Bachelors, Masters, Doctorate, Post-Doc, Special, Non-Degree",
+            "sponsorships": "US Citizen, Permanent Resident (U.S.), EAD - Employment Authorization, Student (F-1) Visa, Employment (H-1) Visa, J-1 Visa"
+        }
+    ],
+    "title": "Spring 2019 College of Computing Career Fair"
+}
