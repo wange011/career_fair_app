@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import CompanyList from './CompanyList';
-import TweetBox from './TweetBox';
+import CompanyList from './company/CompanyList';
+import TweetBox from './tweets/TweetBox';
 import data from '../data.json'
 
 class MainPage extends Component {

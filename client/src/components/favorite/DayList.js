@@ -1,5 +1,5 @@
 import React from 'react';
-import heart from '../res/images/baseline_favorite_black_18dp.png'
+import heart from '../../res/images/baseline_favorite_black_18dp.png'
 
 function DayList(props) {
 

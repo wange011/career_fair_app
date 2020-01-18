@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
-import TaskBar from './components/TaskBar';
-import FavoritesSidebar from './components/FavoritesSidebar';
+import TaskBar from './components/login/TaskBar';
+import FavoritesSidebar from './components/favorite/FavoritesSidebar';
 import MainPage from './components/MainPage';
 
 class App extends Component {
