@@ -1,0 +1,16 @@
+.TweetBoxWrapper {
+    height: 100%;
+    position: relative;
+}
+
+.TweetBox {
+    min-height: 250px;
+    max-height: 250px;
+    width: 200px;
+    position: absolute;
+    top: 30px;
+    right: 0;
+    left: 0;
+    margin: auto;
+    background: #C3C3C3;
+}

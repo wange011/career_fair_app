@@ -1,6 +1,7 @@
 import React from 'react';
-import DayList from '../favorite/DayList'
-import SearchBar from './SearchBar'
+import DayList from './DayList';
+import SearchBar from './SearchBar';
+import './CompanyList.css';
 
 function CompanyList(props) {
 

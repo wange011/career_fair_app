@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import DayFavorites from './DayFavorites'
+import DayFavorites from './DayFavorites';
+import './FavoritesSidebar.css';
 
 class FavoritesSidebar extends Component {
 

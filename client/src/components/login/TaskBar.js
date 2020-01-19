@@ -1,4 +1,5 @@
 import React from 'react';
+import './TaskBar.css';
 
 function TaskBar() {
 

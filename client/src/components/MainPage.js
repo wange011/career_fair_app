@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import CompanyList from './company/CompanyList';
 import TweetBox from './tweets/TweetBox';
-import data from '../data.json'
+import data from '../data.json';
+import './MainPage.css';
 
 class MainPage extends Component {
 

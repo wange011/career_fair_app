@@ -7,7 +7,7 @@ function TweetBox() {
         const script = document.createElement("script");
         script.src = "https://platform.twitter.com/widgets.js";
         document.getElementsByClassName("twitter-embed")[0].appendChild(script);
-      }, []);
+    }, []);
 
     return(
         <div className="TweetBoxWrapper col-lg-3">

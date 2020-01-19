@@ -1,0 +1,160 @@
+.SearchBar {
+    height: 100%;
+    width: 50%;
+    padding: 0;
+    margin: 20px 0px;
+    display: inline-block;
+    vertical-align: bottom;
+}
+
+.SearchBar form {
+    position: relative;
+    bottom: 0px;
+    background: #F6F7F8;
+    border-radius: 2px;
+}
+
+.SearchBar input {
+    height: 50%;
+    width: 100%;
+    background: url(../../res/images/baseline_search_black_18dp.png) no-repeat scroll 3px 3px;
+    background-size: 20px 20px;
+    background-position: right;
+    padding-left: 15px;
+    padding-right: 25px;
+    border: 1px solid #C3C3C3;
+    border-radius: 2px;
+    font-size: 18px;
+}
+
+.SearchBar form:hover {
+    background: #FFFFFF;
+}
+
+.SearchBar form:focus-within {
+    background: #FFFFFF;
+}
+
+.CompanyListWrapper {
+    padding: 0px;
+    margin: 0px;
+    max-height: 90%;
+}
+
+.CompanyListWrapper h1 {
+    text-align: left;
+    font-size: 24px;
+    letter-spacing: 1px;
+    margin: 20px 0px;
+}
+
+.CompanyList {
+    text-align: left;
+    padding: 0px 10px 20px 70px;
+    max-height: 35vw;
+    overflow: auto;
+}
+
+.CompanyList h2 {
+    font-size: 20px;
+    margin: 10px 0px;
+}
+
+.DayListWrapper {
+    max-height: 500px;
+}
+
+.DayList {
+    width: 95%;
+    max-height: 400px;
+    overflow: auto;
+    background: #CCCCCC;
+    padding: 10px 20px 10px 20px;
+}
+
+.CompanyEntry {
+    height: 100px;
+    width: 100%;
+    margin: 10px 0px;
+    text-align: left;
+    display: inline-block;
+    position: relative;
+    background: #F3F3F3;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    transition: .3s;
+}
+
+.CompanyEntry:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.companyLogoWrapper {
+    height: 100%;
+    width: 20%;
+    display: inline-block;
+    position: relative;
+}
+
+.companyLogo {
+    max-width: 70%;
+    height: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    margin-right: 10px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.CompanyEntryInfo {
+    width: 72%;
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: 15px 10px 8px 10px;
+    overflow: hidden;
+}
+
+.CompanyEntryInfo h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.CompanyEntryInfo p {
+    font-size: 12px;
+}
+
+.heartWrapper {
+    height: 100%;
+    width: 8%;
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+}
+
+.heart {
+    max-width: 17px;
+    height: auto;
+    float: right;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 18px 15px 0px 0px;
+    opacity: .3;
+    transition: .2s;
+}
+
+.heart:hover {
+    opacity: 1;
+}
+
+.heart.active {
+    opacity: 1;
+    transition: .2s;
+    cursor: pointer;
+}
