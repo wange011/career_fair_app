@@ -61,4 +61,5 @@
 
 .FavoriteEntryRemove img:hover {
     opacity: 1;
+    cursor: pointer;
 }

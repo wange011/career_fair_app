@@ -1,4 +1,6 @@
 import React from 'react';
+import { connect } from 'react-redux';
+import { removeFavorite } from '../../redux/actions';
 import delIcon from '../../res/images/baseline_clear_black_18dp.png'
 
 function DayFavorites(props) {
@@ -7,10 +9,11 @@ function DayFavorites(props) {
     const favorites = props.list;
 
     var handleClick = (company) => {
-        props.onUnfavorite(company);
+        props.unfavorite(company);
     }
 
     if (favorites) {
+
         //Map each company into a FavoriteEntry
         var favoritesHTML = favorites.map( (company) => {
             return(
@@ -37,4 +40,12 @@ function DayFavorites(props) {
 
 }
 
-export default DayFavorites;
+const mapDispatchToProps = (dispatch) => {
+    return {
+        unfavorite: (company) => {
+            dispatch(removeFavorite(company))
+        }
+    }
+}
+
+export default connect(null, mapDispatchToProps)(DayFavorites);

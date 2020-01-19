@@ -18,31 +18,6 @@ class App extends Component {
 
   }
 
-  handleFavorite = (company) => {
-    
-    var newFavorites = this.state.favorites;
-    newFavorites.push(company);
-    console.log(newFavorites);
-    
-    this.setState({
-      favorites: newFavorites
-    });
-
-  }
-
-  handleUnfavorite = (company) => {
-    var newFavorites = this.state.favorites;
-  
-    newFavorites = newFavorites.filter((favCompany) => {
-      return !(favCompany.name === company.name)
-    });
-    
-    this.setState({
-      favorites: newFavorites
-    });
-
-  }
-
   render(){
     
     return (
@@ -52,8 +27,8 @@ class App extends Component {
 
         <div className="container">
           <div className="row">
-            <FavoritesSidebar favorites={this.state.favorites} onUnfavorite={this.handleUnfavorite}/>
-            <MainPage favorites={this.state.favorites} onFavorite={this.handleFavorite} onUnfavorite={this.handleUnfavorite} />
+            <FavoritesSidebar/>
+            <MainPage/>
           </div>  
           
         </div>

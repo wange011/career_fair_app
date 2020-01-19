@@ -1,18 +1,30 @@
 import React from 'react';
+import { connect } from 'react-redux';
+import { addFavorite, removeFavorite } from '../../redux/actions';
 import heart from '../../res/images/baseline_favorite_black_18dp.png'
 
 function DayList(props) {
 
     //Get the list of all companies attending on a specific day
     const list = props.list;
+    const favorites = props.favorites; 
 
     //Map each company into a CompanyEntry
     if (list) {
         var listHTML = list.map( (company) => {
 
-            if(!company.favorite) {
+            var inFavorites = false;
+
+            // Check if the company is in favorites
+            for (var i = 0; i < favorites.length; i++) {
+                if (company.name === favorites[i].name) {
+                    inFavorites = true;
+                }
+            }
+
+            if(!inFavorites) {
                 var handleClick = (e) => {
-                    props.onFavorite(company);
+                    props.favorite(company);
                     e.target.classList.add("active");
                 }
                 
@@ -20,7 +32,7 @@ function DayList(props) {
 
             } else {
                 var handleClick = (e) => {
-                    props.onUnfavorite(company);
+                    props.unfavorite(company);
                     e.target.classList.remove("active");
                 }
                 
@@ -59,4 +71,15 @@ function DayList(props) {
 
 }
 
-export default DayList;
+const mapDispatchToProps = (dispatch) => {
+    return {
+        favorite: (company) => {
+            dispatch(addFavorite(company))
+        },
+        unfavorite: (company) => {
+            dispatch(removeFavorite(company))
+        }
+    }
+}
+
+export default connect(null, mapDispatchToProps)(DayList);
