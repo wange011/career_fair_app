@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
-import './App.css';
 import TaskBar from './components/login/TaskBar';
 import FavoritesSidebar from './components/favorite/FavoritesSidebar';
 import MainPage from './components/MainPage';
+import { BrowserRouter as Router } from 'react-router-dom';
+import './App.css';
 
 class App extends Component {
   
@@ -27,8 +28,10 @@ class App extends Component {
 
         <div className="container">
           <div className="row">
-            <FavoritesSidebar/>
-            <MainPage/>
+            <Router>
+              <FavoritesSidebar/>
+              <MainPage/>
+            </Router>
           </div>  
           
         </div>

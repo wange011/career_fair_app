@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import CompanyList from './company/CompanyList';
+import CompanyView from './company/CompanyView';
 import TweetBox from './tweets/TweetBox';
+import { BrowserRouter as Switch, Route } from 'react-router-dom';
 import data from '../data.json';
 import './MainPage.css';
 
@@ -48,10 +50,17 @@ class MainPage extends Component {
     render(){
     
         return (
+            
             <div className="MainPage col-lg-10 col-md-10 col-sm-10">
+                        
+                <Route exact path="/">
+                    <CompanyList/>   
+                </Route>
+                <Route path="/view/:id">
+                    <CompanyView/>
+                </Route>    
 
-                <CompanyList list={this.state.filteredCompanies} numDays={this.state.numDays} favorites={this.state.favorites} onFavorite={this.onFavorite} onUnfavorite={this.onUnfavorite}/>
-                <TweetBox />
+                <TweetBox />  
 
             </div>
         );

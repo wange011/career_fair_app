@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { removeFavorite } from '../../redux/actions';
+import { Link } from 'react-router-dom';
 import delIcon from '../../res/images/baseline_clear_black_18dp.png'
 
 function DayFavorites(props) {
@@ -18,9 +19,11 @@ function DayFavorites(props) {
         var favoritesHTML = favorites.map( (company) => {
             return(
                 <div className="FavoriteEntry">
-                    <div className="FavoriteEntryName">
-                        <p>{company.name}</p>
-                    </div>
+                    <Link to={"/view/" + company.id}>
+                        <div className="FavoriteEntryName">
+                            <p>{company.name}</p>
+                        </div>
+                    </Link>
                     <div className="FavoriteEntryRemove">
                         <img src={delIcon} onClick={(e) => handleClick(company)}></img>
                     </div>       

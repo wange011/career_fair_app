@@ -28,8 +28,6 @@ class FavoritesSidebar extends Component {
 }
 
 const mapStateToProps = (state) => {
-    console.log(state.favorites)
-    console.log('props change')
     return {
         favorites: state.favorites
     }

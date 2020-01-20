@@ -22,7 +22,7 @@ var favorites = [];
 for (let i = 0; i < data.companies.length; i++) {
 
     let company = data.companies[i];
-    company.favorite = false;
+    company.id = i;
     let dayNum = parseInt(company.day.charAt(4), 10);
 
     // Ensure that there are enough days added
@@ -71,8 +71,6 @@ function reducer(state = initialState, action) {
 
             // Remove company from specified day
             favorites[dayNum - 1] = favorites[dayNum - 1].filter(favorite => !(favorite.name === company.name));
-
-            console.log(favorites)
 
             // Using spread operator will not mutate
             return {...state, favorites: [...favorites]}

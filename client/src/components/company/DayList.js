@@ -1,7 +1,8 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { addFavorite, removeFavorite } from '../../redux/actions';
-import heart from '../../res/images/baseline_favorite_black_18dp.png'
+import { Link } from 'react-router-dom';
+import heart from '../../res/images/baseline_favorite_black_18dp.png';
 
 function DayList(props) {
 
@@ -41,19 +42,23 @@ function DayList(props) {
             }
 
             return(
-                <div className="CompanyEntry">
 
-                    <div className="companyLogoWrapper">
-                        <img src={company.image} className="companyLogo"></img>
-                    </div>    
-                    <div className="CompanyEntryInfo">
-                        <h3>{company.name}</h3>
-                        <p>Offering: {company.positions_offered}</p>
-                    </div>
+                <div className="CompanyEntry">
+                    <Link to={"/view/" + company.id}>
+                        <div className="CompanyLogoWrapper">
+                            <img src={company.image} className="CompanyLogo"></img>
+                        </div>    
+                        <div className="CompanyEntryInfo">
+                            <h3>{company.name}</h3>
+                            <p>Offering: {company.positions_offered}</p>
+                        </div>
+                    </Link>
                     <div className="heartWrapper">
                         <img src={heart} className={heartClass} onClick={(e) => handleClick(e)}></img>
                     </div>
+
                 </div>
+
             )
         })
     } else {
