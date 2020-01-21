@@ -11,7 +11,7 @@ function TweetBox() {
     }, []);
 
     return(
-        <div className="TweetBoxWrapper col-lg-3">
+        <div className="TweetBoxWrapper col-lg-2">
             <div className="TweetBox">
             <section className="twitterContainer">
                 <div className="twitter-embed">

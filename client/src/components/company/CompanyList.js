@@ -17,7 +17,7 @@ function CompanyList(props) {
     })
 
     return(
-        <div className="CompanyListWrapper col-lg-9">
+        <div className="CompanyListWrapper col-lg-8">
             <SearchBar /> 
             <div className="CompanyList">
                 <h1>COMPANIES ATTENDING</h1>

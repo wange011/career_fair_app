@@ -64,7 +64,7 @@ function CompanyView(props) {
     }
 
     return(
-        <div className="CompanyView col-lg-9">
+        <div className="CompanyView col-lg-8">
 
             <div className="CompanyImageWrapper">
                 <img src={company.image} className="CompanyImageWrapper"></img>
