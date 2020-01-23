@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { addFavorite, removeFavorite } from '../../redux/actions';
 import { Link } from 'react-router-dom';
 import heart from '../../res/images/baseline_favorite_black_18dp.png';
+import default_company from '../../res/images/default_company.png';
 
 function DayList(props) {
 
@@ -41,12 +42,17 @@ function DayList(props) {
                 
             }
 
+            var addDefaultSrc = (e) => {
+                e.target.src = default_company;
+                console.log(e.target.src)
+            }
+
             return(
 
                 <div className="CompanyEntry">
                     <Link to={"/view/" + company.id}>
                         <div className="CompanyLogoWrapper">
-                            <img src={company.image} className="CompanyLogo"></img>
+                            <img onError={(e) => addDefaultSrc(e)} src={company.image} className="CompanyLogo"></img>
                         </div>    
                         <div className="CompanyEntryInfo">
                             <h3>{company.name}</h3>

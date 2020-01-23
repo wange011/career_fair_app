@@ -1,7 +1,74 @@
 .CompanyView {
-    padding: 0px;
-    margin: 0px;
-    height: 100%;
+    padding: 0px 20px 60px 20px;
+    margin: 20px 0px 0px 0px;
+    height: 83.5%;
     display: inline-block;
     max-width: 62.5%;
+    text-align: left;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+.CompanyViewInfo {
+    width: 60%;
+    padding: 50px 0 0 60px;
+    margin: 0px;
+    text-align: left;
+    display: inline-block;
+    overflow: auto;
+}
+
+.CompanyViewInfo h4 {
+    margin: 20px 0 0 0;
+}
+
+.CompanyViewMedia {
+    width: 40%;
+    height: 90%;
+    margin-top: 40px;
+    float: right;
+}
+
+.CompanyImageWrapper {
+    width: 100%;
+    height: 63%;
+    padding: 30px 10px 0px 40px;
+}
+
+.CompanyViewButtons {
+    width: 100%;
+    height: 30%;
+    float: right;
+}
+
+.CompanyView .heart {
+    position: relative;
+    top: -11px;
+    right: 47px;
+}
+
+.CompanyView .active {
+    position: relative;
+    top: -11px;
+    right: 47px;
+}
+
+.CompanyView .heart:hover {
+    position: relative;
+    top: -11px;
+    right: 47px;
+}
+
+.backArrow {
+    width: 22px;
+    position: relative;
+    top: 3px;
+    left: 35px;
+    opacity: .3;
+    transition: .2s;
+}
+
+.backArrow:hover {
+    opacity: 1;
+    cursor: pointer;
 }

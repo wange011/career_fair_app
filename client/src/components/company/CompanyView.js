@@ -3,6 +3,8 @@ import { connect } from 'react-redux';
 import { withRouter } from "react-router";
 import { addFavorite, removeFavorite } from '../../redux/actions';
 import heart from '../../res/images/baseline_favorite_black_18dp.png';
+import backArrow from '../../res/images/baseline_arrow_back_black_18dp.png';
+import default_company from '../../res/images/default_company.png';
 import './CompanyView.css';
 
 // Link to an id when clicked
@@ -63,26 +65,36 @@ function CompanyView(props) {
         
     }
 
+    var addDefaultSrc = (e) => {
+        e.target.src = default_company;
+        console.log(e.target.src)
+    }
+
     return(
         <div className="CompanyView col-lg-8">
-
-            <div className="CompanyImageWrapper">
-                <img src={company.image} className="CompanyImageWrapper"></img>
-            </div>    
+            
             <div className="CompanyViewInfo">
                 <h3>{company.name}</h3>
-                <p>Offering: {company.positions_offered}</p>
-                <p>Day: {company.day}</p>
+                <h4>Day Attending</h4>
+                <p>{company.day}</p>
+                <h4>Degree Levels</h4>
+                <p>{company.degree_levels}</p>
+                <h4>Positions Offered</h4>
+                <p>{company.positions_offered}</p>
+                <h4>Sponsorships Offered</h4>
+                <p>{company.sponsorships}</p>
+                <h4>Company Overview</h4>
                 <p>Overview: {company.overview}</p>
-                <p>Degree Levels: {company.degree_levels}</p>
-                <p>Sponsorships: {company.sponsorships}</p>
             </div>
-            <div className="CompanyFavorite">
-                <img src={heart} className={heartClass} onClick={(e) => handleClick(e)}></img>
-            </div>
-            
-            <button onClick={(e) => props.history.goBack()}>
-            </button>    
+            <div className="CompanyViewMedia">
+                <div className="CompanyImageWrapper">
+                    <img onError={(e) => addDefaultSrc(e)} src={company.image} className="CompanyImage" />
+                </div>
+                <div className="CompanyViewButtons">
+                    <img src={backArrow} className={'backArrow'} onClick={() => props.history.goBack()} />
+                    <img src={heart} className={heartClass} onClick={(e) => handleClick(e)} />
+                </div>
+            </div>  
 
         </div>
     );
