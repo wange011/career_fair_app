@@ -79,7 +79,14 @@ function reducer(state = initialState, action) {
             return state
         
         case FILTER_COMPANIES:
-            return state 
+            //assign filter object to variable
+            var filter = action.filter;
+
+            //filter out companies that don't contain the search term in the title- To be changed; this is just for testing.
+            var filteredCompanies = state.companies.filter(day => (company => company.name.includes(filter.name)));
+
+            //Using spread operator will not mutate
+            return {...state, filteredCompanies: [...filteredCompanies]} 
         
         // TO-DO: Get and sort user favorites after login
         // Also go through the company list and set company.favorite to true

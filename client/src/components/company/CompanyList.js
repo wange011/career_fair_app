@@ -30,7 +30,7 @@ function CompanyList(props) {
 
 const mapStateToProps = (state) => {
     return {
-        companies: state.companies,
+        companies: state.filteredCompanies,
         favorites: state.favorites
     }
 }
