@@ -1,54 +1,14 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { filterCompanies } from '../../redux/actions';
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';  
 
-class SearchBar extends Component {
+function SearchBar(props) {
 
-    constructor(props) {
-        super(props);
-        this.state = {value: ''};
-    
-        this.handleChange = this.handleChange.bind(this);
-    }
-    handleChange(event) {
-        this.setState({value: event.target.value});
-        var filter = {
-            name: this.state.value
-        };
-        this.props.filterComp(filter);
-        console.log(this.props);
-    }
-
-    render(){
-       
-
-        return (
-            <div className="SearchBar">
-                <form>
-                    <input 
-                    type="text" 
-                    placeholder="Search.." 
-                    value = {this.state.value} 
-                    onChange= {this.handleChange}
-                    />
-                </form>
-            </div>
-        );
-
-    }  
-
-}
-
-/* function SearchBar(props) {
-
-    var state = {
-        value: ''
-    }
     var handleChange = (e) => {
-        state.value = e.target.value;
+        var value = e.target.value;
         var filter = {
-            name: state.value
+            name: value
         };
         props.filterComp(filter);
     }
@@ -58,17 +18,21 @@ class SearchBar extends Component {
             <form>
                 <input 
                 type="text" 
-                //placeholder="Search.." 
-                value = {state.value} 
+                placeholder = "Search..."
+                value= {props.search} 
                 onChange={(e) => handleChange(e)}
                 />
             </form>    
-            <p>{state.value}</p>
         
         </div>
     );
 
-} */
+} 
+const mapStateToProps = (state) => {
+    return {
+        search: state.search
+    }
+}
 
 const mapDispatchToProps = (dispatch) => {
     return {
@@ -78,4 +42,4 @@ const mapDispatchToProps = (dispatch) => {
     }
 }
 
-export default connect(null, mapDispatchToProps)(SearchBar);
+export default connect(mapStateToProps, mapDispatchToProps)(SearchBar);
