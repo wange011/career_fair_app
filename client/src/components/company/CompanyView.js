@@ -70,6 +70,10 @@ function CompanyView(props) {
         console.log(e.target.src)
     }
 
+    // handleEdit
+    // handleDone
+    // handleCancel
+
     return(
         <div className="CompanyView col-lg-8">
             

@@ -1,27 +1,38 @@
 import React, { Component } from 'react';
 import TaskBar from './components/login/TaskBar';
 import MainPage from './components/MainPage';
-import { BrowserRouter as Router } from 'react-router-dom';
+import LoginPage from './components/login/LoginPage';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import './App.css';
 
 class App extends Component {
-  
+
+  // If user is loggedIn and isAdmin, return AdminPage
+
   render(){
     
     return (
       <div className="App">
+        <Router>
         
-        <TaskBar onClick={this.handleTaskbarClick} />
+          <Switch>
 
-        <div className="container">
-          <div className="row">
-            <Router>
-              <MainPage/>
-            </Router>
-          </div>  
-          
-        </div>
-        
+            <Route path="/login">
+              <LoginPage />
+            </Route>
+
+            <Route path="/">
+              <TaskBar  />
+              <div className="container">
+                <div className="row">
+                  <MainPage/>
+                </div>  
+              </div>
+            </Route>
+
+          </Switch>
+
+        </Router>
 
       </div>
     );
