@@ -27,7 +27,35 @@ app.get('/companies', (req, res) => {
 
 })
 
-// To-Do put all companies
+
+app.put('/companies', (req, res) => {
+
+    const company = JSON.parse(req.body.company);
+    
+    Company.find( { name: company.name }, (err, companiesFound) => {
+
+    }).then( (companiesFound) => {
+
+        if (companiesFound.length > 0) {
+            Company.findByIdAndUpdate({ _id: companiesFound[0]._id }, company, (err, company) => {
+                if (err) return handleError(err);
+            });
+            
+            return res.send(company.name + " updated");
+
+        } else {
+
+            Company.create(company, (err, company) => {
+                if (err) return handleError(err);
+            });
+
+            return res.send(company.name + " added");
+
+        }
+
+    });
+
+})
 
 
 // Login
@@ -38,33 +66,55 @@ const Salt = require('./models/Salt');
 app.get('/login', (req, res) => {
 
     var username = req.body.username;
-    var salt = "";
 
     // Get the salt
-    Salt.find({ username: username }, (err, salt) => {
-        res.send(salt);
-        salt = salt;
+    Salt.find({ username: username }, (err, users) => {
+    
+    }).then( (users) => {
+
+        if (users.length < 1) {
+            return res.send("No such user");
+        }
+
+
+        const salt = users[0].salt;
+        var password = req.body.password;
+        var passwordHash = SHA256(password + salt).toString("base64");
+        console.log(salt)
+
+        // Check if the passwordHash is in database
+        User.find({ username: username, passwordHash: passwordHash }, (err, users) => {
+
+            if (users.length < 1) {
+
+                return res.send(401);
+
+            } else {
+
+                var userJSON = {
+                    favorites: users[0].favorites,
+                    userType: users[0].userType,
+                    id: users[0]._id
+                }
+
+                return res.send(userJSON);
+
+            }
+
+        });
+
     });
-
-    var password = req.body.password;
-    var passwordHash = SHA256(password + salt).toString("base64");
-
-    return res.send(salt);
-
-    // Check if the passwordHash is in database
-
-    // Return user permissions and favorites or 401 error if incorrect password
 
 })
 
 app.post('/register', (req, res) => {
 
-    let username = req.body.username;
+    let username = req.body.username.trim();
 
     // Make sure username is not already in the database
-    User.find({ username: username }, (err, user) => {
+    User.find({ username: username }, (err, users) => {
         
-        if (user.length > 0) {
+        if (users.length > 0) {
         
             return res.send("User Already Exists");
         
@@ -85,11 +135,19 @@ app.post('/register', (req, res) => {
             // Add the user to the users collection
             User.create({ username: username, passwordHash: passwordHash, userType: userType, favorites: [] 
             }, (err, user) => {
+                
                 if (err) return handleError(err);
+                
+                var userJSON = {
+                    favorites: user.favorites,
+                    userType: user.userType,
+                    id: user._id
+                }
+
+                return res.send(userJSON);
+            
             });
 
-            return res.send(user);
-        
         }
     
     });
@@ -97,8 +155,32 @@ app.post('/register', (req, res) => {
 })
 
 // Favorites
+app.put('/favorites', (req, res) => {
 
-// Edit Companies
+    const user = JSON.parse(req.body.update);
+    const favorites = user.favorites;
+    const id = user.id;
+    
+    User.find( { _id: id }, (err, users) => {
+
+    }).then( (users) => {
+
+        if (users.length > 0) {
+            User.findByIdAndUpdate({ _id: id }, { favorites: favorites }, (err, user) => {
+                if (err) return handleError(err);
+            });
+            
+            return res.send("User updated");
+
+        } else {
+
+            return res.send("User does not exist");
+
+        }
+
+    });
+
+})
 
 // Static variable for statistics, update when a user favorites
 // Admin Statistics
