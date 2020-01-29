@@ -11,7 +11,8 @@ import {
     EDIT_COMPANY,
     FILTER_COMPANIES,
     LOGIN,
-    LOGOUT
+    LOGOUT,
+    filterCompanies
 } from './redux/actions'
 import * as serviceWorker from './serviceWorker';
 
@@ -40,7 +41,8 @@ const initialState = {
     companies: companies,
     filteredCompanies: companies,
     favorites: favorites,
-    numDays: companies.length
+    numDays: companies.length,
+    search: ""
 }
 
 // TO-DO: Seperate Reducers
@@ -79,7 +81,22 @@ function reducer(state = initialState, action) {
             return state
         
         case FILTER_COMPANIES:
-            return state 
+            //assign filter object to variable
+            var filter = action.filter;
+
+            //filter out companies that don't contain the search term in the title- To be changed; this is just for testing.
+            var filteredCompanies = [];
+            for (var i = 0; i < state.companies.length; i++) {
+                filteredCompanies.push(state.companies[i].filter(company => company.name.toLowerCase().includes(filter.name.toLowerCase()) 
+                || company.positions_offered.toLowerCase().includes(filter.name.toLowerCase()) 
+                || company.overview.toLowerCase().includes(filter.name.toLowerCase())
+                || company.degree_levels.toLowerCase().includes(filter.name.toLowerCase())
+                || company.sponsorships.toLowerCase().includes(filter.name.toLowerCase())));
+            }
+            
+
+            //Using spread operator will not mutate
+            return {...state, filteredCompanies: [...filteredCompanies], search: filter.name} 
         
         // TO-DO: Get and sort user favorites after login
         // Also go through the company list and set company.favorite to true
