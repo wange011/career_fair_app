@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { removeFavorite } from '../../redux/actions';
 import { Link } from 'react-router-dom';
-import delIcon from '../../res/images/baseline_clear_black_18dp.png'
+import delIcon from '../../res/images/baseline_clear_black_18dp.png';
 
 function DayFavorites(props) {
 

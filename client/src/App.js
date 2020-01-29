@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import TaskBar from './components/login/TaskBar';
 import MainPage from './components/MainPage';
 import LoginPage from './components/login/LoginPage';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { connect } from 'react-redux';
+import { BrowserRouter as Router } from 'react-router-dom';
 import './App.css';
 
 class App extends Component {
@@ -14,26 +15,19 @@ class App extends Component {
     return (
       <div className="App">
         <Router>
-        
-          <Switch>
 
-            <Route path="/login">
-              <LoginPage />
-            </Route>
+          <TaskBar/>
+          <div className="container">
+            <div className="row">
+              <MainPage/>
+            </div>  
+          </div>
 
-            <Route path="/">
-              <TaskBar  />
-              <div className="container">
-                <div className="row">
-                  <MainPage/>
-                </div>  
-              </div>
-            </Route>
-
-          </Switch>
+          {this.props.showLogin ?
+            <LoginPage/> : null
+          }
 
         </Router>
-
       </div>
     );
   
@@ -41,4 +35,11 @@ class App extends Component {
 
 }
 
-export default App;
+const mapStateToProps = (state) => {
+  return {
+      showLogin: state.showLogin
+  }
+}
+
+export default connect(mapStateToProps)(App);
+

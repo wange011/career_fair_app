@@ -11,8 +11,8 @@ import {
     EDIT_COMPANY,
     FILTER_COMPANIES,
     LOGIN,
-    LOGOUT,
-    filterCompanies
+    TOGGLE_LOGIN,
+    LOGOUT
 } from './redux/actions'
 import * as serviceWorker from './serviceWorker';
 
@@ -42,7 +42,11 @@ const initialState = {
     filteredCompanies: companies,
     favorites: favorites,
     numDays: companies.length,
-    search: ""
+    search: "",
+    userID: "",
+    userType: "student",
+    showLogin: false,
+    incorrectLogin: false
 }
 
 // TO-DO: Seperate Reducers
@@ -99,10 +103,48 @@ function reducer(state = initialState, action) {
             return {...state, filteredCompanies: [...filteredCompanies], search: filter.name} 
         
         // TO-DO: Get and sort user favorites after login
-        // Also go through the company list and set company.favorite to true
         case LOGIN:
-            return state
+
+            const user = {
+                username: action.username,
+                password: action.password
+            }
+            
+            return fetch("http://localhost:5000/login", {
+                method: 'POST',
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8'
+                },
+                body: JSON.stringify(user)
+            }).then( (response) => {
+                
+                if (response.ok) {
+                    return response.json();
+                } else {
+                    throw new Error("Username or Password is incorrect");
+                }
+
+            }).then( (user) => {
+
+                console.log(user)
+
+                state.userID = user.id;
+                state.favorites = user.favorites;
+                state.userType = user.userType;
+                state.incorrectLogin = false;
+
+                console.log(state)
+
+                return {...state}
+
+            }).catch((error) => {
+                return {...state, incorrectLogin: true}
+            });
         
+        case TOGGLE_LOGIN:
+            return {...state, showLogin: !state.showLogin}
+
         case LOGOUT:
             return state
         

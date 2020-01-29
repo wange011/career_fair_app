@@ -7,11 +7,6 @@ import backArrow from '../../res/images/baseline_arrow_back_black_18dp.png';
 import default_company from '../../res/images/default_company.png';
 import './CompanyView.css';
 
-// Link to an id when clicked
-// Needs to be connected to store (edit)
-// useParams(), wrap export in withRouter()
-// Use the :id parameter to find the company that is being viewed
-
 function CompanyView(props) {
 
     const id = parseInt(props.match.params.id);

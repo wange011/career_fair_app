@@ -1,14 +1,20 @@
 const express = require('express')
-const bodyParser = require('body-parser')
+var bodyParser = require('body-parser');
+var multer = require('multer');
+var upload = multer();
 const app = express()
 const port = 5000
 
-// parse application/x-www-form-urlencoded
-app.use(bodyParser.urlencoded({ extended: false }))
+// for parsing application/json
+app.use(bodyParser.json()); 
 
-// parse application/json
-app.use(bodyParser.json())
+// for parsing application/xwww-
+app.use(bodyParser.urlencoded({ extended: true })); 
+//form-urlencoded
 
+// for parsing multipart/form-data
+app.use(upload.array()); 
+app.use(express.static('public'));
 
 var mongoose = require('mongoose');
 // database user: 12dea96fec20593566ab75692c9949596833adc9, password: 5baa61e4c9b93f3f0682250b6cf8331b7ee68fd8
@@ -21,14 +27,18 @@ const Company = require('./models/Company');
 // Get all companies
 app.get('/companies', (req, res) => {
 
+    res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000');
+
     Company.find({}, (err, companies) => {
         res.send(companies);
     });
 
 })
 
-
+// To-Do: Server Side Authentication
 app.put('/companies', (req, res) => {
+
+    res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000');
 
     const company = JSON.parse(req.body.company);
     
@@ -63,7 +73,9 @@ const { SHA256 } = require("sha2");
 const User = require('./models/User');
 const Salt = require('./models/Salt');
 
-app.get('/login', (req, res) => {
+app.post('/login', (req, res) => {
+
+    res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000');
 
     var username = req.body.username;
 
@@ -73,14 +85,13 @@ app.get('/login', (req, res) => {
     }).then( (users) => {
 
         if (users.length < 1) {
-            return res.send("No such user");
+            return res.send(401);
         }
 
 
         const salt = users[0].salt;
         var password = req.body.password;
         var passwordHash = SHA256(password + salt).toString("base64");
-        console.log(salt)
 
         // Check if the passwordHash is in database
         User.find({ username: username, passwordHash: passwordHash }, (err, users) => {
@@ -107,7 +118,10 @@ app.get('/login', (req, res) => {
 
 })
 
+// To-Do: Authorization for registering admin users
 app.post('/register', (req, res) => {
+
+    res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000');
 
     let username = req.body.username.trim();
 
@@ -156,6 +170,8 @@ app.post('/register', (req, res) => {
 
 // Favorites
 app.put('/favorites', (req, res) => {
+
+    res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000');
 
     const user = JSON.parse(req.body.update);
     const favorites = user.favorites;
