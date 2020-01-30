@@ -44,7 +44,6 @@ function DayList(props) {
 
             var addDefaultSrc = (e) => {
                 e.target.src = default_company;
-                console.log(e.target.src)
             }
 
             return(

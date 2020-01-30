@@ -10,6 +10,7 @@
     background-color: #E8E8E8;
     border-bottom: 1px solid silver;
     vertical-align: middle;
+    position: relative;
 }
 
 .appIcon {
@@ -34,4 +35,17 @@
 
 .loginButton:hover {
     background: #D3D3D3;
+}
+
+.usernameWrapper {
+    width: 10%;
+    height: 90%;
+    background: red;
+    display: inline-block;
+    vertical-align: top;
+    position: absolute;
+    right: 20px;
+    top: 0px;
+    bottom: 0px;
+    border-radius: 2px;
 }

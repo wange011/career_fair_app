@@ -9,11 +9,19 @@ function TaskBar(props) {
         <div className="TaskBar">
             
             <img src={require('../../res/images/logo.png')} className="appIcon"></img>
-            <button className="loginButton" onClick={() => props.toggleLogin()}>LOGIN</button>
+            {props.username.length > 0 ?
+            <div className='usernameWrapper'><p>Welcome {props.username}</p></div> : 
+            <button className="loginButton" onClick={() => props.toggleLogin()}>LOGIN</button>}
 
         </div>
     );
 
+}
+
+const mapStateToProps = (state) => {
+    return {
+        username: state.username
+    }
 }
 
 const mapDispatchToProps = (dispatch) => {
@@ -24,4 +32,4 @@ const mapDispatchToProps = (dispatch) => {
     }
 }
 
-export default connect(null, mapDispatchToProps)(TaskBar);
+export default connect(mapStateToProps, mapDispatchToProps)(TaskBar);

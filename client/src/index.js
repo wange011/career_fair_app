@@ -43,6 +43,7 @@ const initialState = {
     favorites: favorites,
     numDays: companies.length,
     search: "",
+    username: "",
     userID: "",
     userType: "student",
     showLogin: false,
@@ -105,42 +106,23 @@ function reducer(state = initialState, action) {
         // TO-DO: Get and sort user favorites after login
         case LOGIN:
 
-            const user = {
-                username: action.username,
-                password: action.password
-            }
-            
-            return fetch("http://localhost:5000/login", {
-                method: 'POST',
-                headers: {
-                    'Accept': 'application/json',
-                    'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8'
-                },
-                body: JSON.stringify(user)
-            }).then( (response) => {
-                
-                if (response.ok) {
-                    return response.json();
-                } else {
-                    throw new Error("Username or Password is incorrect");
-                }
-
-            }).then( (user) => {
-
-                console.log(user)
-
-                state.userID = user.id;
-                state.favorites = user.favorites;
-                state.userType = user.userType;
-                state.incorrectLogin = false;
-
-                console.log(state)
-
-                return {...state}
-
-            }).catch((error) => {
+            if (action.userID === undefined) {
                 return {...state, incorrectLogin: true}
-            });
+            }
+
+            var favorites = state.favorites;
+
+            for (let i = 0; i < action.favorites.length; i++) {
+
+                let company = action.favorites[i];
+                let dayNum = parseInt(company.day.charAt(4), 10);
+
+                favorites[dayNum - 1].push(company);
+
+            }
+
+            return {...state, favorites: [...favorites], username: action.username, 
+                userID: action.id, userType: action.userType, showLogin: false, incorrectLogin: false}
         
         case TOGGLE_LOGIN:
             return {...state, showLogin: !state.showLogin}

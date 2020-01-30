@@ -30,8 +30,8 @@ export function filterCompanies(filter) {
     return { type: FILTER_COMPANIES, filter }
 }
 
-export function login(username, password) {
-    return { type: LOGIN, username, password }
+export function login(favorites, username, userID, userType) {
+    return { type: LOGIN, favorites, username, userID, userType }
 }
 
 export function toggleLogin() {

@@ -22,7 +22,6 @@ function CompanyView(props) {
 
             if (companies[i][j].id === id) {
                 company = companies[i][j];
-                console.log(company)
                 break loop;
             }    
 
@@ -30,7 +29,6 @@ function CompanyView(props) {
     }
 
     const day = parseInt(company.day.charAt(4), 10);
-    console.log(props.favorites)
     var inFavorites = false;
     var favorites = props.favorites[day - 1];
     
@@ -62,7 +60,6 @@ function CompanyView(props) {
 
     var addDefaultSrc = (e) => {
         e.target.src = default_company;
-        console.log(e.target.src)
     }
 
     // handleEdit

@@ -16,6 +16,14 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(upload.array()); 
 app.use(express.static('public'));
 
+// CORS policy
+app.use((req, res, next) => {
+    res.header('Access-Control-Allow-Origin', 'http://localhost:3000');
+    res.setHeader('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
+    res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
+    next();
+});
+
 var mongoose = require('mongoose');
 // database user: 12dea96fec20593566ab75692c9949596833adc9, password: 5baa61e4c9b93f3f0682250b6cf8331b7ee68fd8
 // To-Do: Use Environment Variable for this instead
@@ -27,8 +35,6 @@ const Company = require('./models/Company');
 // Get all companies
 app.get('/companies', (req, res) => {
 
-    res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000');
-
     Company.find({}, (err, companies) => {
         res.send(companies);
     });
@@ -37,8 +43,6 @@ app.get('/companies', (req, res) => {
 
 // To-Do: Server Side Authentication
 app.put('/companies', (req, res) => {
-
-    res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000');
 
     const company = JSON.parse(req.body.company);
     
@@ -75,8 +79,6 @@ const Salt = require('./models/Salt');
 
 app.post('/login', (req, res) => {
 
-    res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000');
-
     var username = req.body.username;
 
     // Get the salt
@@ -104,6 +106,7 @@ app.post('/login', (req, res) => {
 
                 var userJSON = {
                     favorites: users[0].favorites,
+                    username: users[0].username,
                     userType: users[0].userType,
                     id: users[0]._id
                 }
@@ -120,8 +123,6 @@ app.post('/login', (req, res) => {
 
 // To-Do: Authorization for registering admin users
 app.post('/register', (req, res) => {
-
-    res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000');
 
     let username = req.body.username.trim();
 
@@ -170,8 +171,6 @@ app.post('/register', (req, res) => {
 
 // Favorites
 app.put('/favorites', (req, res) => {
-
-    res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000');
 
     const user = JSON.parse(req.body.update);
     const favorites = user.favorites;
