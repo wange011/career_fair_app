@@ -34,9 +34,10 @@
     margin: 5px 0px 2px 0px;
 }
 
-.LoginPage .incorrectLoginMessage {
+.LoginPage #incorrectLoginMessage {
     margin: 10px 0px 2px 0px;
     color: red;
+    visibility: hidden;
 }
 
 .LoginPage input {
@@ -87,6 +88,12 @@
     padding: 50px 10px 10px 70px;
     margin: 20px 0px 0px 0px;
     position: relative;
+}
+
+.LoginPage #incorrectRegisterMessage {
+    margin: 10px 0px 2px 0px;
+    color: red;
+    visibility: hidden;
 }
 
 .LoginPage img {

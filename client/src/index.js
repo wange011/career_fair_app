@@ -71,10 +71,10 @@ function reducer(state = initialState, action) {
         case REMOVE_FAVORITE:
             
             // Add the company to the correct day in the list of favorites
-            company = action.company;
-            dayNum = parseInt(company.day.charAt(4), 10);
+            var company = action.company;
+            var dayNum = parseInt(company.day.charAt(4), 10);
              // Reminder: ensure state is not mutated
-            favorites = state.favorites;
+            var favorites = state.favorites;
 
             // Remove company from specified day
             favorites[dayNum - 1] = favorites[dayNum - 1].filter(favorite => !(favorite.name === company.name));
@@ -83,7 +83,34 @@ function reducer(state = initialState, action) {
             return {...state, favorites: [...favorites]}
         
         case EDIT_COMPANY:
-            return state
+
+            var company = action.company;
+            var dayNum = parseInt(company.day.charAt(4), 10);
+            
+            var companies = state.companies;
+            
+            // Edit the company in the state
+            for (var i = 0; i < companies[dayNum].length; i++) {
+                if (companies[dayNum - 1][i].name === company.name) {
+                    
+                    company.id = companies[dayNum - 1][i].id
+                    companies[dayNum - 1][i] = company;
+                    
+                }
+            }
+
+            // Find if the company is also in filteredCompanies
+            var filteredCompanies = state.filteredCompanies;
+
+            for (var i = 0; i < filteredCompanies[dayNum - 1].length; i++) {
+                if (filteredCompanies[dayNum - 1][i].name === company.name) {
+                    
+                    filteredCompanies[dayNum - 1][i] = company;
+                    
+                }
+            }
+
+            return {...state, companies: [...companies], filteredCompanies: [...filteredCompanies]}
         
         case FILTER_COMPANIES:
             //assign filter object to variable
@@ -106,10 +133,6 @@ function reducer(state = initialState, action) {
         // TO-DO: Get and sort user favorites after login
         case LOGIN:
 
-            if (action.userID === undefined) {
-                return {...state, incorrectLogin: true}
-            }
-
             var favorites = state.favorites;
 
             for (let i = 0; i < action.favorites.length; i++) {
@@ -122,7 +145,7 @@ function reducer(state = initialState, action) {
             }
 
             return {...state, favorites: [...favorites], username: action.username, 
-                userID: action.id, userType: action.userType, showLogin: false, incorrectLogin: false}
+                userID: action.id, userType: action.userType, showLogin: false}
         
         case TOGGLE_LOGIN:
             return {...state, showLogin: !state.showLogin}

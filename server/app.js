@@ -42,7 +42,7 @@ app.get('/companies', (req, res) => {
 })
 
 // To-Do: Server Side Authentication
-app.put('/companies', (req, res) => {
+app.post('/edit_company', (req, res) => {
 
     const company = JSON.parse(req.body.company);
     
@@ -51,19 +51,10 @@ app.put('/companies', (req, res) => {
     }).then( (companiesFound) => {
 
         if (companiesFound.length > 0) {
-            Company.findByIdAndUpdate({ _id: companiesFound[0]._id }, company, (err, company) => {
+            Company.findByIdAndUpdate({ _id: companiesFound[0]._id }, company, {new: true}, (err, new_company) => {
                 if (err) return handleError(err);
+                return res.send(new_company);
             });
-            
-            return res.send(company.name + " updated");
-
-        } else {
-
-            Company.create(company, (err, company) => {
-                if (err) return handleError(err);
-            });
-
-            return res.send(company.name + " added");
 
         }
 
@@ -71,6 +62,30 @@ app.put('/companies', (req, res) => {
 
 })
 
+app.post('/add_company', (req, res) => {
+
+    const company = JSON.parse(req.body.company);
+    
+    Company.find( { name: company.name }, (err, companiesFound) => {
+
+    }).then( (companiesFound) => {
+
+        if (companiesFound.length > 0) {
+            
+            return res.send(company.name + " already exists");
+
+        } else {
+
+            Company.create(company, (err, company) => {
+                if (err) return handleError(err);
+                return res.send(company);
+            });
+
+        }
+
+    });
+
+})
 
 // Login
 const { SHA256 } = require("sha2");
@@ -125,6 +140,15 @@ app.post('/login', (req, res) => {
 app.post('/register', (req, res) => {
 
     let username = req.body.username.trim();
+    var password = req.body.password;
+
+    if (username.length < 1) {
+        return res.send("No username");
+    }
+
+    if (password.length < 1) {
+        return res.send("No password");
+    }
 
     // Make sure username is not already in the database
     User.find({ username: username }, (err, users) => {
@@ -142,7 +166,6 @@ app.post('/register', (req, res) => {
                 if (err) return handleError(err);
             });
 
-            var password = req.body.password;
             var passwordHash = SHA256(password + salt).toString("base64");
 
             var userType = req.body.userType;
@@ -155,6 +178,7 @@ app.post('/register', (req, res) => {
                 
                 var userJSON = {
                     favorites: user.favorites,
+                    username: user.username,
                     userType: user.userType,
                     id: user._id
                 }
@@ -170,7 +194,7 @@ app.post('/register', (req, res) => {
 })
 
 // Favorites
-app.put('/favorites', (req, res) => {
+app.post('/favorites', (req, res) => {
 
     const user = JSON.parse(req.body.update);
     const favorites = user.favorites;

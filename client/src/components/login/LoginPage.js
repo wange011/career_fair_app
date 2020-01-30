@@ -45,7 +45,62 @@ function LoginPage(props) {
 
         }).catch( (error) => {
 
-            props.login();
+            document.getElementById("incorrectLoginMessage").style.visibility = "visible";
+        
+        });
+
+    }
+
+    const handleRegistration  = (e) => {
+        
+        e.preventDefault();
+
+        const inputs = document.getElementsByClassName('RegistrationContainer')[0].getElementsByTagName('input');
+        
+        const username = inputs[0].value;
+        const password = inputs[1].value;
+
+        if (username.length < 1) {
+            document.getElementById("incorrectRegisterMessage").innerHTML = "Please Enter a Username";
+            document.getElementById("incorrectRegisterMessage").style.visibility = "visible";
+            return;
+        }
+
+        if (password.length < 1) {
+            document.getElementById("incorrectRegisterMessage").innerHTML = "Please Enter a Password";
+            document.getElementById("incorrectRegisterMessage").style.visibility = "visible";
+            return;
+        }
+
+        const user = {
+            username: username,
+            password: password
+        }    
+
+        // Consider using redux-thunk
+        fetch("http://localhost:5000/register", {
+            method: 'POST',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(user)
+        }).then( (response) => {
+            
+            if (response.ok) {
+                return response.json();
+            } else {
+                throw new Error("Username or Password is incorrect");
+            }
+
+        }).then( (user) => {
+
+            props.login(user.favorites, user.username, user.id, user.userType);
+
+        }).catch( (error) => {
+
+            document.getElementById("incorrectRegisterMessage").innerHTML = "Username is taken";
+            document.getElementById("incorrectRegisterMessage").style.visibility = "visible";
         
         });
 
@@ -63,8 +118,7 @@ function LoginPage(props) {
                         <input></input>
                         <p>Password</p>
                         <input type="password"></input>
-                        {props.incorrectLogin ? 
-                        <p className="incorrectLoginMessage">No such account exists</p> : null}
+                        <p id="incorrectLoginMessage">No such account exists</p>
                         <button onClick={(e) => handleLogin(e)}>LOG IN</button>
                     </form>
                 </div>
@@ -78,7 +132,8 @@ function LoginPage(props) {
                         <input type="password"></input>
                         <p>Access Code (Optional)</p>
                         <input></input>
-                        <button onClick={(e) => handleLogin(e)}>SIGN UP</button>
+                        <p id="incorrectRegisterMessage">Username is taken</p>
+                        <button onClick={(e) => handleRegistration(e)}>SIGN UP</button>
                     </form>
                 </div>
             
@@ -93,7 +148,8 @@ function LoginPage(props) {
 
 const mapStateToProps = (state) => {
     return {
-        incorrectLogin: state.incorrectLogin
+        incorrectLogin: state.incorrectLogin,
+        incorrectRegister: state.incorrectRegister
     }
 }
 
@@ -102,8 +158,8 @@ const mapDispatchToProps = (dispatch) => {
         toggleLogin: () => {
             dispatch(toggleLogin())
         },
-        login: (favorites, userID, userType) => {
-            dispatch(login(favorites, userID, userType))
+        login: (favorites, username, userID, userType) => {
+            dispatch(login(favorites, username, userID, userType))
         }    
     }
 }
