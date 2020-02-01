@@ -7,10 +7,12 @@ import delIcon from '../../res/images/baseline_clear_black_18dp.png';
 function DayFavorites(props) {
 
     //Get the list of favorited companies attending on a specific day
-    const favorites = props.list;
+    const favorites = props.favorites[props.day - 1];
 
     var handleClick = (company) => {
+        
         props.unfavorite(company);
+
     }
 
     if (favorites) {
@@ -19,7 +21,7 @@ function DayFavorites(props) {
         var favoritesHTML = favorites.map( (company) => {
             return(
                 <div className="FavoriteEntry">
-                    <Link to={"/view/" + company.id}>
+                    <Link to={"/view/" + company._id}>
                         <div className="FavoriteEntryName">
                             <p>{company.name}</p>
                         </div>
@@ -43,6 +45,13 @@ function DayFavorites(props) {
 
 }
 
+const mapStateToProps = (state) => {
+    return {
+        favorites: state.favorites,
+        userID: state.userID
+    }
+}
+
 const mapDispatchToProps = (dispatch) => {
     return {
         unfavorite: (company) => {
@@ -51,4 +60,4 @@ const mapDispatchToProps = (dispatch) => {
     }
 }
 
-export default connect(null, mapDispatchToProps)(DayFavorites);
+export default connect(mapStateToProps, mapDispatchToProps)(DayFavorites);

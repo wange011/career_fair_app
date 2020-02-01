@@ -8,8 +8,8 @@ import default_company from '../../res/images/default_company.png';
 function DayList(props) {
 
     //Get the list of all companies attending on a specific day
-    const list = props.list;
-    const favorites = props.favorites; 
+    const list = props.companies[props.day - 1];
+    const favorites = props.favorites[props.day - 1]; 
 
     //Map each company into a CompanyEntry
     if (list) {
@@ -49,9 +49,9 @@ function DayList(props) {
             return(
 
                 <div className="CompanyEntry">
-                    <Link to={"/view/" + company.id}>
+                    <Link to={"/view/" + company._id}>
                         <div className="CompanyLogoWrapper">
-                            <img onError={(e) => addDefaultSrc(e)} src={company.image} className="CompanyLogo"></img>
+                            <img onError={(e) => addDefaultSrc(e)} src="" className="CompanyLogo"></img>
                         </div>    
                         <div className="CompanyEntryInfo">
                             <h3>{company.name}</h3>
@@ -81,6 +81,13 @@ function DayList(props) {
 
 }
 
+const mapStateToProps = (state) => {
+    return {
+        companies: state.filteredCompanies,
+        favorites: state.favorites
+    }
+}
+
 const mapDispatchToProps = (dispatch) => {
     return {
         favorite: (company) => {
@@ -92,4 +99,4 @@ const mapDispatchToProps = (dispatch) => {
     }
 }
 
-export default connect(null, mapDispatchToProps)(DayList);
+export default connect(mapStateToProps, mapDispatchToProps)(DayList);

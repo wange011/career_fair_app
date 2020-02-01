@@ -196,7 +196,7 @@ app.post('/register', (req, res) => {
 // Favorites
 app.post('/favorites', (req, res) => {
 
-    const user = JSON.parse(req.body.update);
+    const user = JSON.parse(req.body.user);
     const favorites = user.favorites;
     const id = user.id;
     
@@ -206,7 +206,7 @@ app.post('/favorites', (req, res) => {
 
         if (users.length > 0) {
             User.findByIdAndUpdate({ _id: id }, { favorites: favorites }, (err, user) => {
-                if (err) return handleError(err);
+                if (err) return console.log(err);
             });
             
             return res.send("User updated");

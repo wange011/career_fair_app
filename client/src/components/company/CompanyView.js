@@ -9,8 +9,7 @@ import './CompanyView.css';
 
 function CompanyView(props) {
 
-    const id = parseInt(props.match.params.id);
-
+    const id = props.match.params.id;
     var company = null;
     var companies = props.companies;
 
@@ -20,7 +19,7 @@ function CompanyView(props) {
     for (var i = 0; i < companies.length; i++) {
         for (var j = 0; j < companies[i].length; j++) {
 
-            if (companies[i][j].id === id) {
+            if (companies[i][j]._id === id) {
                 company = companies[i][j];
                 break loop;
             }    
@@ -28,7 +27,21 @@ function CompanyView(props) {
         }
     }
 
-    const day = parseInt(company.day.charAt(4), 10);
+    var day = undefined;
+
+    try {
+        day = parseInt(company.day.charAt(4), 10);
+    } catch (error) {
+        
+        setTimeout( () => { 
+            CompanyView(props);
+        }, 3000);
+        
+        return(
+            <div></div>
+        );
+    }
+    
     var inFavorites = false;
     var favorites = props.favorites[day - 1];
     

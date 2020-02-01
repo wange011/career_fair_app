@@ -2,17 +2,21 @@
  * action types
  */
 
+export const GET_COMPANIES = 'GET_COMPANIES'
 export const ADD_FAVORITE = 'ADD_FAVORITE'
 export const REMOVE_FAVORITE = 'REMOVE_FAVORITE'
 export const EDIT_COMPANY = 'EDIT_COMPANY'
 export const FILTER_COMPANIES = 'FILTER_COMPANIES'
-export const LOGIN = "LOGIN"
-export const TOGGLE_LOGIN = "TOGGLE_LOGIN"
-export const LOGOUT = "LOGOUT"
+export const LOGIN = 'LOGIN'
+export const TOGGLE_LOGIN = 'TOGGLE_LOGIN'
+export const LOGOUT = 'LOGOUT'
 
 /*
  * action creators
  */
+export function getCompanies(companies) {
+    return { type: GET_COMPANIES, companies }
+}
 
 export function addFavorite(company) {
     return { type: ADD_FAVORITE, company }

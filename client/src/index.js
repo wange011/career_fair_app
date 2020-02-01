@@ -2,10 +2,10 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import data from './data.json'
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 import {
+    GET_COMPANIES,
     ADD_FAVORITE,
     REMOVE_FAVORITE,
     EDIT_COMPANY,
@@ -16,23 +16,38 @@ import {
 } from './redux/actions'
 import * as serviceWorker from './serviceWorker';
 
-// Maybe include this logic in the back-end instead
-var companies = [];
-var favorites = [];
+var companies = [[], [], []];
+var favorites = [[], [], []];
 
-for (let i = 0; i < data.companies.length; i++) {
+const updateUserFavorites = (state, favorites) => {
 
-    let company = data.companies[i];
-    company.id = i;
-    let dayNum = parseInt(company.day.charAt(4), 10);
-
-    // Ensure that there are enough days added
-    while(dayNum > companies.length) {
-        companies.push([]);
-        favorites.push([]);
+    if (state.userID.length < 1) {
+        return;
     }
 
-    companies[dayNum - 1].push(company);
+    var favoritesList = []
+
+    for (var i = 0; i < favorites.length; i++) {
+        favoritesList = favoritesList.concat(favorites[i]);
+    }
+
+    const user = {
+        favorites: favoritesList,
+        id: state.userID
+    }
+
+    const update = {
+        user: JSON.stringify(user)
+    }
+
+    fetch("http://localhost:5000/favorites", {
+        method: 'POST',
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(update)
+    })
 
 }
 
@@ -55,6 +70,17 @@ function reducer(state = initialState, action) {
     
     switch (action.type) {
         
+        case GET_COMPANIES:
+        
+            var favorites = state.favorites;
+
+            // Make sure there are enough days allocated
+            while (favorites.length < action.companies.length) {
+                favorites.push([]);
+            }
+
+            return {...state, companies: [...action.companies], filteredCompanies: [...action.companies], favorites: [...favorites] }
+
         case ADD_FAVORITE:
 
             // Add the company to the correct day in the list of favorites
@@ -62,8 +88,11 @@ function reducer(state = initialState, action) {
             var dayNum = parseInt(company.day.charAt(4), 10);
             // Reminder: ensure state is not mutated
             var favorites = state.favorites;
-
+            
             favorites[dayNum - 1] = favorites[dayNum - 1].concat(company);
+
+            // Update database
+            updateUserFavorites(state, favorites);
 
             // Using spread operator will not mutate
             return {...state, favorites: [...favorites]}
@@ -79,6 +108,9 @@ function reducer(state = initialState, action) {
             // Remove company from specified day
             favorites[dayNum - 1] = favorites[dayNum - 1].filter(favorite => !(favorite.name === company.name));
 
+            // Update database
+            updateUserFavorites(state, favorites);
+            
             // Using spread operator will not mutate
             return {...state, favorites: [...favorites]}
         
@@ -93,7 +125,6 @@ function reducer(state = initialState, action) {
             for (var i = 0; i < companies[dayNum].length; i++) {
                 if (companies[dayNum - 1][i].name === company.name) {
                     
-                    company.id = companies[dayNum - 1][i].id
                     companies[dayNum - 1][i] = company;
                     
                 }
@@ -145,7 +176,7 @@ function reducer(state = initialState, action) {
             }
 
             return {...state, favorites: [...favorites], username: action.username, 
-                userID: action.id, userType: action.userType, showLogin: false}
+                userID: action.userID, userType: action.userType, showLogin: false}
         
         case TOGGLE_LOGIN:
             return {...state, showLogin: !state.showLogin}

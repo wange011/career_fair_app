@@ -9,7 +9,7 @@ function FavoritesSidebar(props) {
     //Map favorites from each day of the fair into a DayList component
     var favoritesHTML = props.favorites.map( (fairDay, index) => {
         return(
-            <DayFavorites list={fairDay} day={index + 1}/>
+            <DayFavorites day={index + 1}/>
         )
     })
 
