@@ -5,29 +5,29 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import './App.css';
 
 class App extends Component {
-  
-  render(){
-    
+
+  render() {
+
     return (
       <div className="App">
-        
+
         <TaskBar onClick={this.handleTaskbarClick} />
 
         <div className="container">
           <div className="row">
             <Router>
-              <MainPage/>
+              <MainPage />
             </Router>
-          </div>  
-          
+          </div>
+
         </div>
-        
+
 
       </div>
     );
-  
-  }  
+
+  }
 
 }
 
-export default App;
+export default App
