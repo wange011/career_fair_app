@@ -7,12 +7,11 @@ import './CompanyList.css';
 function CompanyList(props) {
 
     var fairDays = props.companies;
-    var favorites = props.favorites;
 
     //Map each day of the fair into a DayList component
     var listHTML = fairDays.map( (fairDay, index) => {
         return(
-            <DayList list={fairDay} favorites={favorites[index]} day={index + 1}/>
+            <DayList day={index + 1}/>
         )
     })
 
@@ -30,8 +29,7 @@ function CompanyList(props) {
 
 const mapStateToProps = (state) => {
     return {
-        companies: state.companies,
-        favorites: state.favorites
+        companies: state.filteredCompanies
     }
 }
 
