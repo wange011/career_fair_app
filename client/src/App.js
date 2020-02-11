@@ -9,24 +9,6 @@ import './App.css';
 
 class App extends Component {
 
-<<<<<<< HEAD
-  render() {
-
-    return (
-      <div className="App">
-
-        <TaskBar onClick={this.handleTaskbarClick} />
-
-        <div className="container">
-          <div className="row">
-            <Router>
-              <MainPage />
-            </Router>
-          </div>
-
-        </div>
-
-=======
   // If user is loggedIn and isAdmin, return AdminPage
 
   componentDidMount() {
@@ -86,7 +68,6 @@ class App extends Component {
           {this.props.showLogin ?
             <LoginPage/> : null
           }
->>>>>>> master
 
         </Router>
       </div>
@@ -96,9 +77,6 @@ class App extends Component {
 
 }
 
-<<<<<<< HEAD
-export default App
-=======
 const mapStateToProps = (state) => {
   return {
       showLogin: state.showLogin
@@ -115,4 +93,3 @@ const mapDispatchToProps = (dispatch) => {
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);
 
->>>>>>> master
