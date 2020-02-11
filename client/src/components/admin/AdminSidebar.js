@@ -40,7 +40,7 @@ function AdminSidebar() {
                     return (
                         <React.Fragment key={name}>
                             <ListItem style={{ paddingLeft: 18 }} button {...rest}>
-                                <ListItemText>{label}</ListItemText>
+                                <ListItemText class="RootButton">{label}</ListItemText>
                             </ListItem>
                             {Array.isArray(subItems) ? (
                                 <List disablePadding dense>

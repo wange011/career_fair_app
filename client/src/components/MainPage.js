@@ -4,6 +4,7 @@ import CompanyView from './company/CompanyView';
 import FavoritesSidebar from './favorite/FavoritesSidebar';
 import AdminSidebar from './admin/AdminSidebar';
 import TweetBox from './tweets/TweetBox';
+import { connect } from 'react-redux';
 import { BrowserRouter as Switch, Route } from 'react-router-dom';
 import './MainPage.css';
 
@@ -15,7 +16,9 @@ class MainPage extends Component {
 
             <div className="MainPage col-lg-10 col-md-10 col-sm-10">
 
-                <AdminSidebar />
+                {this.props.userType === 'admin' ?
+                <AdminSidebar/> : <FavoritesSidebar/> 
+                }
 
                 <Switch>
                     <Route exact path="/">
@@ -36,4 +39,10 @@ class MainPage extends Component {
 
 }
 
-export default MainPage;
+const mapStateToProps = (state) => {
+    return {
+        userType: state.userType
+    }
+}
+
+export default connect(mapStateToProps)(MainPage)
