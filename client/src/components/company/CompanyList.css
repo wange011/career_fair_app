@@ -3,6 +3,7 @@
     width: 50%;
     padding: 0;
     margin: 20px 0px;
+    margin-bottom: 5px;
     display: inline-block;
     vertical-align: bottom;
 }
@@ -33,6 +34,24 @@
 
 .SearchBar form:focus-within {
     background: #FFFFFF;
+}
+.FilterOption table {
+    width: 100%;
+    table-layout: fixed;
+    margin: 1vw;
+}
+.FilterOption th {
+    text-align: center;
+}
+.FilterOption td {
+    text-align: left;
+}
+.FilterOption img {
+    max-width: 17px;
+    height: auto;
+}
+.FilterOption .hidden {
+    display: none;
 }
 
 .CompanyListWrapper {

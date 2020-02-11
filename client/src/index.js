@@ -9,10 +9,11 @@ import {
     ADD_FAVORITE,
     REMOVE_FAVORITE,
     EDIT_COMPANY,
+    SEARCH_COMPANIES,
     FILTER_COMPANIES,
+    HIDE,
     LOGIN,
-    LOGOUT,
-    filterCompanies
+    LOGOUT
 } from './redux/actions'
 import * as serviceWorker from './serviceWorker';
 
@@ -42,12 +43,17 @@ const initialState = {
     filteredCompanies: companies,
     favorites: favorites,
     numDays: companies.length,
-    search: ""
+    search: "",
+    filter: {
+        sponsor: [],
+        position: [],
+        degree: []
+    },
+    shouldHide: false
 }
 
 // TO-DO: Seperate Reducers
 function reducer(state = initialState, action) {
-    
     switch (action.type) {
         
         case ADD_FAVORITE:
@@ -79,24 +85,55 @@ function reducer(state = initialState, action) {
         
         case EDIT_COMPANY:
             return state
-        
-        case FILTER_COMPANIES:
-            //assign filter object to variable
-            var filter = action.filter;
 
-            //filter out companies that don't contain the search term in the title- To be changed; this is just for testing.
+        case SEARCH_COMPANIES:
+            //assign search object to variable
+            var searched = action.search;
+
+            //filter out companies that don't contain the search term in the title
             var filteredCompanies = [];
             for (var i = 0; i < state.companies.length; i++) {
-                filteredCompanies.push(state.companies[i].filter(company => company.name.toLowerCase().includes(filter.name.toLowerCase()) 
-                || company.positions_offered.toLowerCase().includes(filter.name.toLowerCase()) 
-                || company.overview.toLowerCase().includes(filter.name.toLowerCase())
-                || company.degree_levels.toLowerCase().includes(filter.name.toLowerCase())
-                || company.sponsorships.toLowerCase().includes(filter.name.toLowerCase())));
+                filteredCompanies.push(state.companies[i].filter(company => company.name.toLowerCase().includes(searched.name.toLowerCase()) 
+                || company.positions_offered.toLowerCase().includes(searched.name.toLowerCase()) 
+                || company.overview.toLowerCase().includes(searched.name.toLowerCase())
+                || company.degree_levels.toLowerCase().includes(searched.name.toLowerCase())
+                || company.sponsorships.toLowerCase().includes(searched.name.toLowerCase())));
             }
             
 
             //Using spread operator will not mutate
-            return {...state, filteredCompanies: [...filteredCompanies], search: filter.name} 
+            return {...state, filteredCompanies: [...filteredCompanies], search: searched.name} 
+        
+        case FILTER_COMPANIES:
+            //assign filter object to variable
+            var ofilter = state.filter;
+            var filter = action.filter;
+            if (action.check) {
+                filter.position = ofilter.position.concat(filter.position);
+                filter.sponsor = ofilter.sponsor.concat(filter.sponsor);
+                filter.degree = ofilter.degree.concat(filter.degree);
+            } else {
+                filter.position = ofilter.position.filter(pos => pos != filter.position[0]);
+                filter.sponsor = ofilter.sponsor.filter(pos => pos != filter.sponsor[0]);
+                filter.degree = ofilter.degree.filter(pos => pos != filter.degree[0]);
+            }
+
+            //filter out companies that don't match the filter
+            var filteredCompanies = [];
+            for (var i = 0; i < state.companies.length; i++) {
+                filteredCompanies.push(state.companies[i].filter(company => (filter.position.find(pos => company.positions_offered.split(', ').includes(pos))
+                || filter.position.length === 0) 
+                && (filter.degree.find(deg => company.degree_levels.split(', ').includes(deg)) || filter.degree.length === 0)
+                && (filter.sponsor.find(spons => company.sponsorships.split(', ').includes(spons)) || filter.sponsor.length === 0)));
+            }
+            
+
+            //Using spread operator will not mutate
+            return {...state, filteredCompanies: [...filteredCompanies], filter: filter}
+            
+        case HIDE:
+            var shouldHide = action.shouldHide;
+            return {...state, shouldHide: action.shouldHide}
         
         // TO-DO: Get and sort user favorites after login
         // Also go through the company list and set company.favorite to true

@@ -1,6 +1,7 @@
 import React from 'react';
 import DayList from './DayList';
 import SearchBar from './SearchBar';
+import FilterOption from'./FilterOption';
 import { connect } from 'react-redux';
 import './CompanyList.css';
 
@@ -20,6 +21,7 @@ function CompanyList(props) {
     return(
         <div className="CompanyListWrapper col-lg-8">
             <SearchBar /> 
+            <FilterOption />
             <div className="CompanyList">
                 <h1>COMPANIES ATTENDING</h1>
                 {listHTML}

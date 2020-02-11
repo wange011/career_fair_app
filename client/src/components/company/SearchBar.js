@@ -1,16 +1,15 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { filterCompanies } from '../../redux/actions';
-import { Link } from 'react-router-dom';  
+import { searchCompanies } from '../../redux/actions';
 
 function SearchBar(props) {
 
     var handleChange = (e) => {
         var value = e.target.value;
-        var filter = {
+        var searched = {
             name: value
         };
-        props.filterComp(filter);
+        props.searchComp(searched);
     }
     
     return(
@@ -36,8 +35,8 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        filterComp: (filter) => {
-            dispatch(filterCompanies(filter))
+        searchComp: (searched) => {
+            dispatch(searchCompanies(searched))
         }
     }
 }
