@@ -131,6 +131,7 @@ function reducer(state = initialState, action) {
             //filter out companies that don't contain the search term in the title
             var filteredCompanies = [];
             for (var i = 0; i < state.companies.length; i++) {
+                // loops through companies and checks if any section contains the search term
                 filteredCompanies.push(state.companies[i].filter(company => company.name.toLowerCase().includes(searched.name.toLowerCase()) 
                 || company.positions_offered.toLowerCase().includes(searched.name.toLowerCase()) 
                 || company.overview.toLowerCase().includes(searched.name.toLowerCase())
@@ -146,11 +147,14 @@ function reducer(state = initialState, action) {
             //assign filter object to variable
             var ofilter = state.filter;
             var filter = action.filter;
+            // check if the box input was being checked or unchecked
             if (action.check === "checked") {
+                // adds new filter with previous filter
                 filter.position = ofilter.position.concat(filter.position);
                 filter.sponsor = ofilter.sponsor.concat(filter.sponsor);
                 filter.degree = ofilter.degree.concat(filter.degree);
             } else if (action.check === "") {
+                // remove the uncheck option from filter
                 filter.position = ofilter.position.filter(pos => pos != filter.position[0]);
                 filter.sponsor = ofilter.sponsor.filter(pos => pos != filter.sponsor[0]);
                 filter.degree = ofilter.degree.filter(pos => pos != filter.degree[0]);
@@ -170,6 +174,7 @@ function reducer(state = initialState, action) {
             return {...state, filteredCompanies: [...filteredCompanies], filter: filter}
             
         case HIDE:
+            // updates shouldHide for the filter table
             var shouldHide = action.shouldHide;
             return {...state, shouldHide: action.shouldHide}
         

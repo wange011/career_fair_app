@@ -5,6 +5,8 @@ import downIcon from '../../res/images/baseline_arrow_down_black_18dp.png';
 import rightIcon from '../../res/images/baseline_arrow_forward_black_18dp.png';
 
 function FilterOption(props) {
+
+    // filters degree
     var handleDegree = (e, deg) => {
         var filtered = {
             degree: [deg],
@@ -14,6 +16,7 @@ function FilterOption(props) {
         props.filterComp(filtered, e.target.checked);
     }
 
+    // filters position
     var handlePosition = (e, pos) => {
         var filtered = {
             degree: [],
@@ -23,6 +26,7 @@ function FilterOption(props) {
         props.filterComp(filtered, e.target.checked);
     }
 
+    // filters sponsors
     var handleSponsor = (e, spons) => {
         var filtered = {
             degree: [],
@@ -32,10 +36,12 @@ function FilterOption(props) {
         props.filterComp(filtered, e.target.checked);
     }
 
+    // expands the filter list
     var expandList = (e) => {
         var shouldHide = !props.shouldHide;
         props.hid(shouldHide);
     }
+    // determines whether it should show the down or right arrow
     var arrowIcon;
     if (props.shouldHide) {
         arrowIcon = downIcon;

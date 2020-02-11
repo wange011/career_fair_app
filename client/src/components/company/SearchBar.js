@@ -4,6 +4,7 @@ import { searchCompanies } from '../../redux/actions';
 
 function SearchBar(props) {
 
+    // updates the search value and companies present
     var handleChange = (e) => {
         var value = e.target.value;
         var searched = {
