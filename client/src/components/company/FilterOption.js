@@ -75,19 +75,34 @@ function FilterOption(props) {
                             <td><input type="checkbox" name="sponsor" onClick={(e) => handleSponsor(e, "Student (F-1) Visa")}></input>Student (F-1) Visa</td>
                         </tr>
                         <tr>
-                            <td><input type="checkbox" name="degree" onClick={(e) => handleDegree(e, "Non-Degree")}></input>Non-Degree</td>
+                            <td><input type="checkbox" name="degree" onClick={(e) => handleDegree(e, "Doctorate")}></input>Doctorate</td>
                             <td><input type="checkbox" name="position" onClick={(e) => handlePosition(e, "PhD")}></input>PhD</td>
                             <td><input type="checkbox" name="sponsor" onClick={(e) => handleSponsor(e, "Employment (H-1) Visa")}></input>Employment (H-1) Visa</td>
                         </tr>
                         <tr>
-                            <td></td>
+                            <td><input type="checkbox" name="degree" onClick={(e) => handleDegree(e, "Special")}></input>Special</td>
                             <td><input type="checkbox" name="position" onClick={(e) => handlePosition(e, "MBA Internship/Co-op Position")}></input>MBA Internship/Co-op</td>
                             <td><input type="checkbox" name="sponsor" onClick={(e) => handleSponsor(e, "J-1 Visa")}></input>J-1 Visa</td>
                         </tr>
                         <tr>
-                            <td></td>
-                            <td></td>
+                            <td><input type="checkbox" name="degree" onClick={(e) => handleDegree(e, "Non-Degree")}></input>Non-Degree</td>
+                            <td><input type="checkbox" name="position" onClick={(e) => handlePosition(e, "Global Internship Position")}></input>Global Internship</td>
                             <td><input type="checkbox" name="sponsor" onClick={(e) => handleSponsor(e, "A")}></input>A</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td><input type="checkbox" name="position" onClick={(e) => handlePosition(e, "Undergraduate Research Position")}></input>Undergraduate Research</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td><input type="checkbox" name="position" onClick={(e) => handlePosition(e, "Professional Part Time Position Only")}></input>Professional Part Time</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td><input type="checkbox" name="position" onClick={(e) => handlePosition(e, "Non-Professional Part-Time/Seasonal Only")}></input>Non-Professional Part-Time/Seasonal</td>
+                            <td></td>
                         </tr>
                     </table>
                 </form>

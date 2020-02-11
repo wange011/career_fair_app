@@ -108,11 +108,11 @@ function reducer(state = initialState, action) {
             //assign filter object to variable
             var ofilter = state.filter;
             var filter = action.filter;
-            if (action.check) {
+            if (action.check === "checked") {
                 filter.position = ofilter.position.concat(filter.position);
                 filter.sponsor = ofilter.sponsor.concat(filter.sponsor);
                 filter.degree = ofilter.degree.concat(filter.degree);
-            } else {
+            } else if (action.check === "") {
                 filter.position = ofilter.position.filter(pos => pos != filter.position[0]);
                 filter.sponsor = ofilter.sponsor.filter(pos => pos != filter.sponsor[0]);
                 filter.degree = ofilter.degree.filter(pos => pos != filter.degree[0]);

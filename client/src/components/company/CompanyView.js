@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { withRouter } from "react-router";
-import { addFavorite, removeFavorite } from '../../redux/actions';
+import { addFavorite, removeFavorite, filterCompanies } from '../../redux/actions';
 import heart from '../../res/images/baseline_favorite_black_18dp.png';
 import backArrow from '../../res/images/baseline_arrow_back_black_18dp.png';
 import default_company from '../../res/images/default_company.png';
@@ -70,6 +70,16 @@ function CompanyView(props) {
         console.log(e.target.src)
     }
 
+    var goBack = (e) => {
+        var filter = {
+            degree: [],
+            position: [],
+            sponsor: []
+        };
+        props.filterComp(filter, "clear");
+        props.history.goBack();
+    }
+
     return(
         <div className="CompanyView col-lg-8">
             
@@ -91,7 +101,7 @@ function CompanyView(props) {
                     <img onError={(e) => addDefaultSrc(e)} src={company.image} className="CompanyImage" />
                 </div>
                 <div className="CompanyViewButtons">
-                    <img src={backArrow} className={'backArrow'} onClick={() => props.history.goBack()} />
+                    <img src={backArrow} className={'backArrow'} onClick={() => goBack()} />
                     <img src={heart} className={heartClass} onClick={(e) => handleClick(e)} />
                 </div>
             </div>  
@@ -104,7 +114,8 @@ function CompanyView(props) {
 const mapStateToProps = (state) => {
     return {
         companies: state.filteredCompanies,
-        favorites: state.favorites
+        favorites: state.favorites,
+        filter: state.filter
     }
 }
 
@@ -115,6 +126,9 @@ const mapDispatchToProps = (dispatch) => {
         },
         unfavorite: (company) => {
             dispatch(removeFavorite(company))
+        },
+        filterComp: (filtered, check) => {
+            dispatch(filterCompanies(filtered, check))
         }
     }
 }
