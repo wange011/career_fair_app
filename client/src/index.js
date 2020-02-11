@@ -122,7 +122,33 @@ function reducer(state = initialState, action) {
             return {...state, favorites: [...favorites]}
         
         case EDIT_COMPANY:
-            return state
+
+            var company = action.company;
+            var dayNum = parseInt(company.day.charAt(4), 10);
+            
+            var companies = state.companies;
+            
+            // Edit the company in the state
+            for (var i = 0; i < companies[dayNum].length; i++) {
+                if (companies[dayNum - 1][i].name === company.name) {
+                    
+                    companies[dayNum - 1][i] = company;
+                    
+                }
+            }
+
+            // Find if the company is also in filteredCompanies
+            var filteredCompanies = state.filteredCompanies;
+
+            for (var i = 0; i < filteredCompanies[dayNum - 1].length; i++) {
+                if (filteredCompanies[dayNum - 1][i].name === company.name) {
+                    
+                    filteredCompanies[dayNum - 1][i] = company;
+                    
+                }
+            }
+
+            return {...state, companies: [...companies], filteredCompanies: [...filteredCompanies]}
 
         case SEARCH_COMPANIES:
             //assign search object to variable
