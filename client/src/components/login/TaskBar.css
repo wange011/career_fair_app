@@ -10,6 +10,7 @@
     background-color: #E8E8E8;
     border-bottom: 1px solid silver;
     vertical-align: middle;
+    position: relative;
 }
 
 .appIcon {
@@ -34,4 +35,56 @@
 
 .loginButton:hover {
     background: #D3D3D3;
+}
+
+.profileWrapper {
+    min-width: 5%;
+    display: inline-block;
+    vertical-align: top;
+    position: absolute;
+    right: 30px;
+    top: 5px;
+    bottom: 5px;
+    margin: 5px 0px;
+    padding: 6px 3px;
+    border-radius: 3px;
+    border: 1px solid #E8E8E8;
+}
+
+.profileWrapper:hover {
+    border: 1px solid silver;
+    cursor: pointer;
+}
+
+.profIconWrapper {
+    display: inline-block;
+    height: 100%;
+    vertical-align: top;
+}
+
+.profIcon {
+    width: 25px;
+    height: 25px;
+}
+
+.usernameWrapper {
+    display: inline-block;
+    height: 100%;
+    padding: 4px 4px;
+    font-weight: 600;
+    font-size: 12px;
+    vertical-align: top;
+}
+
+.downArrowWrapper {
+    display: inline-block;
+    height: 100%;
+    padding: 0px 0px;
+    vertical-align: top;
+    text-align: right;
+}
+
+.downArrow {
+    width: 21px;
+    height: 21px;
 }

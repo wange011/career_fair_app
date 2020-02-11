@@ -2,18 +2,23 @@
  * action types
  */
 
+export const GET_COMPANIES = 'GET_COMPANIES'
 export const ADD_FAVORITE = 'ADD_FAVORITE'
 export const REMOVE_FAVORITE = 'REMOVE_FAVORITE'
 export const EDIT_COMPANY = 'EDIT_COMPANY'
 export const SEARCH_COMPANIES = 'SEARCH_COMPANIES'
 export const FILTER_COMPANIES = 'FILTER_COMPANIES'
 export const HIDE = 'HIDE'
-export const LOGIN = "LOGIN"
-export const LOGOUT = "LOGOUT"
+export const LOGIN = 'LOGIN'
+export const TOGGLE_LOGIN = 'TOGGLE_LOGIN'
+export const LOGOUT = 'LOGOUT'
 
 /*
  * action creators
  */
+export function getCompanies(companies) {
+    return { type: GET_COMPANIES, companies }
+}
 
 export function addFavorite(company) {
     return { type: ADD_FAVORITE, company }
@@ -39,8 +44,12 @@ export function hide(shouldHide) {
     return { type: HIDE, shouldHide }
 }
 
-export function login(username, password) {
-    return { type: LOGIN, username, password }
+export function login(favorites, username, userID, userType) {
+    return { type: LOGIN, favorites, username, userID, userType }
+}
+
+export function toggleLogin() {
+    return { type: TOGGLE_LOGIN }
 }
 
 export function logout(company) {
