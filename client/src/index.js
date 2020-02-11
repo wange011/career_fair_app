@@ -153,16 +153,23 @@ function reducer(state = initialState, action) {
         case SEARCH_COMPANIES:
             //assign search object to variable
             var searched = action.search;
+            var filter = state.filter;
 
             //filter out companies that don't contain the search term in the title
             var filteredCompanies = [];
             for (var i = 0; i < state.companies.length; i++) {
                 // loops through companies and checks if any section contains the search term
-                filteredCompanies.push(state.companies[i].filter(company => company.name.toLowerCase().includes(searched.name.toLowerCase()) 
+                filteredCompanies.push(state.companies[i].filter(company => (company.name.toLowerCase().includes(searched.name.toLowerCase()) 
                 || company.positions_offered.toLowerCase().includes(searched.name.toLowerCase()) 
                 || company.overview.toLowerCase().includes(searched.name.toLowerCase())
                 || company.degree_levels.toLowerCase().includes(searched.name.toLowerCase())
-                || company.sponsorships.toLowerCase().includes(searched.name.toLowerCase())));
+                || company.sponsorships.toLowerCase().includes(searched.name.toLowerCase()))
+                &&
+                // checks pre-existing filter 
+                ((filter.position.find(pos => company.positions_offered.split(', ').includes(pos))
+                || filter.position.length === 0) 
+                && (filter.degree.find(deg => company.degree_levels.split(', ').includes(deg)) || filter.degree.length === 0)
+                && (filter.sponsor.find(spons => company.sponsorships.split(', ').includes(spons)) || filter.sponsor.length === 0))));
             }
             
 
@@ -173,6 +180,7 @@ function reducer(state = initialState, action) {
             //assign filter object to variable
             var ofilter = state.filter;
             var filter = action.filter;
+            var searched = state.search;
             // check if the box input was being checked or unchecked
             if (action.check === "checked") {
                 // adds new filter with previous filter
@@ -188,11 +196,26 @@ function reducer(state = initialState, action) {
 
             //filter out companies that don't match the filter
             var filteredCompanies = [];
-            for (var i = 0; i < state.companies.length; i++) {
-                filteredCompanies.push(state.companies[i].filter(company => (filter.position.find(pos => company.positions_offered.split(', ').includes(pos))
-                || filter.position.length === 0) 
-                && (filter.degree.find(deg => company.degree_levels.split(', ').includes(deg)) || filter.degree.length === 0)
-                && (filter.sponsor.find(spons => company.sponsorships.split(', ').includes(spons)) || filter.sponsor.length === 0)));
+            // if there isn't a pre-existing search term
+            if (searched === "") {
+                for (var i = 0; i < state.companies.length; i++) {
+                    filteredCompanies.push(state.companies[i].filter(company => (filter.position.find(pos => company.positions_offered.split(', ').includes(pos))
+                    || filter.position.length === 0) 
+                    && (filter.degree.find(deg => company.degree_levels.split(', ').includes(deg)) || filter.degree.length === 0)
+                    && (filter.sponsor.find(spons => company.sponsorships.split(', ').includes(spons)) || filter.sponsor.length === 0)));
+                }
+            } else { // if there is a pre-existing search term (will do this more efficiently soon.)
+                for (var i = 0; i < state.companies.length; i++) {
+                    filteredCompanies.push(state.companies[i].filter(company => (filter.position.find(pos => company.positions_offered.split(', ').includes(pos))
+                    || filter.position.length === 0) 
+                    && (filter.degree.find(deg => company.degree_levels.split(', ').includes(deg)) || filter.degree.length === 0)
+                    && (filter.sponsor.find(spons => company.sponsorships.split(', ').includes(spons)) || filter.sponsor.length === 0)
+                    && (company.name.toLowerCase().includes(searched.toLowerCase()) 
+                    || company.positions_offered.toLowerCase().includes(searched.toLowerCase()) 
+                    || company.overview.toLowerCase().includes(searched.toLowerCase())
+                    || company.degree_levels.toLowerCase().includes(searched.toLowerCase())
+                    || company.sponsorships.toLowerCase().includes(searched.toLowerCase()))));
+                }
             }
             
 
