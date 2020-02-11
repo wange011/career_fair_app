@@ -1,0 +1,50 @@
+/*FavoritesSideBar*/
+
+.AdminSideBar {
+    background: #F3F3F3;
+    text-align: left;
+    height: 100%;
+    max-height: 90%;
+    padding: 0px;
+    overflow: auto;
+}
+
+.AdminSideBar h1 {
+    font-size: 22px;
+    margin: 10px 10px;
+    padding: 5px 5px;
+    border-bottom: 1px solid #D3D3D3;
+}
+
+.AdminSideBar h2 {
+    font-size: 16px;
+    margin: 5px 5px;
+}
+
+.sidebar-subitem-text {
+    font-size: 0.8rem;
+}
+
+.AdminSideBar span {
+    font-family: 'Lato', sans-serif !important;
+    font-size: 12px !important;
+    padding: 0px 5px;
+}
+
+.AdminSideBar div {
+    padding: 5px 10px !important;
+}
+
+.AdminSideBar .RootButton {
+    width: 100%;
+    margin: 0px 0px !important;
+}
+
+.AdminSideBar .RootButton span {
+    display: block;
+    font-size: 16px !important;
+    color: black !important;
+    border-bottom: 1px solid #D3D3D3 !important;
+    width: 100% !important;
+    padding: 0px;
+}
