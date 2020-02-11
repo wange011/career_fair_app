@@ -9,7 +9,24 @@ import './AdminSidebar.css';
 
 const items = [
     { name: 'home', label: 'Home' },
-    { name: 'analytics', label: 'Analytics' },
+    {
+        name: 'users',
+        label: 'Users',
+        items: [
+            { name: 'addUser', label: "Add User" },
+            { name: 'deleteUser', label: "Delete User" },
+            { name: 'modifyUser', label: "Modify User" },
+        ]
+    },
+    {
+        name: 'analytics',
+        label: 'Analytics',
+        items: [
+            { name: 'viewA', label: 'View A' },
+            { name: 'viewB', label: 'View B' },
+            { name: 'viewC', label: 'View C' }
+        ]
+    },
     { name: 'settings', label: 'Settings' },
 ]
 
@@ -19,9 +36,21 @@ function AdminSidebar() {
         <div className="AdminSideBar col-lg-2 col-md-2 col-sm-2">
 
             <List disablePadding dense>
-                {items.map(({ label, name, ...rest }) => (
+                {items.map(({ label, name, items: subItems, ...rest }) => (
                     <ListItem key={name} button {...rest}>
                         <ListItemText>{label}</ListItemText>
+                        {Array.isArray(subItems) ? (
+                            <List disablePadding>
+                                {subItems.map((subItem) => (
+                                    <ListItem key = {subItem.name} button>
+                                        <ListItemText className="sidebar-item-text">
+                                            {subItem.label}
+                                        </ListItemText>
+                                    </ListItem>
+                                ))}
+                            </List>
+                        ) : null}
+
                     </ListItem>
                 ))}
             </List>
