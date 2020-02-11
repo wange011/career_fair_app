@@ -34,15 +34,16 @@ const items = [
 function AdminSidebar() {
     return (
         <div className="AdminSideBar col-lg-2 col-md-2 col-sm-2">
-
             <List disablePadding dense>
                 {items.map(({ label, name, items: subItems, ...rest }) => (
-                    <ListItem key={name} button {...rest}>
-                        <ListItemText>{label}</ListItemText>
+                    <React.Fragment key={name}>
+                        <ListItem style={{ paddingLeft: 18 }} button {...rest}>
+                            <ListItemText>{label}</ListItemText>
+                        </ListItem>
                         {Array.isArray(subItems) ? (
                             <List disablePadding>
                                 {subItems.map((subItem) => (
-                                    <ListItem key = {subItem.name} button>
+                                    <ListItem key={subItem.name} button>
                                         <ListItemText className="sidebar-item-text">
                                             {subItem.label}
                                         </ListItemText>
@@ -50,8 +51,7 @@ function AdminSidebar() {
                                 ))}
                             </List>
                         ) : null}
-
-                    </ListItem>
+                    </React.Fragment>
                 ))}
             </List>
 
