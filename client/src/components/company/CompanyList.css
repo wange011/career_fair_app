@@ -35,6 +35,15 @@
 .SearchBar form:focus-within {
     background: #FFFFFF;
 }
+
+.FilterOption p {
+    cursor: default;
+}
+
+.FilterOption img:hover {
+    cursor: pointer;
+}
+
 .FilterOption table {
     width: 100%;
     table-layout: fixed;
@@ -48,7 +57,9 @@
 }
 .FilterOption img {
     max-width: 17px;
-    height: auto;
+    max-height: auto;
+    vertical-align: top;
+    padding: 2px 0px 0px 0px;
 }
 .FilterOption .hidden {
     display: none;
