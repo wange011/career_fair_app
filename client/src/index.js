@@ -66,6 +66,16 @@ const initialState = {
         degree: []
     },
     shouldHide: false,
+    checked: {
+        "db": false, "ppft": false, "susc": false,
+        "dm": false, "pi": false, "sprus": false,
+        "dphd": false, "pcop": false, "sead": false,
+        "dpd": false, "pm": false, "ssf1v": false,
+        "dd": false, "pphd": false, "seh1v": false,
+        "ds": false, "pmbaico": false, "sj1v": false,
+        "dnd": false, "pgip": false, "sa": false,
+        "purp": false, "ppptpo": false, "pnpptso": false
+    },
     username: "",
     userID: "",
     userType: "student",
@@ -156,10 +166,10 @@ function reducer(state = initialState, action) {
             var filter = state.filter;
 
             //filter out companies that don't contain the search term in the title
-            var filteredCompanies = [];
-            for (var i = 0; i < state.companies.length; i++) {
+            var filtCompanies = [];
+            for (var j = 0; j < state.companies.length; j++) {
                 // loops through companies and checks if any section contains the search term
-                filteredCompanies.push(state.companies[i].filter(company => (company.name.toLowerCase().includes(searched.name.toLowerCase()) 
+                filtCompanies.push(state.companies[j].filter(company => (company.name.toLowerCase().includes(searched.name.toLowerCase()) 
                 || company.positions_offered.toLowerCase().includes(searched.name.toLowerCase()) 
                 || company.overview.toLowerCase().includes(searched.name.toLowerCase())
                 || company.degree_levels.toLowerCase().includes(searched.name.toLowerCase())
@@ -174,57 +184,60 @@ function reducer(state = initialState, action) {
             
 
             //Using spread operator will not mutate
-            return {...state, filteredCompanies: [...filteredCompanies], search: searched.name} 
+            return {...state, filteredCompanies: [...filtCompanies], search: searched.name} 
         
         case FILTER_COMPANIES:
             //assign filter object to variable
             var ofilter = state.filter;
-            var filter = action.filter;
-            var searched = state.search;
+            var nfilter = action.filter;
+            var searcher = state.search;
+            var id = action.id;
+            var checked = state.checked;
             // check if the box input was being checked or unchecked
-            if (action.check === "checked") {
+            if (action.check === true) {
                 // adds new filter with previous filter
-                filter.position = ofilter.position.concat(filter.position);
-                filter.sponsor = ofilter.sponsor.concat(filter.sponsor);
-                filter.degree = ofilter.degree.concat(filter.degree);
-            } else if (action.check === "") {
+                nfilter.position = ofilter.position.concat(nfilter.position);
+                nfilter.sponsor = ofilter.sponsor.concat(nfilter.sponsor);
+                nfilter.degree = ofilter.degree.concat(nfilter.degree);
+                checked[id] = true;
+            } else if (action.check === false) {
                 // remove the uncheck option from filter
-                filter.position = ofilter.position.filter(pos => pos != filter.position[0]);
-                filter.sponsor = ofilter.sponsor.filter(pos => pos != filter.sponsor[0]);
-                filter.degree = ofilter.degree.filter(pos => pos != filter.degree[0]);
+                nfilter.position = ofilter.position.filter(pos => pos !== nfilter.position[0]);
+                nfilter.sponsor = ofilter.sponsor.filter(pos => pos !== nfilter.sponsor[0]);
+                nfilter.degree = ofilter.degree.filter(pos => pos !== nfilter.degree[0]);
+                checked[id] = false;
             }
 
             //filter out companies that don't match the filter
-            var filteredCompanies = [];
+            var filCompanies = [];
             // if there isn't a pre-existing search term
-            if (searched === "") {
-                for (var i = 0; i < state.companies.length; i++) {
-                    filteredCompanies.push(state.companies[i].filter(company => (filter.position.find(pos => company.positions_offered.split(', ').includes(pos))
-                    || filter.position.length === 0) 
-                    && (filter.degree.find(deg => company.degree_levels.split(', ').includes(deg)) || filter.degree.length === 0)
-                    && (filter.sponsor.find(spons => company.sponsorships.split(', ').includes(spons)) || filter.sponsor.length === 0)));
+            if (searcher === "") {
+                for (i = 0; i < state.companies.length; i++) {
+                    filCompanies.push(state.companies[i].filter(company => (nfilter.position.find(pos => company.positions_offered.split(', ').includes(pos))
+                    || nfilter.position.length === 0) 
+                    && (nfilter.degree.find(deg => company.degree_levels.split(', ').includes(deg)) || nfilter.degree.length === 0)
+                    && (nfilter.sponsor.find(spons => company.sponsorships.split(', ').includes(spons)) || nfilter.sponsor.length === 0)));
                 }
             } else { // if there is a pre-existing search term (will do this more efficiently soon.)
-                for (var i = 0; i < state.companies.length; i++) {
-                    filteredCompanies.push(state.companies[i].filter(company => (filter.position.find(pos => company.positions_offered.split(', ').includes(pos))
-                    || filter.position.length === 0) 
-                    && (filter.degree.find(deg => company.degree_levels.split(', ').includes(deg)) || filter.degree.length === 0)
-                    && (filter.sponsor.find(spons => company.sponsorships.split(', ').includes(spons)) || filter.sponsor.length === 0)
-                    && (company.name.toLowerCase().includes(searched.toLowerCase()) 
-                    || company.positions_offered.toLowerCase().includes(searched.toLowerCase()) 
-                    || company.overview.toLowerCase().includes(searched.toLowerCase())
-                    || company.degree_levels.toLowerCase().includes(searched.toLowerCase())
-                    || company.sponsorships.toLowerCase().includes(searched.toLowerCase()))));
+                for (i = 0; i < state.companies.length; i++) {
+                    filCompanies.push(state.companies[i].filter(company => (nfilter.position.find(pos => company.positions_offered.split(', ').includes(pos))
+                    || nfilter.position.length === 0) 
+                    && (nfilter.degree.find(deg => company.degree_levels.split(', ').includes(deg)) || nfilter.degree.length === 0)
+                    && (nfilter.sponsor.find(spons => company.sponsorships.split(', ').includes(spons)) || nfilter.sponsor.length === 0)
+                    && (company.name.toLowerCase().includes(searcher.toLowerCase()) 
+                    || company.positions_offered.toLowerCase().includes(searcher.toLowerCase()) 
+                    || company.overview.toLowerCase().includes(searcher.toLowerCase())
+                    || company.degree_levels.toLowerCase().includes(searcher.toLowerCase())
+                    || company.sponsorships.toLowerCase().includes(searcher.toLowerCase()))));
                 }
             }
             
 
             //Using spread operator will not mutate
-            return {...state, filteredCompanies: [...filteredCompanies], filter: filter}
+            return {...state, filteredCompanies: [...filCompanies], filter: nfilter, checked: checked}
             
         case HIDE:
             // updates shouldHide for the filter table
-            var shouldHide = action.shouldHide;
             return {...state, shouldHide: action.shouldHide}
         
         // TO-DO: Get and sort user favorites after login

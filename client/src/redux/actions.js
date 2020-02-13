@@ -36,8 +36,8 @@ export function searchCompanies(search) {
     return { type: SEARCH_COMPANIES, search }
 }
 
-export function filterCompanies(filter, check) {
-    return { type: FILTER_COMPANIES, filter, check }
+export function filterCompanies(filter, check, id) {
+    return { type: FILTER_COMPANIES, filter, check, id }
 }
 
 export function hide(shouldHide) {

@@ -75,17 +75,6 @@ function CompanyView(props) {
         e.target.src = default_company;
     }
 
-    // clear filter and go back
-    var goBack = (e) => {
-        var filter = {
-            degree: [],
-            position: [],
-            sponsor: []
-        };
-        props.filterComp(filter, "clear");
-        props.history.goBack();
-    }
-
     // handleEdit
     const handleEdit = () => {
         const p = document.getElementsByClassName('CompanyView')[0].getElementsByTagName('p');
@@ -202,7 +191,7 @@ function CompanyView(props) {
                     <img onError={(e) => addDefaultSrc(e)} src={company.image} className="CompanyImage" />
                 </div>
                 <div className="CompanyViewButtons">
-                    <img src={backArrow} className={'backArrow'} onClick={() => goBack()} />
+                    <img src={backArrow} className={'backArrow'} onClick={() => props.history.goBack()} />
                     <img src={heart} className={heartClass} onClick={(e) => handleClick(e)} />
                 </div>
             </div>  
