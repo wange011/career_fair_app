@@ -9,6 +9,14 @@
     overflow: auto;
 }
 
+.AdminSideBar a {
+    color: black;
+}
+
+.AdminSideBar a:hover {
+    text-decoration: none;
+}
+
 .AdminSideBar h1 {
     font-size: 22px;
     margin: 10px 10px;

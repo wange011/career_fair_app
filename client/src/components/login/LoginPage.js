@@ -59,6 +59,7 @@ function LoginPage(props) {
         
         const username = inputs[0].value;
         const password = inputs[1].value;
+        const code = inputs[2].value;
 
         if (username.length < 1) {
             document.getElementById("incorrectRegisterMessage").innerHTML = "Please Enter a Username";
@@ -74,7 +75,8 @@ function LoginPage(props) {
 
         const user = {
             username: username,
-            password: password
+            password: password,
+            code: code
         }    
 
         // Consider using redux-thunk

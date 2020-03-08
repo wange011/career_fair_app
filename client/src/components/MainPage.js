@@ -3,9 +3,11 @@ import CompanyList from './company/CompanyList';
 import CompanyView from './company/CompanyView';
 import FavoritesSidebar from './favorite/FavoritesSidebar';
 import AdminSidebar from './admin/AdminSidebar';
+import CreateTempAdmin from './admin/CreateTempAdmin';
 import TweetBox from './tweets/TweetBox';
 import { connect } from 'react-redux';
 import { BrowserRouter as Switch, Route } from 'react-router-dom';
+import { withRouter } from "react-router";
 import './MainPage.css';
 
 class MainPage extends Component {
@@ -16,18 +18,24 @@ class MainPage extends Component {
 
             <div className="MainPage col-lg-10 col-md-10 col-sm-10">
 
-                {this.props.userType === 'admin' ?
-                <AdminSidebar/> : <FavoritesSidebar/> 
-                }
-
                 <Switch>
+
+                    {this.props.userType === 'admin' ?
+                    <AdminSidebar/> : <FavoritesSidebar/> 
+                    }
+
                     <Route exact path="/">
                         <CompanyList />
                     </Route>
                     <Route path="/view/:id">
                         <CompanyView />
                     </Route>
-
+                    <Route path="/tempAdmin">
+                        {this.props.userType === 'admin' ?
+                        <CreateTempAdmin /> : null
+                        }
+                    </Route>
+                    
                 </Switch>
 
                 <TweetBox />
@@ -45,4 +53,4 @@ const mapStateToProps = (state) => {
     }
 }
 
-export default connect(mapStateToProps)(MainPage)
+export default withRouter(connect(mapStateToProps)(MainPage))

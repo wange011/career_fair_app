@@ -5,6 +5,7 @@ import LoginPage from './components/login/LoginPage';
 import { connect } from 'react-redux';
 import { getCompanies } from './redux/actions';
 import { BrowserRouter as Router } from 'react-router-dom';
+import { withRouter } from "react-router";
 import './App.css';
 
 class App extends Component {
