@@ -168,14 +168,13 @@
     margin: auto;
 }
 
+.heartWrapper .tooltipwrapper {
+    margin: 15px;
+}
+
 .heart {
     max-width: 17px;
     height: auto;
-    float: right;
-    position: absolute;
-    top: 0;
-    right: 0;
-    margin: 18px 15px 0px 0px;
     opacity: .3;
     transition: .2s;
 }

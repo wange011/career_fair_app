@@ -5,6 +5,7 @@
 export const GET_COMPANIES = 'GET_COMPANIES'
 export const ADD_FAVORITE = 'ADD_FAVORITE'
 export const REMOVE_FAVORITE = 'REMOVE_FAVORITE'
+export const SET_NUM_FAVORITES = 'GET_NUM_FAVORITES'
 export const EDIT_COMPANY = 'EDIT_COMPANY'
 export const SEARCH_COMPANIES = 'SEARCH_COMPANIES'
 export const FILTER_COMPANIES = 'FILTER_COMPANIES'
@@ -26,6 +27,10 @@ export function addFavorite(company) {
 
 export function removeFavorite(company) {
     return { type: REMOVE_FAVORITE, company }
+}
+
+export function setNumFavorites(numFavorites)  {
+    return { type: SET_NUM_FAVORITES, numFavorites }
 }
 
 export function editCompany(company) {
@@ -52,6 +57,6 @@ export function toggleLogin() {
     return { type: TOGGLE_LOGIN }
 }
 
-export function logout(company) {
+export function logout() {
     return { type: LOGOUT }
 }

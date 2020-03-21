@@ -8,6 +8,7 @@ import {
     GET_COMPANIES,
     ADD_FAVORITE,
     REMOVE_FAVORITE,
+    SET_NUM_FAVORITES,
     EDIT_COMPANY,
     SEARCH_COMPANIES,
     FILTER_COMPANIES,
@@ -58,6 +59,7 @@ const initialState = {
     companies: companies,
     filteredCompanies: companies,
     favorites: favorites,
+    numFavorites: {},
     numDays: companies.length,
     search: "",
     filter: {
@@ -131,6 +133,9 @@ function reducer(state = initialState, action) {
             // Using spread operator will not mutate
             return {...state, favorites: [...favorites]}
         
+        case SET_NUM_FAVORITES:
+            return {...state, numFavorites: action.numFavorites}
+
         case EDIT_COMPANY:
 
             var company = action.company;
