@@ -42,22 +42,10 @@
     float: right;
 }
 
-.CompanyView .heart {
-    position: relative;
-    top: -11px;
-    right: 47px;
-}
-
-.CompanyView .active {
-    position: relative;
-    top: -11px;
-    right: 47px;
-}
-
-.CompanyView .heart:hover {
-    position: relative;
-    top: -11px;
-    right: 47px;
+.CompanyView .tooltipwrapper {
+    top: 4px;
+    left: 200px;
+    max-height: 17px;
 }
 
 .backArrow {

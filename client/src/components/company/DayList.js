@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { addFavorite, removeFavorite } from '../../redux/actions';
+import { addFavorite, removeFavorite, setNumFavorites } from '../../redux/actions';
 import { Link } from 'react-router-dom';
 import heart from '../../res/images/baseline_favorite_black_18dp.png';
 import default_company from '../../res/images/default_company.png';
@@ -10,6 +10,41 @@ function DayList(props) {
     //Get the list of all companies attending on a specific day
     const list = props.companies[props.day - 1];
     const favorites = props.favorites[props.day - 1]; 
+
+    const updateUserFavorites = (company, updateType) => {
+
+        fetch("http://localhost:5000/favorites_stat", {
+            method: 'GET',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            }
+        }).then( (response) => {
+            if (response.ok) {
+                return response.json();
+            } else {
+                throw new Error("");
+            }
+        }).then( (numFavorites) => {
+            switch(updateType) {
+                case 'ADD':
+                    numFavorites[company.name] += 1;
+                    if (props.userID.length >= 1) {
+                        props.setNumFavorites(numFavorites);
+                    }
+                    props.favorite(company);
+                    break;
+                case 'REMOVE':  
+                    numFavorites[company.name] -= 1;
+                    if (props.userID.length >= 1) {
+                        props.setNumFavorites(numFavorites);
+                    }
+                    props.unfavorite(company);
+                    break;
+            }
+        })
+
+    }
 
     //Map each company into a CompanyEntry
     if (list) {
@@ -26,7 +61,7 @@ function DayList(props) {
 
             if(!inFavorites) {
                 var handleClick = (e) => {
-                    props.favorite(company);
+                    updateUserFavorites(company, 'ADD');
                     e.target.classList.add("active");
                 }
                 
@@ -34,7 +69,7 @@ function DayList(props) {
 
             } else {
                 var handleClick = (e) => {
-                    props.unfavorite(company);
+                    updateUserFavorites(company, 'REMOVE');
                     e.target.classList.remove("active");
                 }
                 
@@ -45,7 +80,7 @@ function DayList(props) {
             var addDefaultSrc = (e) => {
                 e.target.src = default_company;
             }
-
+            
             return(
 
                 <div className="CompanyEntry">
@@ -59,7 +94,10 @@ function DayList(props) {
                         </div>
                     </Link>
                     <div className="heartWrapper">
-                        <img src={heart} className={heartClass} onClick={(e) => handleClick(e)}></img>
+                        <div className="tooltipwrapper">
+                            <img src={heart} className={heartClass} onClick={(e) => handleClick(e)}></img>
+                            <p className="tooltiptext">{props.numFavorites[company.name]}</p>
+                        </div>
                     </div>
 
                 </div>
@@ -84,7 +122,9 @@ function DayList(props) {
 const mapStateToProps = (state) => {
     return {
         companies: state.filteredCompanies,
-        favorites: state.favorites
+        favorites: state.favorites,
+        numFavorites: state.numFavorites,
+        userID: state.userID
     }
 }
 
@@ -95,6 +135,9 @@ const mapDispatchToProps = (dispatch) => {
         },
         unfavorite: (company) => {
             dispatch(removeFavorite(company))
+        },
+        setNumFavorites: (numFavorites) => {
+            dispatch(setNumFavorites(numFavorites))
         }
     }
 }

@@ -3,7 +3,7 @@ import TaskBar from './components/login/TaskBar';
 import MainPage from './components/MainPage';
 import LoginPage from './components/login/LoginPage';
 import { connect } from 'react-redux';
-import { getCompanies } from './redux/actions';
+import { getCompanies, setNumFavorites } from './redux/actions';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { withRouter } from "react-router";
 import './App.css';
@@ -15,42 +15,62 @@ class App extends Component {
   componentDidMount() {
 
     fetch("http://localhost:5000/companies", {
-            method: 'GET',
-            headers: {
-                'Accept': 'application/json',
-                'Content-Type': 'application/json'
-            }
-        }).then( (response) => {
-            
-            if (response.ok) {
-                return response.json();
-            } else {
-                throw new Error("");
-            }
-
-        }).then( (returnedCompanies) => {
-
-          var companies = [];
-
-          for (let i = 0; i < returnedCompanies.length; i++) {
-
-            let company = returnedCompanies[i];
-            let dayNum = parseInt(company.day.charAt(4), 10);
+        method: 'GET',
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+        }
+    }).then( (response) => {
         
-            // Ensure that there are enough days added
-            while(dayNum > companies.length) {
-                companies.push([]);
-            }
-        
-            companies[dayNum - 1].push(company);
-        
-          }
+        if (response.ok) {
+            return response.json();
+        } else {
+            throw new Error("");
+        }
 
-          this.props.getCompanies(companies);
+    }).then( (returnedCompanies) => {
 
-        }).catch( (error) => {
-        
-        });
+      var companies = [];
+
+      for (let i = 0; i < returnedCompanies.length; i++) {
+
+        let company = returnedCompanies[i];
+        let dayNum = parseInt(company.day.charAt(4), 10);
+    
+        // Ensure that there are enough days added
+        while(dayNum > companies.length) {
+            companies.push([]);
+        }
+    
+        companies[dayNum - 1].push(company);
+    
+      }
+
+      this.props.getCompanies(companies);
+
+    }).catch( (error) => {
+    
+    });
+
+    fetch("http://localhost:5000/favorites_stat", {
+        method: 'GET',
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+        }
+    }).then( (response) => {
+    
+        if (response.ok) {
+            return response.json();
+        } else {
+            throw new Error("");
+        }
+
+    }).then( (numFavorites) => {
+        console.log(numFavorites);
+        this.props.setNumFavorites(numFavorites);
+    })
+
   }
 
   render(){
@@ -88,6 +108,9 @@ const mapDispatchToProps = (dispatch) => {
   return {
     getCompanies: (companies) => {
       dispatch(getCompanies(companies))
+    },
+    setNumFavorites: (numFavorites) => {
+      dispatch(setNumFavorites(numFavorites))
     }
   }
 }

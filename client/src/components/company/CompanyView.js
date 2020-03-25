@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { withRouter } from "react-router";
-import { addFavorite, removeFavorite, editCompany, filterCompanies } from '../../redux/actions';
+import { addFavorite, removeFavorite, setNumFavorites, editCompany, filterCompanies } from '../../redux/actions';
 import heart from '../../res/images/baseline_favorite_black_18dp.png';
 import backArrow from '../../res/images/baseline_arrow_back_black_18dp.png';
 import default_company from '../../res/images/default_company.png';
@@ -45,6 +45,41 @@ function CompanyView(props) {
     var inFavorites = false;
     var favorites = props.favorites[day - 1];
     
+    const updateUserFavorites = (company, updateType) => {
+
+        fetch("http://localhost:5000/favorites_stat", {
+            method: 'GET',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            }
+        }).then( (response) => {
+            if (response.ok) {
+                return response.json();
+            } else {
+                throw new Error("");
+            }
+        }).then( (numFavorites) => {
+            switch(updateType) {
+                case 'ADD':
+                    numFavorites[company.name] += 1;
+                    if (props.userID.length >= 1) {
+                        props.setNumFavorites(numFavorites);
+                    }
+                    props.favorite(company);
+                    break;
+                case 'REMOVE':  
+                    numFavorites[company.name] -= 1;
+                    if (props.userID.length >= 1) {
+                        props.setNumFavorites(numFavorites);
+                    }
+                    props.unfavorite(company);
+                    break;
+            }
+        })
+
+    }
+
     // Check if the company is in favorites
     for (var i = 0; i < favorites.length; i++) {
         if (company.name === favorites[i].name) {
@@ -55,7 +90,7 @@ function CompanyView(props) {
 
     if(!inFavorites) {
         var handleClick = (e) => {
-            props.favorite(company);
+            updateUserFavorites(company, 'ADD');
             e.target.classList.add("active");
         }
         
@@ -63,7 +98,7 @@ function CompanyView(props) {
 
     } else {
         var handleClick = (e) => {
-            props.unfavorite(company);
+            updateUserFavorites(company, 'REMOVE');
             e.target.classList.remove("active");
         }
         
@@ -192,7 +227,10 @@ function CompanyView(props) {
                 </div>
                 <div className="CompanyViewButtons">
                     <img src={backArrow} className={'backArrow'} onClick={() => props.history.goBack()} />
-                    <img src={heart} className={heartClass} onClick={(e) => handleClick(e)} />
+                    <div className="tooltipwrapper">
+                        <img src={heart} className={heartClass} onClick={(e) => handleClick(e)}></img>
+                        <span className="tooltiptext">{props.numFavorites[company.name]}</span>
+                    </div>
                 </div>
             </div>  
 
@@ -205,8 +243,10 @@ const mapStateToProps = (state) => {
     return {
         companies: state.filteredCompanies,
         favorites: state.favorites,
+        numFavorites: state.numFavorites,
         filter: state.filter,
-        userType: state.userType
+        userType: state.userType,
+        userID: state.userID
     }
 }
 
@@ -217,6 +257,9 @@ const mapDispatchToProps = (dispatch) => {
         },
         unfavorite: (company) => {
             dispatch(removeFavorite(company))
+        },
+        setNumFavorites: (numFavorites) => {
+            dispatch(setNumFavorites(numFavorites))
         },
         filterComp: (filtered, check) => {
             dispatch(filterCompanies(filtered, check))
