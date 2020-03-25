@@ -23,7 +23,7 @@ const items = [
         name: 'analytics',
         label: 'Analytics',
         items: [
-            { name: 'viewA', label: 'View A', link: "/" },
+            { name: 'favorites', label: 'Favorites', link: "/favorites" },
             { name: 'viewB', label: 'View B', link: "/" },
             { name: 'viewC', label: 'View C', link: "/" }
         ], 
