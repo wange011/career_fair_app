@@ -37,7 +37,7 @@ class MainPage extends Component {
                         }
                     </Route>
                     <Route path="/favorites">
-                        <NumFavorites />
+                        <NumFavorites numFavorites={this.props.numFavorites}/>
                     </Route>
                     
                 </Switch>
@@ -53,7 +53,8 @@ class MainPage extends Component {
 
 const mapStateToProps = (state) => {
     return {
-        userType: state.userType
+        userType: state.userType,
+        numFavorites: state.numFavorites
     }
 }
 

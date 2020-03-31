@@ -1,40 +1,53 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
-import { withRouter } from "react-router";
 import * as d3 from 'd3';
 import './NumFavorites.css';
 
 
 class NumFavorites extends Component {
-
+    
     componentDidMount() {
         // const data = [ 2, 4, 2, 6, 8 ]
-        var test = fetch("http://localhost:3000/favorites_stat")
-        .then(res => res.json());
-        console.log(test);
+        this.refs.current && this.refs.current.focus();
+        console.log(this.props.numFavorites)
         const data = {
-            "children": [{"Name":"Olives","Count":4319},
-                {"Name":"Tea","Count":4159},
-                {"Name":"Mashed Potatoes","Count":2583},
-                {"Name":"Boiled Potatoes","Count":2074},
-                {"Name":"Milk","Count":1894},
-                {"Name":"Chicken Salad","Count":1809},
-                {"Name":"Vanilla Ice Cream","Count":1713},
-                {"Name":"Cocoa","Count":1636},
-                {"Name":"Lettuce Salad","Count":1566},
-                {"Name":"Lobster Salad","Count":1511},
-                {"Name":"Chocolate","Count":1489},
-                {"Name":"Apple Pie","Count":1487},
-                {"Name":"Orange Juice","Count":1423},
-                {"Name":"American Cheese","Count":1372},
-                {"Name":"Green Peas","Count":1341},
-                {"Name":"Assorted Cakes","Count":1331},
-                {"Name":"French Fried Potatoes","Count":1328},
-                {"Name":"Potato Salad","Count":1306},
-                {"Name":"Baked Potatoes","Count":1293},
-                {"Name":"Roquefort","Count":1273},
-                {"Name":"Stewed Prunes","Count":1268}]
+            "children": [{"Name": 'Agilysys, Inc.', "Count": 18},
+            {"Name": 'ADP', "Count": 22},
+            {"Name": 'American Express', "Count": 33},
+            {"Name": 'Capital One', "Count": 41},
+            {"Name": '402d Software Maintenance Group, Robins AFB', "Count": 18},
+            {"Name": 'Accenture', "Count":  17},
+            {"Name": 'Air Force Reserve', "Count": 20},
+            {"Name": 'Apogee', "Count": 16},
+            {"Name": 'AnswerRocket', "Count": 28},
+            {"Name": 'Annapolis Micro Systems, Inc.', "Count": 23},
+            {"Name": 'Cisco Systems', "Count": 19},
+            {"Name": 'Citi Technology', "Count": 10},
+            {"Name": 'Comentec LLC', "Count": 24},
+            {"Name": 'CodeMettle', "Count": 8},
+            {"Name": 'COUNTRY Financial', "Count": 30},
+            {"Name": 'Cvent', "Count": 16},
+            {"Name": 'DataScan', "Count": 5},
+            {"Name": 'Daugherty Business Solutions', "Count": 10},
+            {"Name": 'Datto Inc', "Count": 17},
+            {"Name": 'Dispersive Networks', "Count": 40},
+            {"Name": 'Dropbox', "Count": 2},
+            {"Name": 'EPI-USE America Inc', "Count": 15},
+            {"Name": 'General Dynamics Land Systems', "Count": 14},
+            {"Name": 'Georgia Tech Research Institute (GTRI)', "Count": 13},
+            {"Name": 'Goldman Sachs', "Count": 25},
+            {"Name": "GT's Advanced Technology Development Center", "Count": 24},
+            {"Name": 'Opendoor', "Count": 16},
+            {"Name": 'OSIsoft', "Count": 21},
+            {"Name": 'Stryker', "Count": 42},
+            {"Name": 'Synamedia', "Count": 34},
+            {"Name": 'The Home Depot', "Count": 32},
+            {"Name": 'The Aerospace Corporation', "Count": 12},
+            {"Name": 'Wayfair', "Count": 41},
+            {"Name": 'XPO Logistics', "Count": 19},
+            {"Name": 'Zuora', "Count": 37},
+            {"Name": 'Yahoo/Tumblr', "Count": 36}]
         };
         this.drawBubbleChart(data)
     }
@@ -109,11 +122,18 @@ class NumFavorites extends Component {
             .attr("fill", "white");
 
         
-        console.log(this.props.favorites_stat)
+        console.log(this.props)
         console.log(this)
     }
-    render() { return <div ref="canvas" class = "col-lg-8"></div> }
+    render() { 
+        return <div ref="canvas" className="col-lg-8"></div> 
+    }
 }
 
+const mapStateToProps = (state) => {
+    return {
+        numFavorites: state.numFavorites
+    }
+}
 
-export default withRouter(NumFavorites)
+export default connect(mapStateToProps)(NumFavorites);
