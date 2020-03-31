@@ -51,6 +51,25 @@ class NumFavorites extends Component {
         };
         this.drawBubbleChart(data)
     }
+
+    componentDidUpdate() {
+        console.log("Updated");
+        this.refs.current && this.refs.current.focus();
+        console.log(this.props.numFavorites);
+        var children = []
+        for (var name in this.props.numFavorites) {
+            children.push({"Name": name, "Count": this.props.numFavorites[name]})
+        }
+
+        const data = {
+            "children": children
+        }
+
+        console.log(data);
+        this.removeData();
+        this.drawBubbleChart(data);
+    }
+
     drawBubbleChart(data)  {
         const canvasHeight = 400
         const canvasWidth = 600
@@ -125,6 +144,13 @@ class NumFavorites extends Component {
         console.log(this.props)
         console.log(this)
     }
+
+    removeData() {
+
+        d3.select("svg").remove()
+
+    }
+
     render() { 
         return <div ref="canvas" className="col-lg-8"></div> 
     }
