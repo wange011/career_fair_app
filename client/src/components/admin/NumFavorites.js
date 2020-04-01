@@ -10,7 +10,7 @@ class NumFavorites extends Component {
     componentDidMount() {
         // const data = [ 2, 4, 2, 6, 8 ]
         this.refs.current && this.refs.current.focus();
-        console.log(this.props.numFavorites)
+        console.log(this.props)
         const data = {
             "children": [{"Name": 'Agilysys, Inc.', "Count": 18},
             {"Name": 'ADP', "Count": 22},
@@ -132,7 +132,8 @@ class NumFavorites extends Component {
 
 const mapStateToProps = (state) => {
     return {
-        numFavorites: state.numFavorites
+        numFavorites: state.numFavorites,
+        companies: state.companies
     }
 }
 
