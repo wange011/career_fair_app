@@ -69,7 +69,7 @@ class NumFavorites extends Component {
         };
         this.drawBubbleChart(sample_data)
     }
-
+    
     componentDidUpdate() {
         console.log("Updated");
         this.refs.current && this.refs.current.focus();
@@ -120,14 +120,6 @@ class NumFavorites extends Component {
             .attr("class", "node")
             .attr("transform", function(d) {
                 return "translate(" + d.x + "," + d.y + ")";
-            })
-            .attr("xlink:href", function(d) {
-                const name = d.data.Name;
-                const id = nameToID(companies, name);
-                if (id === NaN) {
-                    return "";
-                }
-                return "/view/" + id;
             });
 
         node.append("title")
@@ -138,6 +130,14 @@ class NumFavorites extends Component {
         node.append("circle")
             .attr("r", function(d) {
                 return d.r;
+            })
+            .attr("href", function(d) {
+                const name = d.data.Name;
+                const id = nameToID(companies, name);
+                if (id === NaN) {
+                    return "";
+                }
+                return "/view/" + id;
             })
             .style("fill", function(d,i) {
                 return color(i);
