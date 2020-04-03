@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 import * as d3 from 'd3';
 import './NumFavorites.css';
@@ -7,19 +7,11 @@ import { packSiblings } from 'd3';
 
 function nameToID(comps, name) {
     if (comps != undefined) {
-        for (var comp in comps[1]) {
-            if (comps[1][comp].name === name) {
-                return comps[1][comp]._id;
-            }
-        }
-        for (var comp in comps[2]) {
-            if (comps[2][comp].name === name) {
-                return comps[2][comp]._id;
-            }
-        }
-        for (var comp in comps[3]) {
-            if (comps[3][comp].name === name) {
-                return comps[3][comp]._id;
+        for (var i = 0; i < comps.length; i++) {
+            for (var j in comps[i]) {
+                if (comps[i][j].name === name) {
+                    return comps[i][j]._id;
+                }
             }
         }
     } else {return NaN}
@@ -67,13 +59,24 @@ class NumFavorites extends Component {
             {"Name": 'Zuora', "Count": 37},
             {"Name": 'Yahoo/Tumblr', "Count": 36}]
         };
-        this.drawBubbleChart(sample_data)
+
+        if (Object.keys(this.props.numFavorites).length == 0) {
+            this.drawBubbleChart(sample_data)
+        } else {
+            var children = []
+            for (var name in this.props.numFavorites) {
+                children.push({"Name": name, "Count": this.props.numFavorites[name]})
+            }
+    
+            const data = {
+                "children": children
+            }
+            this.drawBubbleChart(data, this.props.companies)
+        }
     }
     
     componentDidUpdate() {
-        console.log("Updated");
         this.refs.current && this.refs.current.focus();
-        console.log(this.props.numFavorites);
         var children = []
         for (var name in this.props.numFavorites) {
             children.push({"Name": name, "Count": this.props.numFavorites[name]})
@@ -110,6 +113,8 @@ class NumFavorites extends Component {
         var nodes = d3.hierarchy(data)
             .sum(function(d) { return d.Count; });
 
+        var props = this.props
+
         var node = svg.selectAll(".node")
             .data(bubble(nodes).descendants())
             .enter()
@@ -120,6 +125,22 @@ class NumFavorites extends Component {
             .attr("class", "node")
             .attr("transform", function(d) {
                 return "translate(" + d.x + "," + d.y + ")";
+            })
+            .attr("xlink:href", function(d) {
+                const name = d.data.Name;
+                const id = nameToID(companies, name);
+                if (id === NaN) {
+                    return "";
+                }
+                return "/view/" + id;
+            })
+            .on("click", function(d) {
+                const name = d.data.Name;
+                const id = nameToID(companies, name);
+                if (id === NaN) {
+                    return;
+                }
+                props.history.push("/view/" + id);
             });
 
         node.append("title")
@@ -199,4 +220,4 @@ const mapStateToProps = (state) => {
     }
 }
 
-export default connect(mapStateToProps)(NumFavorites);
+export default withRouter(connect(mapStateToProps)(NumFavorites));

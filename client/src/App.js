@@ -67,7 +67,6 @@ class App extends Component {
         }
 
     }).then( (numFavorites) => {
-        console.log(numFavorites);
         this.props.setNumFavorites(numFavorites);
     })
 

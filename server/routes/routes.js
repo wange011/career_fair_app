@@ -142,8 +142,6 @@ router.post('/register', (req, res) => {
 
             var userType = "student";
 
-            console.log(code.length)
-
             if(code.length > 0) {
                 AccessCode.find({ code: code }, (err, userCode) => {
 
