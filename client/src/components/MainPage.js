@@ -3,6 +3,7 @@ import CompanyList from './company/CompanyList';
 import CompanyView from './company/CompanyView';
 import FavoritesSidebar from './favorite/FavoritesSidebar';
 import AdminSidebar from './admin/AdminSidebar';
+import NumFavorites from './admin/NumFavorites'
 import CreateTempAdmin from './admin/CreateTempAdmin';
 import TweetBox from './tweets/TweetBox';
 import { connect } from 'react-redux';
@@ -35,6 +36,9 @@ class MainPage extends Component {
                         <CreateTempAdmin /> : null
                         }
                     </Route>
+                    <Route path="/favorites">
+                        <NumFavorites numFavorites={this.props.numFavorites}/>
+                    </Route>
                     
                 </Switch>
 
@@ -49,7 +53,8 @@ class MainPage extends Component {
 
 const mapStateToProps = (state) => {
     return {
-        userType: state.userType
+        userType: state.userType,
+        numFavorites: state.numFavorites
     }
 }
 
