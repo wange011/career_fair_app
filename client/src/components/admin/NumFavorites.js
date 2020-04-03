@@ -3,15 +3,33 @@ import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import * as d3 from 'd3';
 import './NumFavorites.css';
+import { packSiblings } from 'd3';
 
+function nameToID(comps, name) {
+    if (comps != undefined) {
+        for (var comp in comps[1]) {
+            if (comps[1][comp].name === name) {
+                return comps[1][comp]._id;
+            }
+        }
+        for (var comp in comps[2]) {
+            if (comps[2][comp].name === name) {
+                return comps[2][comp]._id;
+            }
+        }
+        for (var comp in comps[3]) {
+            if (comps[3][comp].name === name) {
+                return comps[3][comp]._id;
+            }
+        }
+    } else {return NaN}
+}
 
 class NumFavorites extends Component {
     
     componentDidMount() {
-        // const data = [ 2, 4, 2, 6, 8 ]
         this.refs.current && this.refs.current.focus();
-        console.log(this.props)
-        const data = {
+        const sample_data = {
             "children": [{"Name": 'Agilysys, Inc.', "Count": 18},
             {"Name": 'ADP', "Count": 22},
             {"Name": 'American Express', "Count": 33},
@@ -49,7 +67,7 @@ class NumFavorites extends Component {
             {"Name": 'Zuora', "Count": 37},
             {"Name": 'Yahoo/Tumblr', "Count": 36}]
         };
-        this.drawBubbleChart(data)
+        this.drawBubbleChart(sample_data)
     }
 
     componentDidUpdate() {
@@ -64,13 +82,14 @@ class NumFavorites extends Component {
         const data = {
             "children": children
         }
-
-        console.log(data);
         this.removeData();
-        this.drawBubbleChart(data);
+        this.drawBubbleChart(data, this.props.companies);
     }
 
-    drawBubbleChart(data)  {
+    drawBubbleChart(data, companies)  {
+        if (Object.keys(data.children).length === 0) {
+            return NaN;
+        }
         const canvasHeight = 400
         const canvasWidth = 600
         const scale = 20
@@ -101,6 +120,14 @@ class NumFavorites extends Component {
             .attr("class", "node")
             .attr("transform", function(d) {
                 return "translate(" + d.x + "," + d.y + ")";
+            })
+            .attr("xlink:href", function(d) {
+                const name = d.data.Name;
+                const id = nameToID(companies, name);
+                if (id === NaN) {
+                    return "";
+                }
+                return "/view/" + id;
             });
 
         node.append("title")
@@ -120,11 +147,20 @@ class NumFavorites extends Component {
             .attr("dy", ".2em")
             .style("text-anchor", "middle")
             .text(function(d) {
-                return d.data.Name.substring(0, d.r / 3);
+                const title = d.data.Name;
+                if (d.r < 80) {
+                    return title.substring(0, d.r / 3);
+                } else {
+                    return title.substring(0, d.r / 5);
+                }
             })
             .attr("font-family", "sans-serif")
             .attr("font-size", function(d){
-                return d.r/5;
+                if (d.r < 80) {
+                    return d.r/5;
+                } else {
+                    return d.r / 8;
+                }
             })
             .attr("fill", "white");
 
@@ -136,13 +172,13 @@ class NumFavorites extends Component {
             })
             .attr("font-family",  "Gill Sans", "Gill Sans MT")
             .attr("font-size", function(d){
-                return d.r/5;
+                if (d.r < 80) {
+                    return d.r/5;
+                } else {
+                    return d.r / 8;
+                }
             })
             .attr("fill", "white");
-
-        
-        console.log(this.props)
-        console.log(this)
     }
 
     removeData() {
@@ -152,7 +188,7 @@ class NumFavorites extends Component {
     }
 
     render() { 
-        return <div ref="canvas" className="col-lg-8"></div> 
+        return <div ref="canvas" className="col-lg-8"></div>
     }
 }
 
