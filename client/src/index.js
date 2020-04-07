@@ -266,7 +266,13 @@ function reducer(state = initialState, action) {
             return {...state, showLogin: !state.showLogin}
 
         case LOGOUT:
-            return state
+            var favorites = []
+
+            for (var i = 0; i < state.favorites.length; i++) {
+                favorites.push([])
+            }
+
+            return {...state, favorites: favorites, username: "", userID: "", userType: "student"}
         
         default:
             return state
