@@ -213,6 +213,9 @@ function CompanyView(props) {
                 <h4>Company Overview</h4>
                 <p>Overview: {company.overview}</p>
                 <textarea id="companyOverview" rows='5' defaultValue={company.overview}/>
+                <h4>Notes</h4>
+                <p></p>
+                <textarea id="note" rows='5' />
 
                 {(props.userType === "admin" || props.userType === "tempAdmin") ? 
                 <div> 

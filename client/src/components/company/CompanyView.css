@@ -101,3 +101,7 @@
 .CompanyView button:hover {
     background: #D0D0D0;
 }
+
+#note {
+    min-width: 100%;
+}
