@@ -9,6 +9,7 @@ import {
     ADD_FAVORITE,
     REMOVE_FAVORITE,
     SET_NUM_FAVORITES,
+    UPDATE_NOTES,
     EDIT_COMPANY,
     SEARCH_COMPANIES,
     FILTER_COMPANIES,
@@ -60,6 +61,7 @@ const initialState = {
     filteredCompanies: companies,
     favorites: favorites,
     numFavorites: {},
+    notes: {},
     numDays: companies.length,
     search: "",
     filter: {
@@ -135,6 +137,9 @@ function reducer(state = initialState, action) {
         
         case SET_NUM_FAVORITES:
             return {...state, numFavorites: action.numFavorites}
+
+        case UPDATE_NOTES:
+            return {...state, notes: action.notes}
 
         case EDIT_COMPANY:
 
@@ -259,7 +264,13 @@ function reducer(state = initialState, action) {
 
             }
 
-            return {...state, favorites: [...favorites], username: action.username, 
+            var notes = {}
+
+            if (action.notes) {
+                notes = action.notes;
+            }
+
+            return {...state, favorites: [...favorites], notes: notes, username: action.username, 
                 userID: action.userID, userType: action.userType, showLogin: false}
         
         case TOGGLE_LOGIN:

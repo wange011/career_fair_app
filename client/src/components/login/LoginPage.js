@@ -41,7 +41,7 @@ function LoginPage(props) {
 
         }).then( (user) => {
 
-            props.login(user.favorites, user.username, user.id, user.userType);
+            props.login(user.favorites, user.notes, user.username, user.id, user.userType);
 
         }).catch( (error) => {
 
@@ -160,8 +160,8 @@ const mapDispatchToProps = (dispatch) => {
         toggleLogin: () => {
             dispatch(toggleLogin())
         },
-        login: (favorites, username, userID, userType) => {
-            dispatch(login(favorites, username, userID, userType))
+        login: (favorites, notes, username, userID, userType) => {
+            dispatch(login(favorites, notes, username, userID, userType))
         }    
     }
 }

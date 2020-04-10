@@ -45,7 +45,7 @@ html, body {
 }
 
 /*Global*/
-h1, h2, h3, p, span {
+h1, h2, h3, p, span, textarea {
   margin: 0px;
   color: black;
   font-family: 'Lato', sans-serif;

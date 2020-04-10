@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { withRouter } from "react-router";
-import { addFavorite, removeFavorite, setNumFavorites, editCompany, filterCompanies } from '../../redux/actions';
+import { addFavorite, removeFavorite, setNumFavorites, updateNotes, editCompany, filterCompanies } from '../../redux/actions';
 import heart from '../../res/images/baseline_favorite_black_18dp.png';
 import backArrow from '../../res/images/baseline_arrow_back_black_18dp.png';
 import default_company from '../../res/images/default_company.png';
@@ -124,7 +124,11 @@ function CompanyView(props) {
 
         for (var i = 0; i < input.length; i++) {
             input[i].style.width = input[i].value.length + "ch";
-            input[i].style.visibility = 'visible';
+            if (input[i].id === 'note') {
+                input[i].style.visibility = 'hidden';
+            } else {
+                input[i].style.visibility = 'visible';
+            }
             input[i].style.position = 'relative';
         }
 
@@ -187,10 +191,49 @@ function CompanyView(props) {
         const input = document.getElementsByClassName('CompanyView')[0].getElementsByTagName('textarea');
 
         for (var i = 0; i < input.length; i++) {
-            input[i].style.visibility = 'hidden';
+            if (input[i].id === 'note') {
+                input[i].style.visibility = 'visible';
+            } else {
+                input[i].style.visibility = 'hidden';
+            }
             input[i].style.position = 'absolute';
         }
-    }    
+    }
+    
+    const handleNotes = () => {
+        const textarea = document.getElementById('note');
+        const note = textarea.value;
+        var notes = props.notes;
+        notes[company.name] = note;
+        props.updateNotes(notes);
+
+        if (props.userID.length <= 0) {
+            return;
+        }
+
+        const update = {
+            userID: props.userID,
+            notes: notes
+        }
+
+        fetch("http://localhost:5000/notes", {
+            method: 'POST',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(update)
+        }).then( (response) => {
+            
+            if (response.ok) {
+                return response.json();
+            } else {
+                throw new Error("User does not exist");
+            }
+
+        })
+
+    }
 
     return(
         <div className="CompanyView col-lg-8">
@@ -213,9 +256,6 @@ function CompanyView(props) {
                 <h4>Company Overview</h4>
                 <p>Overview: {company.overview}</p>
                 <textarea id="companyOverview" rows='5' defaultValue={company.overview}/>
-                <h4>Notes</h4>
-                <p></p>
-                <textarea id="note" rows='5' />
 
                 {(props.userType === "admin" || props.userType === "tempAdmin") ? 
                 <div> 
@@ -235,6 +275,10 @@ function CompanyView(props) {
                         <span className="tooltiptext">{props.numFavorites[company.name]}</span>
                     </div>
                 </div>
+                <div className="CompanyNotes">
+                    <h4>Notes</h4>
+                    <textarea id="note" rows='8' onChange={() => {handleNotes()}}  defaultValue={(props.notes[company.name]) ? props.notes[company.name] : ""}/>
+                </div>
             </div>  
 
         </div>
@@ -247,6 +291,7 @@ const mapStateToProps = (state) => {
         companies: state.filteredCompanies,
         favorites: state.favorites,
         numFavorites: state.numFavorites,
+        notes: state.notes,
         filter: state.filter,
         userType: state.userType,
         userID: state.userID
@@ -263,6 +308,9 @@ const mapDispatchToProps = (dispatch) => {
         },
         setNumFavorites: (numFavorites) => {
             dispatch(setNumFavorites(numFavorites))
+        },
+        updateNotes: (notes) => {
+            dispatch(updateNotes(notes))
         },
         filterComp: (filtered, check) => {
             dispatch(filterCompanies(filtered, check))

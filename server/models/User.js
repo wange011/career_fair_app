@@ -19,7 +19,8 @@ const schema = new Schema({
     userType: String,
     favorites: [
         company
-    ]
+    ],
+    notes: Object
 });
 
 const User = mongoose.model('User', schema);
