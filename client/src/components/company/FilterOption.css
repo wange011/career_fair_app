@@ -1,0 +1,66 @@
+.FilterOption table th {
+    font-family: 'Lato', sans-serif;
+}
+
+.contain {
+    font-weight: 400;
+    font-family: sans-serif;
+}
+.contain {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
+  .contain input {
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+
+  .contain .checkmark {
+    position: absolute;
+    top: 2px;
+    left: 0;
+    height: 16px;
+    width: 16px;
+    background-color: #eee;
+  }
+
+.contain:hover input ~ .checkmark {
+    background-color: #ccc;
+  }
+
+.contain input:checked ~ .checkmark {
+    background-color: #005077;
+  }
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+
+.contain input:checked ~ .checkmark:after {
+    display: block;
+  }
+
+.contain .checkmark:after {
+    left: 5px;
+    top: 2px;
+    width: 6px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
