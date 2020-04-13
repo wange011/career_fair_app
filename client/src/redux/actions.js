@@ -6,6 +6,7 @@ export const GET_COMPANIES = 'GET_COMPANIES'
 export const ADD_FAVORITE = 'ADD_FAVORITE'
 export const REMOVE_FAVORITE = 'REMOVE_FAVORITE'
 export const SET_NUM_FAVORITES = 'GET_NUM_FAVORITES'
+export const UPDATE_NOTES = 'UPDATE_NOTES'
 export const EDIT_COMPANY = 'EDIT_COMPANY'
 export const SEARCH_COMPANIES = 'SEARCH_COMPANIES'
 export const FILTER_COMPANIES = 'FILTER_COMPANIES'
@@ -33,6 +34,10 @@ export function setNumFavorites(numFavorites)  {
     return { type: SET_NUM_FAVORITES, numFavorites }
 }
 
+export function updateNotes(notes) {
+    return { type: UPDATE_NOTES, notes }
+}
+
 export function editCompany(company) {
     return { type: EDIT_COMPANY, company }
 }
@@ -49,8 +54,8 @@ export function hide(shouldHide) {
     return { type: HIDE, shouldHide }
 }
 
-export function login(favorites, username, userID, userType) {
-    return { type: LOGIN, favorites, username, userID, userType }
+export function login(favorites, notes, username, userID, userType) {
+    return { type: LOGIN, favorites, notes, username, userID, userType }
 }
 
 export function toggleLogin() {

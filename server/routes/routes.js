@@ -92,6 +92,7 @@ router.post('/login', (req, res) => {
 
                 var userJSON = {
                     favorites: users[0].favorites,
+                    notes: users[0].notes,
                     username: users[0].username,
                     userType: users[0].userType,
                     id: users[0]._id
@@ -151,13 +152,14 @@ router.post('/register', (req, res) => {
                         userType = "tempAdmin";
 
                         // Add the user to the users collection
-                        User.create({ username: username, passwordHash: passwordHash, userType: userType, favorites: [] 
+                        User.create({ username: username, passwordHash: passwordHash, userType: userType, favorites: [], notes: {} 
                         }, (err, user) => {
                             
                             if (err) return handleError(err);
                             
                             var userJSON = {
                                 favorites: user.favorites,
+                                notes: {},
                                 username: user.username,
                                 userType: user.userType,
                                 id: user._id
@@ -172,13 +174,14 @@ router.post('/register', (req, res) => {
                 })
             } else {
                 // Add the user to the users collection
-                User.create({ username: username, passwordHash: passwordHash, userType: userType, favorites: [] 
+                User.create({ username: username, passwordHash: passwordHash, userType: userType, favorites: [], notes: {} 
                 }, (err, user) => {
                     
                     if (err) return handleError(err);
                     
                     var userJSON = {
                         favorites: user.favorites,
+                        notes: {},
                         username: user.username,
                         userType: user.userType,
                         id: user._id
@@ -288,6 +291,24 @@ router.get('/favorites_stat', (req, res) => {
 
     });
 
+})
+
+router.post('/notes', (req, res) => {
+    const userID = req.body.userID;
+    const notes = req.body.notes;
+
+    User.findByIdAndUpdate({ _id: userID }, { notes: notes }, (err, user) => {
+
+        if (err) {
+            return res.send(401);
+
+        } else {
+
+            return res.send(user);
+
+        }
+
+    });
 })
 
 module.exports = router;
