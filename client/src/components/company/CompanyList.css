@@ -182,12 +182,10 @@
 .heart:hover {
     opacity: 1;
     cursor: pointer;
-    filter: brightness(0.9) invert(.7) sepia(1) hue-rotate(310deg) saturate(1000%);
 }
 
 .heart.active {
     opacity: 1;
     transition: .2s;
     cursor: pointer;
-    filter: brightness(0.9) invert(.7) sepia(1) hue-rotate(310deg) saturate(1000%);
 }
