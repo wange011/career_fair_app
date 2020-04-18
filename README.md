@@ -1,4 +1,4 @@
-# Buzzfair
+# BuzzFair
 
 An updated application for the Georgia Tech College of Computing (CoC) career fair
 
